@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Nos services d'évaluation : Baseline, Midline, Endline, M&E et renforcement de capacités">
+    <title>Nos services | Bunsh - Partenaire de Recherche et d'Evaluation</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="img/ico/log_ico.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="img/ico/log_ico.ico">
+    <link rel="apple-touch-icon" href="img/logo/logo.png">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header>
+        <div class="container">
+            <nav>
+                <a href="index.html" class="logo">
+                    <img src="img/logo/logo.png" alt="Partenaire de Recherche et d'Evaluation" class="logo-img">
+                </a>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html" data-translate="nav_accueil">Accueil</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle active">
+                            <span data-translate="nav_bunsh">Bunsh</span> <i class="fas fa-chevron-down"></i>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="about.html"><i class="fas fa-info-circle"></i> <span data-translate="nav_apropos">À propos</span></a></li>
+                            <li><a href="services.html" class="active"><i class="fas fa-cogs"></i> <span data-translate="nav_services">Nos services</span></a></li>
+                            <li><a href="realisations.html"><i class="fas fa-trophy"></i> <span data-translate="nav_realisations">Nos réalisations</span></a></li>
+                            <li><a href="ressources.html"><i class="fas fa-book"></i> <span data-translate="nav_ressources">Ressources</span></a></li>
+                        </ul>
+                    </li>
+                    <li><a href="actualites.html" data-translate="nav_actualites">Actualités</a></li>
+                    <li><a href="carrieres.html" data-translate="nav_carrieres">Carrières</a></li>
+                    <li><a href="adhesion.html" data-translate="nav_adhesion">Adhésion</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle">
+                            <span data-translate="nav_mediatheque">Média</span> <i class="fas fa-chevron-down"></i>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="photos.html"><i class="fas fa-images"></i> <span data-translate="nav_photos">Photos</span></a></li>
+                            <li><a href="videos.html"><i class="fas fa-video"></i> <span data-translate="nav_videos">Vidéos</span></a></li>
+                        </ul>
+                    </li>
+                    <li><a href="contact.html" data-translate="nav_contact">Contact</a></li>
+                </ul>
+                <div class="language-switcher">
+                    <button class="lang-btn active" id="langFr" onclick="changeLanguage('fr')" aria-label="Français">FR</button>
+                    <div class="lang-separator"></div>
+                    <button class="lang-btn" id="langEn" onclick="changeLanguage('en')" aria-label="English">EN</button>
+                </div>
+                <div class="menu-toggle" id="menuToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" style="background-image: url('img/logo/banner4.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat; position: relative;">
+        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(135deg, rgba(11, 34, 148, 0.3) 0%, rgba(13, 45, 176, 0.35) 100%); z-index: 1;"></div>
+        <div class="container" style="position: relative; z-index: 2;">
+            <h1 style="text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7), 0 0 20px rgba(11, 34, 148, 0.5);" data-translate="serv_hero_titre">Nos services</h1>
+            <p style="text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.7), 0 0 15px rgba(11, 34, 148, 0.4);" data-translate="serv_hero_desc">Des solutions complètes d'évaluation pour mesurer et maximiser l'impact de vos projets de développement</p>
+        </div>
+    </section>
+
+    <!-- Services principaux -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title" data-translate="serv_poles_titre">Nos trois pôles d'évaluation</h2>
+            <p class="section-subtitle" data-translate="serv_poles_desc">
+                Nous vous accompagnons tout au long du cycle de vie de votre projet
+            </p>
+            
+            <div class="services-grid">
+                <!-- Baseline -->
+                <div class="service-card fade-in" style="border-top: 4px solid #0b2294;">
+                    <div class="service-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3 data-translate="serv_baseline_titre">Études de base (Baseline)</h3>
+                    <p style="margin-bottom: 1rem;" data-translate="serv_baseline_desc">Établissement d'une situation de référence avant le démarrage de votre projet pour mesurer ultérieurement les changements et l'impact.</p>
+                    
+                    <div class="service-details" style="max-height: 0; overflow: hidden; transition: max-height 0.4s ease;">
+                        <h4 style="color: #0b2294; margin-bottom: 0.8rem; font-size: 1rem; margin-top: 1.5rem;" data-translate="serv_baseline_faisons">Ce que nous faisons :</h4>
+                        <ul style="list-style: none; padding: 0; color: #666; line-height: 2;">
+                            <li data-translate="serv_baseline_item1">✓ Définition des indicateurs clés de performance</li>
+                            <li data-translate="serv_baseline_item2">✓ Collecte de données initiales quantitatives et qualitatives</li>
+                            <li data-translate="serv_baseline_item3">✓ Cartographie des bénéficiaires et zones d'intervention</li>
+                            <li data-translate="serv_baseline_item4">✓ Analyse de la situation de départ</li>
+                            <li data-translate="serv_baseline_item5">✓ Établissement des cibles à atteindre</li>
+                            <li data-translate="serv_baseline_item6">✓ Élaboration du plan de suivi-évaluation</li>
+                        </ul>
+                        
+                        <h4 style="color: #0b2294; margin: 1.5rem 0 0.8rem; font-size: 1rem;" data-translate="serv_baseline_livrables">Livrables :</h4>
+                        <ul style="list-style: none; padding: 0; color: #666; line-height: 2;">
+                            <li data-translate="serv_baseline_livr1">• Rapport de baseline complet</li>
+                            <li data-translate="serv_baseline_livr2">• Base de données brutes et nettoyées</li>
+                            <li data-translate="serv_baseline_livr3">• Cadre de mesure des résultats</li>
+                            <li data-translate="serv_baseline_livr4">• Outils de collecte validés</li>
+                        </ul>
+                    </div>
+                    
+                    <button class="read-more-btn" onclick="toggleServiceDetails(this)" style="margin-top: 1rem; background: linear-gradient(135deg, #0b2294, #0d2db0); color: white; border: none; padding: 0.7rem 1.5rem; border-radius: 25px; cursor: pointer; font-weight: 600; transition: all 0.3s ease; width: 100%; font-size: 0.95rem;">
+                        <i class="fas fa-chevron-down" style="margin-right: 0.5rem;"></i>
+                        <span data-translate="serv_lire_plus">Lire plus</span>
+                    </button>
+                </div>
+
+                <!-- Midline -->
+                <div class="service-card fade-in" style="border-top: 4px solid #f63224;">
+                    <div class="service-icon">
+                        <i class="fas fa-chart-bar"></i>
+                    </div>
+                    <h3 data-translate="serv_midline_titre">Évaluations intermédiaires (Midline)</h3>
+                    <p style="margin-bottom: 1rem;" data-translate="serv_midline_desc">Suivi et mesure des progrès à mi-parcours pour ajuster les stratégies et optimiser les résultats en cours de projet.</p>
+                    
+                    <div class="service-details" style="max-height: 0; overflow: hidden; transition: max-height 0.4s ease;">
+                        <h4 style="color: #0b2294; margin-bottom: 0.8rem; font-size: 1rem; margin-top: 1.5rem;" data-translate="serv_midline_faisons">Ce que nous faisons :</h4>
+                        <ul style="list-style: none; padding: 0; color: #666; line-height: 2;">
+                            <li data-translate="serv_midline_item1">✓ Mesure des indicateurs intermédiaires</li>
+                            <li data-translate="serv_midline_item2">✓ Évaluation de l'avancement par rapport aux cibles</li>
+                            <li data-translate="serv_midline_item3">✓ Identification des obstacles et défis</li>
+                            <li data-translate="serv_midline_item4">✓ Analyse de la qualité de mise en œuvre</li>
+                            <li data-translate="serv_midline_item5">✓ Recommandations d'ajustement stratégique</li>
+                            <li data-translate="serv_midline_item6">✓ Documentation des premières leçons apprises</li>
+                        </ul>
+                        
+                        <h4 style="color: #0b2294; margin: 1.5rem 0 0.8rem; font-size: 1rem;" data-translate="serv_midline_livrables">Livrables :</h4>
+                        <ul style="list-style: none; padding: 0; color: #666; line-height: 2;">
+                            <li data-translate="serv_midline_livr1">• Rapport d'évaluation midline</li>
+                            <li data-translate="serv_midline_livr2">• Tableau de bord des indicateurs</li>
+                            <li data-translate="serv_midline_livr3">• Note de recommandations stratégiques</li>
+                            <li data-translate="serv_midline_livr4">• Présentation PowerPoint des résultats</li>
+                        </ul>
+                    </div>
+                    
+                    <button class="read-more-btn" onclick="toggleServiceDetails(this)" style="margin-top: 1rem; background: linear-gradient(135deg, #f63224, #d42a1f); color: white; border: none; padding: 0.7rem 1.5rem; border-radius: 25px; cursor: pointer; font-weight: 600; transition: all 0.3s ease; width: 100%; font-size: 0.95rem;">
+                        <i class="fas fa-chevron-down" style="margin-right: 0.5rem;"></i>
+                        <span data-translate="serv_lire_plus">Lire plus</span>
+                    </button>
+                </div>
+
+                <!-- Endline -->
+                <div class="service-card fade-in" style="border-top: 4px solid #0b2294;">
+                    <div class="service-icon">
+                        <i class="fas fa-bullseye"></i>
+                    </div>
+                    <h3 data-translate="serv_endline_titre">Évaluations finales (Endline)</h3>
+                    <p style="margin-bottom: 1rem;" data-translate="serv_endline_desc">Mesure complète de l'impact et des résultats obtenus en fin de projet avec une analyse approfondie des changements.</p>
+                    
+                    <div class="service-details" style="max-height: 0; overflow: hidden; transition: max-height 0.4s ease;">
+                        <h4 style="color: #0b2294; margin-bottom: 0.8rem; font-size: 1rem; margin-top: 1.5rem;" data-translate="serv_endline_faisons">Ce que nous faisons :</h4>
+                        <ul style="list-style: none; padding: 0; color: #666; line-height: 2;">
+                            <li data-translate="serv_endline_item1">✓ Mesure finale de tous les indicateurs</li>
+                            <li data-translate="serv_endline_item2">✓ Analyse comparative baseline-endline</li>
+                            <li data-translate="serv_endline_item3">✓ Évaluation de l'impact selon critères OCDE-CAD</li>
+                            <li data-translate="serv_endline_item4">✓ Analyse de la durabilité des résultats</li>
+                            <li data-translate="serv_endline_item5">✓ Documentation complète des leçons apprises</li>
+                            <li data-translate="serv_endline_item6">✓ Recommandations pour futures interventions</li>
+                        </ul>
+                        
+                        <h4 style="color: #0b2294; margin: 1.5rem 0 0.8rem; font-size: 1rem;" data-translate="serv_endline_livrables">Livrables :</h4>
+                        <ul style="list-style: none; padding: 0; color: #666; line-height: 2;">
+                            <li data-translate="serv_endline_livr1">• Rapport d'évaluation finale complet</li>
+                            <li data-translate="serv_endline_livr2">• Synthèse exécutive</li>
+                            <li data-translate="serv_endline_livr3">• Études de cas et témoignages</li>
+                            <li data-translate="serv_endline_livr4">• Visualisations de données (infographies)</li>
+                        </ul>
+                    </div>
+                    
+                    <button class="read-more-btn" onclick="toggleServiceDetails(this)" style="margin-top: 1rem; background: linear-gradient(135deg, #0b2294, #0d2db0); color: white; border: none; padding: 0.7rem 1.5rem; border-radius: 25px; cursor: pointer; font-weight: 600; transition: all 0.3s ease; width: 100%; font-size: 0.95rem;">
+                        <i class="fas fa-chevron-down" style="margin-right: 0.5rem;"></i>
+                        <span data-translate="serv_lire_plus">Lire plus</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services annexes -->
+    <section class="section" style="background-color: #f8f9fa;">
+        <div class="container">
+            <h2 class="section-title" data-translate="serv_comp_titre">Services complémentaires</h2>
+            <p class="section-subtitle" data-translate="serv_comp_desc">
+                D'autres services pour renforcer vos capacités d'évaluation et de suivi
+            </p>
+            
+            <div class="services-grid">
+                <div class="service-card fade-in">
+                    <div class="service-icon">
+                        <i class="fas fa-tasks"></i>
+                    </div>
+                    <h3 data-translate="serv_comp1_titre">Conception d'outils de suivi-évaluation (M&E)</h3>
+                    <p data-translate="serv_comp1_desc">Élaboration de systèmes de suivi-évaluation complets incluant cadres logiques, théories du changement, plans M&E, et outils de collecte de données adaptés à votre contexte.</p>
+                </div>
+
+                <div class="service-card fade-in">
+                    <div class="service-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3 data-translate="serv_comp2_titre">Renforcement de capacités</h3>
+                    <p data-translate="serv_comp2_desc">Formations pratiques de vos équipes sur les méthodologies d'évaluation, la collecte de données, l'analyse statistique, et l'utilisation d'outils comme Kobo Toolbox, SPSS et Power BI.</p>
+                </div>
+
+                <div class="service-card fade-in">
+                    <div class="service-icon">
+                        <i class="fas fa-chart-area"></i>
+                    </div>
+                    <h3 data-translate="serv_comp3_titre">Data analysis & Visualisation</h3>
+                    <p data-translate="serv_comp3_desc">Analyse statistique approfondie de vos données existantes et création de tableaux de bord interactifs avec Power BI pour un pilotage efficace de vos projets.</p>
+                </div>
+
+                <div class="service-card fade-in">
+                    <div class="service-icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <h3 data-translate="serv_comp4_titre">Études de faisabilité</h3>
+                    <p data-translate="serv_comp4_desc">Analyse de la viabilité technique, financière et sociale de vos projets avant leur lancement pour maximiser les chances de succès et d'impact.</p>
+                </div>
+
+                <div class="service-card fade-in">
+                    <div class="service-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3 data-translate="serv_comp5_titre">Collecte de données mobile</h3>
+                    <p data-translate="serv_comp5_desc">Mise en place de systèmes de collecte de données via smartphones et tablettes (Kobo, ODK) pour une saisie rapide, fiable et géolocalisée.</p>
+                </div>
+
+                <div class="service-card fade-in">
+                    <div class="service-icon">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <h3 data-translate="serv_comp6_titre">Évaluations participatives</h3>
+                    <p data-translate="serv_comp6_desc">Organisation de focus groups, entretiens approfondis et ateliers participatifs pour capturer les perceptions et expériences des bénéficiaires.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Méthodologies -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title" data-translate="serv_methodo_titre">Nos méthodologies</h2>
+            <p class="section-subtitle" data-translate="serv_methodo_desc">
+                Des approches scientifiques reconnues internationalement
+            </p>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-top: 2rem;">
+                <div style="padding: 1.5rem; background: white; border-left: 4px solid #0b2294; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+                    <h4 style="color: #0b2294; margin-bottom: 0.5rem;" data-translate="serv_methodo1_titre">Méthodes quantitatives</h4>
+                    <p style="color: #666; font-size: 0.95rem;" data-translate="serv_methodo1_desc">Enquêtes structurées, échantillonnage statistique, analyses descriptives et inférentielles, régressions, tests d'hypothèses.</p>
+                </div>
+
+                <div style="padding: 1.5rem; background: white; border-left: 4px solid #f63224; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+                    <h4 style="color: #f63224; margin-bottom: 0.5rem;" data-translate="serv_methodo2_titre">Méthodes qualitatives</h4>
+                    <p style="color: #666; font-size: 0.95rem;" data-translate="serv_methodo2_desc">Entretiens semi-directifs, focus groups, observations, études de cas, analyse thématique et narrative.</p>
+                </div>
+
+                <div style="padding: 1.5rem; background: white; border-left: 4px solid #0b2294; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+                    <h4 style="color: #0b2294; margin-bottom: 0.5rem;" data-translate="serv_methodo3_titre">Méthodes mixtes</h4>
+                    <p style="color: #666; font-size: 0.95rem;" data-translate="serv_methodo3_desc">Combinaison stratégique de données quantitatives et qualitatives pour une compréhension holistique des phénomènes.</p>
+                </div>
+
+                <div style="padding: 1.5rem; background: white; border-left: 4px solid #f63224; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+                    <h4 style="color: #f63224; margin-bottom: 0.5rem;" data-translate="serv_methodo4_titre">Approches participatives</h4>
+                    <p style="color: #666; font-size: 0.95rem;" data-translate="serv_methodo4_desc">Implication des parties prenantes et bénéficiaires dans toutes les étapes du processus d'évaluation.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Outils -->
+    <section class="section" style="background-color: #f8f9fa;">
+        <div class="container">
+            <h2 class="section-title" data-translate="serv_outils_titre">Nos outils technologiques</h2>
+            <p class="section-subtitle" data-translate="serv_outils_desc">
+                Technologies de pointe pour une évaluation moderne et efficace
+            </p>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; margin-top: 2rem;">
+                <div style="text-align: center; padding: 1.5rem; background: white; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.05);">
+                    <div style="font-size: 2.5rem; margin-bottom: 0.5rem; color: #0b2294;"><i class="fas fa-mobile-alt"></i></div>
+                    <h4 style="color: #0b2294;" data-translate="serv_outil1_nom">Kobo Toolbox</h4>
+                    <p style="color: #666; font-size: 0.9rem;" data-translate="serv_outil1_desc">Collecte de données mobile</p>
+                </div>
+
+                <div style="text-align: center; padding: 1.5rem; background: white; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.05);">
+                    <div style="font-size: 2.5rem; margin-bottom: 0.5rem; color: #0b2294;"><i class="fas fa-chart-bar"></i></div>
+                    <h4 style="color: #0b2294;" data-translate="serv_outil2_nom">SPSS</h4>
+                    <p style="color: #666; font-size: 0.9rem;" data-translate="serv_outil2_desc">Analyse statistique</p>
+                </div>
+
+                <div style="text-align: center; padding: 1.5rem; background: white; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.05);">
+                    <div style="font-size: 2.5rem; margin-bottom: 0.5rem; color: #0b2294;"><i class="fas fa-chart-line"></i></div>
+                    <h4 style="color: #0b2294;" data-translate="serv_outil3_nom">Power BI</h4>
+                    <p style="color: #666; font-size: 0.9rem;" data-translate="serv_outil3_desc">Visualisation de données</p>
+                </div>
+
+                <div style="text-align: center; padding: 1.5rem; background: white; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.05);">
+                    <div style="font-size: 2.5rem; margin-bottom: 0.5rem; color: #0b2294;"><i class="fas fa-code"></i></div>
+                    <h4 style="color: #0b2294;" data-translate="serv_outil4_nom">R & Python</h4>
+                    <p style="color: #666; font-size: 0.9rem;" data-translate="serv_outil4_desc">Analyses avancées</p>
+                </div>
+
+                <div style="text-align: center; padding: 1.5rem; background: white; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.05);">
+                    <div style="font-size: 2.5rem; margin-bottom: 0.5rem; color: #0b2294;"><i class="fas fa-map-marked-alt"></i></div>
+                    <h4 style="color: #0b2294;" data-translate="serv_outil5_nom">SIG / GIS</h4>
+                    <p style="color: #666; font-size: 0.9rem;" data-translate="serv_outil5_desc">Cartographie et géolocalisation</p>
+                </div>
+
+                <div style="text-align: center; padding: 1.5rem; background: white; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.05);">
+                    <div style="font-size: 2.5rem; margin-bottom: 0.5rem; color: #0b2294;"><i class="fas fa-cloud"></i></div>
+                    <h4 style="color: #0b2294;" data-translate="serv_outil6_nom">Cloud Storage</h4>
+                    <p style="color: #666; font-size: 0.9rem;" data-translate="serv_outil6_desc">Stockage sécurisé</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Processus -->
+    <section class="section" style="background: linear-gradient(135deg, #f8f9fa 0%, #e8f0fe 50%, #f8f9fa 100%); position: relative; overflow: hidden;">
+        <div style="position: absolute; top: -50%; right: -10%; width: 500px; height: 500px; background: radial-gradient(circle, rgba(11, 34, 148, 0.03) 0%, transparent 70%); z-index: 0;"></div>
+        <div style="position: absolute; bottom: -50%; left: -10%; width: 500px; height: 500px; background: radial-gradient(circle, rgba(246, 50, 36, 0.03) 0%, transparent 70%); z-index: 0;"></div>
+        <div class="container" style="position: relative; z-index: 1;">
+            <h2 class="section-title" data-translate="serv_processus_titre">Notre processus de travail</h2>
+            <p class="section-subtitle" data-translate="serv_processus_desc">
+                Une approche structurée en 6 étapes pour garantir la qualité
+            </p>
+
+            <div style="max-width: 900px; margin: 0 auto;">
+                <div style="display: grid; gap: 1.5rem; margin-top: 2rem;">
+                    <div style="display: flex; gap: 1.5rem; align-items: start;">
+                        <div style="min-width: 50px; height: 50px; background: #0b2294; color: white; display: flex; align-items: center; justify-content: center; border-radius: 50%; font-weight: 700; font-size: 1.2rem;">1</div>
+                        <div>
+                            <h4 style="margin-bottom: 0.5rem; color: #0b2294;" data-translate="serv_processus1_titre">Cadrage et planification</h4>
+                            <p style="color: #666;" data-translate="serv_processus1_desc">Rencontre avec le client, compréhension des objectifs, définition du cadre d'évaluation et élaboration de la note méthodologique.</p>
+                        </div>
+                    </div>
+
+                    <div style="display: flex; gap: 1.5rem; align-items: start;">
+                        <div style="min-width: 50px; height: 50px; background: #0b2294; color: white; display: flex; align-items: center; justify-content: center; border-radius: 50%; font-weight: 700; font-size: 1.2rem;">2</div>
+                        <div>
+                            <h4 style="margin-bottom: 0.5rem; color: #0b2294;" data-translate="serv_processus2_titre">Développement des outils</h4>
+                            <p style="color: #666;" data-translate="serv_processus2_desc">Conception des questionnaires, guides d'entretien et protocoles de collecte adaptés au contexte.</p>
+                        </div>
+                    </div>
+
+                    <div style="display: flex; gap: 1.5rem; align-items: start;">
+                        <div style="min-width: 50px; height: 50px; background: #0b2294; color: white; display: flex; align-items: center; justify-content: center; border-radius: 50%; font-weight: 700; font-size: 1.2rem;">3</div>
+                        <div>
+                            <h4 style="margin-bottom: 0.5rem; color: #0b2294;" data-translate="serv_processus3_titre">Formation et pré-test</h4>
+                            <p style="color: #666;" data-translate="serv_processus3_desc">Formation des enquêteurs, test pilote des outils et ajustements nécessaires avant le déploiement.</p>
+                        </div>
+                    </div>
+
+                    <div style="display: flex; gap: 1.5rem; align-items: start;">
+                        <div style="min-width: 50px; height: 50px; background: #0b2294; color: white; display: flex; align-items: center; justify-content: center; border-radius: 50%; font-weight: 700; font-size: 1.2rem;">4</div>
+                        <div>
+                            <h4 style="margin-bottom: 0.5rem; color: #0b2294;" data-translate="serv_processus4_titre">Collecte de données</h4>
+                            <p style="color: #666;" data-translate="serv_processus4_desc">Déploiement sur le terrain avec contrôle qualité continu et supervision rapprochée des équipes.</p>
+                        </div>
+                    </div>
+
+                    <div style="display: flex; gap: 1.5rem; align-items: start;">
+                        <div style="min-width: 50px; height: 50px; background: #0b2294; color: white; display: flex; align-items: center; justify-content: center; border-radius: 50%; font-weight: 700; font-size: 1.2rem;">5</div>
+                        <div>
+                            <h4 style="margin-bottom: 0.5rem; color: #0b2294;" data-translate="serv_processus5_titre">Analyse et interprétation</h4>
+                            <p style="color: #666;" data-translate="serv_processus5_desc">Nettoyage des données, analyses statistiques approfondies et triangulation des résultats quantitatifs et qualitatifs.</p>
+                        </div>
+                    </div>
+
+                    <div style="display: flex; gap: 1.5rem; align-items: start;">
+                        <div style="min-width: 50px; height: 50px; background: #0b2294; color: white; display: flex; align-items: center; justify-content: center; border-radius: 50%; font-weight: 700; font-size: 1.2rem;">6</div>
+                        <div>
+                            <h4 style="margin-bottom: 0.5rem; color: #0b2294;" data-translate="serv_processus6_titre">Rédaction et restitution</h4>
+                            <p style="color: #666;" data-translate="serv_processus6_desc">Rédaction du rapport final, présentation des résultats et recommandations actionnables pour le client.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <!-- Logo et description -->
+            <div class="footer-brand">
+                <div class="footer-logo">
+                    <img src="img/logo/logo.png" alt="Partenaire de Recherche et d'Evaluation" class="footer-logo-img">
+                </div>
+            </div>
+
+            <!-- Contenu principal -->
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 data-translate="footer_navigation">Navigation</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html" data-translate="nav_accueil">Accueil</a></li>
+                        <li><a href="about.html" data-translate="nav_apropos">À propos</a></li>
+                        <li><a href="services.html" data-translate="nav_services">Nos services</a></li>
+                        <li><a href="realisations.html" data-translate="nav_realisations">Nos réalisations</a></li>
+                        <li><a href="ressources.html" data-translate="nav_ressources">Ressources</a></li>
+                        <li><a href="photos.html" data-translate="footer_galerie_photos">Galerie Photos</a></li>
+                        <li><a href="videos.html" data-translate="footer_galerie_videos">Galerie Vidéos</a></li>
+                        <li><a href="actualites.html" data-translate="nav_actualites">Actualités</a></li>
+                        <li><a href="carrieres.html" data-translate="nav_carrieres">Carrières</a></li>
+                        <li><a href="adhesion.html" data-translate="nav_adhesion">Adhésion</a></li>
+                        <li><a href="contact.html" data-translate="nav_contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3 data-translate="footer_services">Services</h3>
+                    <ul class="footer-links">
+                        <li><a href="services.html" data-translate="footer_baseline">Études de base (Baseline)</a></li>
+                        <li><a href="services.html" data-translate="footer_midline">Évaluations Midline</a></li>
+                        <li><a href="services.html" data-translate="footer_endline">Évaluations Endline</a></li>
+                        <li><a href="services.html" data-translate="footer_me">Suivi-évaluation (M&E)</a></li>
+                        <li><a href="services.html" data-translate="footer_renforcement">Renforcement de capacités</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3 data-translate="footer_contact">Contact</h3>
+                    <p><span data-translate="footer_adresse">📍 1, Basoko, Safricas, Kinshasa, Democratic Republic of the Congo</span></p>
+                    <p>📧 contact@bunshconsulting.com</p>
+                    <p>📞 +243 0979 286 949</p>
+                </div>
+            </div>
+
+            <!-- Section réseaux sociaux -->
+            <div class="footer-social">
+                <h3 data-translate="footer_suivez">Suivez-nous</h3>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/" class="social-icon-large">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="social-icon-large">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="social-icon-large">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="#" class="social-icon-large">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Copyright -->
+            <div class="footer-bottom">
+                <p data-translate="footer_copyright">&copy; 2025 Bunsh - Partenaire de Recherche et d'Evaluation</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to top button -->
+    <button class="scroll-to-top hidden" id="scrollToTop" aria-label="Retour en haut">
+        ↑
+    </button>
+
+    <script src="js/script.js"></script>
+    <script src="js/translation.js"></script>
+    
+    <script>
+        function toggleServiceDetails(button) {
+            const card = button.closest('.service-card');
+            const details = card.querySelector('.service-details');
+            const icon = button.querySelector('i');
+            const span = button.querySelector('span');
+            const isOpen = details.style.maxHeight && details.style.maxHeight !== '0px';
+            
+            const currentLang = localStorage.getItem('preferredLanguage') || 'fr';
+            const readMoreText = currentLang === 'fr' ? 'Lire plus' : 'Read more';
+            const readLessText = currentLang === 'fr' ? 'Lire moins' : 'Read less';
+            
+            if (isOpen) {
+                // Fermer
+                details.style.maxHeight = '0';
+                icon.style.transform = 'rotate(0deg)';
+                span.textContent = readMoreText;
+            } else {
+                // Ouvrir
+                details.style.maxHeight = details.scrollHeight + 'px';
+                icon.style.transform = 'rotate(180deg)';
+                span.textContent = readLessText;
+            }
+        }
+    </script>
+    
+    <style>
+        .read-more-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(11, 34, 148, 0.3);
+        }
+        
+        .read-more-btn i {
+            transition: transform 0.3s ease;
+        }
+    </style>
+</body>
+</html>
+

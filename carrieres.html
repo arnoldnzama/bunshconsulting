@@ -1,0 +1,931 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Rejoignez notre équipe - Offres d'emploi au Partenaire de Recherche et d'Evaluation">
+    <title>Carrières | Bunsh - Partenaire de Recherche et d'Evaluation</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="img/ico/log_ico.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="img/ico/log_ico.ico">
+    <link rel="apple-touch-icon" href="img/logo/logo.png">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .job-card {
+            background-color: var(--color-primary);
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            margin-bottom: 2rem;
+            transition: var(--transition);
+        }
+
+        .job-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 30px rgba(11, 34, 148, 0.2);
+        }
+
+        .job-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+            margin-bottom: 1.5rem;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .job-title-section h3 {
+            color: var(--color-accent-blue);
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .job-type {
+            display: inline-block;
+            padding: 0.4rem 1rem;
+            background-color: #e8f0fe;
+            color: var(--color-accent-blue);
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-right: 0.5rem;
+        }
+
+        .job-location {
+            color: #666;
+            font-size: 0.95rem;
+            margin-top: 0.5rem;
+        }
+
+        .job-location i {
+            color: var(--color-accent-red);
+            margin-right: 0.3rem;
+        }
+
+        .apply-btn {
+            background-color: var(--color-accent-red);
+            color: white;
+            padding: 0.7rem 1.5rem;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+
+        .apply-btn:hover {
+            background-color: #d42a1f;
+            transform: translateY(-2px);
+        }
+
+        .job-details {
+            margin-bottom: 1.5rem;
+        }
+
+        .job-details h4 {
+            color: var(--color-secondary);
+            margin-bottom: 0.8rem;
+            font-size: 1.1rem;
+        }
+
+        .job-details ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .job-details ul li {
+            padding: 0.4rem 0;
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .job-details ul li:before {
+            content: "✓ ";
+            color: var(--color-accent-blue);
+            font-weight: bold;
+            margin-right: 0.5rem;
+        }
+
+        .application-form {
+            display: none;
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 2px solid #e0e0e0;
+        }
+
+        .application-form.active {
+            display: block;
+            animation: slideDown 0.3s ease-out;
+        }
+
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .file-input-wrapper {
+            position: relative;
+            display: inline-block;
+            width: 100%;
+        }
+
+        .file-input-label {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            padding: 1rem;
+            background-color: #f8f9fa;
+            border: 2px dashed #0b2294;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: var(--transition);
+            text-align: center;
+        }
+
+        .file-input-label:hover {
+            background-color: #e8f0fe;
+            border-color: var(--color-accent-red);
+        }
+
+        .file-input-label i {
+            font-size: 1.5rem;
+            color: var(--color-accent-blue);
+        }
+
+        .file-input {
+            display: none;
+        }
+
+        .file-name {
+            margin-top: 0.5rem;
+            color: #666;
+            font-size: 0.9rem;
+            font-style: italic;
+        }
+
+        .file-name.has-file {
+            color: var(--color-accent-blue);
+            font-weight: 600;
+        }
+
+        .form-message {
+            padding: 1rem;
+            border-radius: 5px;
+            margin-top: 1rem;
+            display: none;
+        }
+
+        .form-message.success {
+            background-color: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+            display: block;
+        }
+
+        .form-message.error {
+            background-color: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+            display: block;
+        }
+
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .benefit-item {
+            display: flex;
+            align-items: start;
+            gap: 1rem;
+            padding: 1.5rem;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .benefit-icon {
+            font-size: 2rem;
+            color: var(--color-accent-blue);
+        }
+
+        .benefit-content h4 {
+            color: var(--color-secondary);
+            margin-bottom: 0.5rem;
+        }
+
+        .benefit-content p {
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            .job-header {
+                flex-direction: column;
+            }
+
+            .apply-btn {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header>
+        <div class="container">
+            <nav>
+                <a href="index.html" class="logo">
+                    <img src="img/logo/logo.png" alt="Partenaire de Recherche et d'Evaluation" class="logo-img">
+                </a>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html" data-translate="nav_accueil">Accueil</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle">
+                            <span data-translate="nav_bunsh">Bunsh</span> <i class="fas fa-chevron-down"></i>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="about.html"><i class="fas fa-info-circle"></i> <span data-translate="nav_apropos">À propos</span></a></li>
+                            <li><a href="services.html"><i class="fas fa-cogs"></i> <span data-translate="nav_services">Nos services</span></a></li>
+                            <li><a href="realisations.html"><i class="fas fa-trophy"></i> <span data-translate="nav_realisations">Nos réalisations</span></a></li>
+                            <li><a href="ressources.html"><i class="fas fa-book"></i> <span data-translate="nav_ressources">Ressources</span></a></li>
+                        </ul>
+                    </li>
+                    <li><a href="actualites.html" data-translate="nav_actualites">Actualités</a></li>
+                    <li><a href="carrieres.html" class="active" data-translate="nav_carrieres">Carrières</a></li>
+                    <li><a href="adhesion.html" data-translate="nav_adhesion">Adhésion</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle">
+                            <span data-translate="nav_mediatheque">Média</span> <i class="fas fa-chevron-down"></i>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="photos.html"><i class="fas fa-images"></i> <span data-translate="nav_photos">Photos</span></a></li>
+                            <li><a href="videos.html"><i class="fas fa-video"></i> <span data-translate="nav_videos">Vidéos</span></a></li>
+                        </ul>
+                    </li>
+                    <li><a href="contact.html" data-translate="nav_contact">Contact</a></li>
+                </ul>
+                <div class="language-switcher">
+                    <button class="lang-btn active" id="langFr" onclick="changeLanguage('fr')" aria-label="Français">FR</button>
+                    <div class="lang-separator"></div>
+                    <button class="lang-btn" id="langEn" onclick="changeLanguage('en')" aria-label="English">EN</button>
+                </div>
+                <div class="menu-toggle" id="menuToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" style="background-image: url('img/logo/banner5.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat; position: relative;">
+        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(135deg, rgba(11, 34, 148, 0.3) 0%, rgba(13, 45, 176, 0.35) 100%); z-index: 1;"></div>
+        <div class="container" style="position: relative; z-index: 2;">
+            <h1 style="text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7), 0 0 20px rgba(11, 34, 148, 0.5);" data-translate="carrieres_title">Rejoignez notre équipe</h1>
+            <p style="text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.7), 0 0 15px rgba(11, 34, 148, 0.4);" data-translate="carrieres_subtitle">Participez à des projets qui transforment des vies. Rejoignez une équipe passionnée et engagée dans la mesure de l'impact au service du développement.</p>
+        </div>
+    </section>
+
+    <!-- Pourquoi nous rejoindre -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title" data-translate="carrieres_pourquoi_title">Pourquoi travailler avec nous ?</h2>
+            <p class="section-subtitle" data-translate="carrieres_pourquoi_desc">
+                Nous offrons bien plus qu'un emploi : une opportunité de contribuer au développement de la RDC
+            </p>
+            <div class="benefits-grid">
+                <div class="benefit-item fade-in">
+                    <div class="benefit-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div class="benefit-content">
+                        <h4 data-translate="carrieres_avantage1_titre">Croissance professionnelle</h4>
+                        <p data-translate="carrieres_avantage1_desc">Formations continues et développement de compétences</p>
+                    </div>
+                </div>
+                <div class="benefit-item fade-in">
+                    <div class="benefit-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="benefit-content">
+                        <h4 data-translate="carrieres_avantage2_titre">Équipe dynamique</h4>
+                        <p data-translate="carrieres_avantage2_desc">Travaillez avec des experts passionnés</p>
+                    </div>
+                </div>
+                <div class="benefit-item fade-in">
+                    <div class="benefit-icon">
+                        <i class="fas fa-hand-holding-heart"></i>
+                    </div>
+                    <div class="benefit-content">
+                        <h4 data-translate="carrieres_avantage3_titre">Impact social</h4>
+                        <p data-translate="carrieres_avantage3_desc">Contribuez à des projets qui changent des vies</p>
+                    </div>
+                </div>
+                <div class="benefit-item fade-in">
+                    <div class="benefit-icon">
+                        <i class="fas fa-laptop"></i>
+                    </div>
+                    <div class="benefit-content">
+                        <h4 data-translate="carrieres_avantage4_titre">Technologies modernes</h4>
+                        <p data-translate="carrieres_avantage4_desc">Utilisez les outils d'analyse les plus récents</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Offres d'emploi -->
+    <section class="section" style="background-color: #f8f9fa;">
+        <div class="container">
+            <h2 class="section-title" data-translate="carrieres_offres_titre">Nos offres d'emploi</h2>
+            <p class="section-subtitle" data-translate="carrieres_offres_desc">Découvrez les postes disponibles et candidatez directement en ligne</p>
+
+            <!-- Offre 1 -->
+            <div class="job-card fade-in">
+                <div class="job-header">
+                    <div class="job-title-section">
+                        <h3 data-translate="carrieres_offre1_titre">Chargé(e) de Suivi-Évaluation (M&E Officer)</h3>
+                        <div>
+                            <span class="job-type" data-translate="carrieres_cdi">CDI</span>
+                            <span class="job-type" data-translate="carrieres_temps_plein">Temps plein</span>
+                        </div>
+                        <div class="job-location">
+                            <i class="fas fa-map-marker-alt"></i> <span data-translate="carrieres_kinshasa">Kinshasa, RDC</span>
+                        </div>
+                    </div>
+                    <button class="apply-btn" onclick="toggleApplicationForm('job1')">
+                        <i class="fas fa-paper-plane"></i> <span data-translate="carrieres_postuler">Postuler</span>
+                    </button>
+                </div>
+
+                <h4 style="margin-bottom: 0.8rem;" data-translate="carrieres_description_poste">Description du poste</h4>
+                <p style="color: #666; line-height: 1.8; margin-bottom: 1.5rem;" data-translate="carrieres_offre1_desc">
+                    Nous recherchons un(e) Chargé(e) de Suivi-Évaluation pour rejoindre notre équipe. Vous serez responsable de la conception d'outils de collecte de données, de la supervision des enquêtes de terrain et de l'analyse des données pour nos projets d'évaluation.
+                </p>
+
+                <div class="job-details" style="max-height: 0; overflow: hidden; transition: max-height 0.4s ease;">
+                    <h4 data-translate="carrieres_responsabilites">Responsabilités principales</h4>
+                    <ul>
+                        <li data-translate="carrieres_offre1_resp1">Concevoir des outils de collecte de données (questionnaires, guides d'entretien)</li>
+                        <li data-translate="carrieres_offre1_resp2">Superviser les équipes d'enquêteurs sur le terrain</li>
+                        <li data-translate="carrieres_offre1_resp3">Réaliser l'analyse statistique des données collectées (SPSS, R ou Stata)</li>
+                        <li data-translate="carrieres_offre1_resp4">Rédiger des rapports d'évaluation de qualité</li>
+                        <li data-translate="carrieres_offre1_resp5">Contribuer au développement méthodologique du bureau</li>
+                    </ul>
+
+                    <h4 data-translate="carrieres_profil">Profil recherché</h4>
+                    <ul>
+                        <li data-translate="carrieres_offre1_prof1">Licence ou Master en Statistiques, Économie, Développement ou domaine connexe</li>
+                        <li data-translate="carrieres_offre1_prof2">Minimum 2 ans d'expérience en suivi-évaluation de projets</li>
+                        <li data-translate="carrieres_offre1_prof3">Excellentes compétences en analyse de données (SPSS, R, Stata ou Python)</li>
+                        <li data-translate="carrieres_offre1_prof4">Maîtrise du français (écrit et oral), l'anglais est un atout</li>
+                        <li data-translate="carrieres_offre1_prof5">Capacité à travailler en équipe et sous pression</li>
+                        <li data-translate="carrieres_offre1_prof6">Disponibilité pour des déplacements sur le terrain</li>
+                    </ul>
+                </div>
+
+                <button class="read-more-job-btn" onclick="toggleJobDetails(this)" style="margin: 1.5rem 0; background: linear-gradient(135deg, #0b2294, #0d2db0); color: white; border: none; padding: 0.7rem 1.5rem; border-radius: 25px; cursor: pointer; font-weight: 600; transition: all 0.3s ease; width: 100%; font-size: 0.95rem;">
+                    <i class="fas fa-chevron-down" style="margin-right: 0.5rem;"></i>
+                    <span data-translate="carrieres_lire_plus">Lire plus de détails</span>
+                </button>
+
+                <!-- Formulaire de candidature -->
+                <div class="application-form" id="form-job1">
+                    <h4 style="color: var(--color-accent-blue); margin-bottom: 1.5rem;">
+                        <i class="fas fa-file-upload"></i> Formulaire de candidature
+                    </h4>
+                    <form class="contact-form" id="applicationForm1" enctype="multipart/form-data">
+                        <input type="hidden" name="poste" value="Chargé(e) de Suivi-Évaluation (M&E Officer)">
+                        
+                        <div class="form-group">
+                            <label for="nom1">Nom complet <span style="color: red;">*</span></label>
+                            <input type="text" id="nom1" name="nom" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email1">Email <span style="color: red;">*</span></label>
+                            <input type="email" id="email1" name="email" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="telephone1">Téléphone <span style="color: red;">*</span></label>
+                            <input type="tel" id="telephone1" name="telephone" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="cv1">Curriculum Vitae (PDF) <span style="color: red;">*</span></label>
+                            <div class="file-input-wrapper">
+                                <label for="cv1" class="file-input-label">
+                                    <i class="fas fa-cloud-upload-alt"></i>
+                                    <span>Cliquez pour joindre votre CV (PDF uniquement)</span>
+                                </label>
+                                <input type="file" id="cv1" name="cv" class="file-input" accept=".pdf" required onchange="updateFileName(this, 'cv1-name')">
+                                <div class="file-name" id="cv1-name">Aucun fichier sélectionné</div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="lettre1">Lettre de motivation (PDF) <span style="color: red;">*</span></label>
+                            <div class="file-input-wrapper">
+                                <label for="lettre1" class="file-input-label">
+                                    <i class="fas fa-cloud-upload-alt"></i>
+                                    <span>Cliquez pour joindre votre lettre de motivation (PDF uniquement)</span>
+                                </label>
+                                <input type="file" id="lettre1" name="lettre_motivation" class="file-input" accept=".pdf" required onchange="updateFileName(this, 'lettre1-name')">
+                                <div class="file-name" id="lettre1-name">Aucun fichier sélectionné</div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message1">Message complémentaire (optionnel)</label>
+                            <textarea id="message1" name="message" rows="4" placeholder="Parlez-nous de votre motivation et de votre expérience..."></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-paper-plane"></i> Envoyer ma candidature
+                        </button>
+
+                        <div class="form-message" id="formMessage1"></div>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Offre 2 -->
+            <div class="job-card fade-in">
+                <div class="job-header">
+                    <div class="job-title-section">
+                        <h3 data-translate="carrieres_offre2_titre">Enquêteur(trice) de terrain</h3>
+                        <div>
+                            <span class="job-type" data-translate="carrieres_cdd">CDD</span>
+                            <span class="job-type" data-translate="carrieres_temps_plein">Temps plein</span>
+                        </div>
+                        <div class="job-location">
+                            <i class="fas fa-map-marker-alt"></i> <span data-translate="carrieres_provinces">Kinshasa et provinces</span>
+                        </div>
+                    </div>
+                    <button class="apply-btn" onclick="toggleApplicationForm('job2')">
+                        <i class="fas fa-paper-plane"></i> <span data-translate="carrieres_postuler">Postuler</span>
+                    </button>
+                </div>
+
+                <h4 style="margin-bottom: 0.8rem;" data-translate="carrieres_description_poste">Description du poste</h4>
+                <p style="color: #666; line-height: 1.8; margin-bottom: 1.5rem;" data-translate="carrieres_offre2_desc">
+                    Nous recrutons des enquêteurs/enquêtrices pour la collecte de données dans le cadre de nos projets d'évaluation. Vous interviendrez sur le terrain pour administrer des questionnaires et mener des entretiens auprès des bénéficiaires de projets.
+                </p>
+
+                <div class="job-details" style="max-height: 0; overflow: hidden; transition: max-height 0.4s ease;">
+                    <h4 data-translate="carrieres_responsabilites">Responsabilités principales</h4>
+                    <ul>
+                        <li data-translate="carrieres_offre2_resp1">Administrer des questionnaires auprès des ménages et organisations</li>
+                        <li data-translate="carrieres_offre2_resp2">Mener des entretiens individuels et des focus groups</li>
+                        <li data-translate="carrieres_offre2_resp3">Collecter des données via tablettes (KoboCollect, ODK)</li>
+                        <li data-translate="carrieres_offre2_resp4">Assurer la qualité des données collectées</li>
+                        <li data-translate="carrieres_offre2_resp5">Respecter les protocoles éthiques de collecte de données</li>
+                    </ul>
+
+                    <h4 data-translate="carrieres_profil">Profil recherché</h4>
+                    <ul>
+                        <li data-translate="carrieres_offre2_prof1">Diplôme d'études supérieures (minimum Graduat)</li>
+                        <li data-translate="carrieres_offre2_prof2">Expérience en collecte de données sur le terrain (un atout)</li>
+                        <li data-translate="carrieres_offre2_prof3">Excellentes compétences en communication interpersonnelle</li>
+                        <li data-translate="carrieres_offre2_prof4">Maîtrise du français et d'au moins une langue locale</li>
+                        <li data-translate="carrieres_offre2_prof5">Capacité à utiliser des outils numériques (tablettes, smartphones)</li>
+                        <li data-translate="carrieres_offre2_prof6">Disponibilité immédiate et flexibilité pour des missions de terrain</li>
+                    </ul>
+                </div>
+
+                <button class="read-more-job-btn" onclick="toggleJobDetails(this)" style="margin: 1.5rem 0; background: linear-gradient(135deg, #0b2294, #0d2db0); color: white; border: none; padding: 0.7rem 1.5rem; border-radius: 25px; cursor: pointer; font-weight: 600; transition: all 0.3s ease; width: 100%; font-size: 0.95rem;">
+                    <i class="fas fa-chevron-down" style="margin-right: 0.5rem;"></i>
+                    <span data-translate="carrieres_lire_plus">Lire plus de détails</span>
+                </button>
+
+                <!-- Formulaire de candidature -->
+                <div class="application-form" id="form-job2">
+                    <h4 style="color: var(--color-accent-blue); margin-bottom: 1.5rem;">
+                        <i class="fas fa-file-upload"></i> Formulaire de candidature
+                    </h4>
+                    <form class="contact-form" id="applicationForm2" enctype="multipart/form-data">
+                        <input type="hidden" name="poste" value="Enquêteur(trice) de terrain">
+                        
+                        <div class="form-group">
+                            <label for="nom2">Nom complet <span style="color: red;">*</span></label>
+                            <input type="text" id="nom2" name="nom" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email2">Email <span style="color: red;">*</span></label>
+                            <input type="email" id="email2" name="email" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="telephone2">Téléphone <span style="color: red;">*</span></label>
+                            <input type="tel" id="telephone2" name="telephone" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="cv2">Curriculum Vitae (PDF) <span style="color: red;">*</span></label>
+                            <div class="file-input-wrapper">
+                                <label for="cv2" class="file-input-label">
+                                    <i class="fas fa-cloud-upload-alt"></i>
+                                    <span>Cliquez pour joindre votre CV (PDF uniquement)</span>
+                                </label>
+                                <input type="file" id="cv2" name="cv" class="file-input" accept=".pdf" required onchange="updateFileName(this, 'cv2-name')">
+                                <div class="file-name" id="cv2-name">Aucun fichier sélectionné</div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="lettre2">Lettre de motivation (PDF) <span style="color: red;">*</span></label>
+                            <div class="file-input-wrapper">
+                                <label for="lettre2" class="file-input-label">
+                                    <i class="fas fa-cloud-upload-alt"></i>
+                                    <span>Cliquez pour joindre votre lettre de motivation (PDF uniquement)</span>
+                                </label>
+                                <input type="file" id="lettre2" name="lettre_motivation" class="file-input" accept=".pdf" required onchange="updateFileName(this, 'lettre2-name')">
+                                <div class="file-name" id="lettre2-name">Aucun fichier sélectionné</div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message2">Message complémentaire (optionnel)</label>
+                            <textarea id="message2" name="message" rows="4" placeholder="Parlez-nous de votre motivation et de votre expérience..."></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-paper-plane"></i> Envoyer ma candidature
+                        </button>
+
+                        <div class="form-message" id="formMessage2"></div>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Offre 3 -->
+            <div class="job-card fade-in">
+                <div class="job-header">
+                    <div class="job-title-section">
+                        <h3 data-translate="carrieres_offre3_titre">Analyste de données</h3>
+                        <div>
+                            <span class="job-type" data-translate="carrieres_cdi">CDI</span>
+                            <span class="job-type" data-translate="carrieres_temps_plein">Temps plein</span>
+                        </div>
+                        <div class="job-location">
+                            <i class="fas fa-map-marker-alt"></i> <span data-translate="carrieres_kinshasa">Kinshasa, RDC</span>
+                        </div>
+                    </div>
+                    <button class="apply-btn" onclick="toggleApplicationForm('job3')">
+                        <i class="fas fa-paper-plane"></i> <span data-translate="carrieres_postuler">Postuler</span>
+                    </button>
+                </div>
+
+                <h4 style="margin-bottom: 0.8rem;" data-translate="carrieres_description_poste">Description du poste</h4>
+                <p style="color: #666; line-height: 1.8; margin-bottom: 1.5rem;" data-translate="carrieres_offre3_desc">
+                    Nous recherchons un(e) Analyste de données expérimenté(e) pour traiter et analyser les données de nos études d'évaluation. Vous travaillerez sur des bases de données complexes et produirez des analyses statistiques avancées.
+                </p>
+
+                <div class="job-details" style="max-height: 0; overflow: hidden; transition: max-height 0.4s ease;">
+                    <h4 data-translate="carrieres_responsabilites">Responsabilités principales</h4>
+                    <ul>
+                        <li data-translate="carrieres_offre3_resp1">Nettoyer et préparer les bases de données pour analyse</li>
+                        <li data-translate="carrieres_offre3_resp2">Réaliser des analyses statistiques descriptives et inférentielles</li>
+                        <li data-translate="carrieres_offre3_resp3">Créer des visualisations de données (graphiques, tableaux, dashboards)</li>
+                        <li data-translate="carrieres_offre3_resp4">Produire des rapports d'analyse clairs et documentés</li>
+                        <li data-translate="carrieres_offre3_resp5">Collaborer avec l'équipe M&E sur les méthodologies d'évaluation</li>
+                    </ul>
+
+                    <h4 data-translate="carrieres_profil">Profil recherché</h4>
+                    <ul>
+                        <li data-translate="carrieres_offre3_prof1">Master en Statistiques, Data Science, Économétrie ou domaine connexe</li>
+                        <li data-translate="carrieres_offre3_prof2">Minimum 3 ans d'expérience en analyse de données</li>
+                        <li data-translate="carrieres_offre3_prof3">Expertise en R, Python, SPSS ou Stata</li>
+                        <li data-translate="carrieres_offre3_prof4">Maîtrise des méthodes statistiques (régression, tests d'hypothèses, etc.)</li>
+                        <li data-translate="carrieres_offre3_prof5">Expérience avec Power BI ou Tableau (un plus)</li>
+                        <li data-translate="carrieres_offre3_prof6">Rigueur, attention aux détails et capacité à respecter les délais</li>
+                    </ul>
+                </div>
+
+                <button class="read-more-job-btn" onclick="toggleJobDetails(this)" style="margin: 1.5rem 0; background: linear-gradient(135deg, #0b2294, #0d2db0); color: white; border: none; padding: 0.7rem 1.5rem; border-radius: 25px; cursor: pointer; font-weight: 600; transition: all 0.3s ease; width: 100%; font-size: 0.95rem;">
+                    <i class="fas fa-chevron-down" style="margin-right: 0.5rem;"></i>
+                    <span data-translate="carrieres_lire_plus">Lire plus de détails</span>
+                </button>
+
+                <!-- Formulaire de candidature -->
+                <div class="application-form" id="form-job3">
+                    <h4 style="color: var(--color-accent-blue); margin-bottom: 1.5rem;">
+                        <i class="fas fa-file-upload"></i> Formulaire de candidature
+                    </h4>
+                    <form class="contact-form" id="applicationForm3" enctype="multipart/form-data">
+                        <input type="hidden" name="poste" value="Analyste de données">
+                        
+                        <div class="form-group">
+                            <label for="nom3">Nom complet <span style="color: red;">*</span></label>
+                            <input type="text" id="nom3" name="nom" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email3">Email <span style="color: red;">*</span></label>
+                            <input type="email" id="email3" name="email" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="telephone3">Téléphone <span style="color: red;">*</span></label>
+                            <input type="tel" id="telephone3" name="telephone" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="cv3">Curriculum Vitae (PDF) <span style="color: red;">*</span></label>
+                            <div class="file-input-wrapper">
+                                <label for="cv3" class="file-input-label">
+                                    <i class="fas fa-cloud-upload-alt"></i>
+                                    <span>Cliquez pour joindre votre CV (PDF uniquement)</span>
+                                </label>
+                                <input type="file" id="cv3" name="cv" class="file-input" accept=".pdf" required onchange="updateFileName(this, 'cv3-name')">
+                                <div class="file-name" id="cv3-name">Aucun fichier sélectionné</div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="lettre3">Lettre de motivation (PDF) <span style="color: red;">*</span></label>
+                            <div class="file-input-wrapper">
+                                <label for="lettre3" class="file-input-label">
+                                    <i class="fas fa-cloud-upload-alt"></i>
+                                    <span>Cliquez pour joindre votre lettre de motivation (PDF uniquement)</span>
+                                </label>
+                                <input type="file" id="lettre3" name="lettre_motivation" class="file-input" accept=".pdf" required onchange="updateFileName(this, 'lettre3-name')">
+                                <div class="file-name" id="lettre3-name">Aucun fichier sélectionné</div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message3">Message complémentaire (optionnel)</label>
+                            <textarea id="message3" name="message" rows="4" placeholder="Parlez-nous de votre motivation et de votre expérience..."></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-paper-plane"></i> Envoyer ma candidature
+                        </button>
+
+                        <div class="form-message" id="formMessage3"></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section" style="background: linear-gradient(135deg, #0b2294 0%, #0d2db0 100%); color: white;">
+        <div class="container" style="text-align: center;">
+            <h2 style="color: white; font-size: 2rem; margin-bottom: 1rem;" data-translate="carrieres_spontanee">Candidature spontanée</h2>
+            <p style="margin-bottom: 2rem; font-size: 1.1rem;" data-translate="carrieres_spontanee_desc">Vous ne trouvez pas le poste qui vous correspond ? Envoyez-nous votre candidature spontanée !</p>
+            <a href="contact.html" class="btn btn-primary" data-translate="carrieres_contactez">Nous contacter</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <!-- Logo et description -->
+            <div class="footer-brand">
+                <div class="footer-logo">
+                    <img src="img/logo/logo.png" alt="Partenaire de Recherche et d'Evaluation" class="footer-logo-img">
+                </div>
+            </div>
+
+            <!-- Contenu principal -->
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 data-translate="footer_navigation">Navigation</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html" data-translate="nav_accueil">Accueil</a></li>
+                        <li><a href="about.html" data-translate="nav_apropos">À propos</a></li>
+                        <li><a href="services.html" data-translate="nav_services">Nos services</a></li>
+                        <li><a href="realisations.html" data-translate="nav_realisations">Nos réalisations</a></li>
+                        <li><a href="ressources.html" data-translate="nav_ressources">Ressources</a></li>
+                        <li><a href="photos.html" data-translate="footer_galerie_photos">Galerie Photos</a></li>
+                        <li><a href="videos.html" data-translate="footer_galerie_videos">Galerie Vidéos</a></li>
+                        <li><a href="actualites.html" data-translate="nav_actualites">Actualités</a></li>
+                        <li><a href="carrieres.html" data-translate="nav_carrieres">Carrières</a></li>
+                        <li><a href="adhesion.html" data-translate="nav_adhesion">Adhésion</a></li>
+                        <li><a href="contact.html" data-translate="nav_contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3 data-translate="footer_services">Services</h3>
+                    <ul class="footer-links">
+                        <li><a href="services.html" data-translate="footer_baseline">Études de base (Baseline)</a></li>
+                        <li><a href="services.html" data-translate="footer_midline">Évaluations Midline</a></li>
+                        <li><a href="services.html" data-translate="footer_endline">Évaluations Endline</a></li>
+                        <li><a href="services.html" data-translate="footer_me">Suivi-évaluation (M&E)</a></li>
+                        <li><a href="services.html" data-translate="footer_renforcement">Renforcement de capacités</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3 data-translate="footer_contact">Contact</h3>
+                    <p><span data-translate="footer_adresse">📍 1, Basoko, Safricas, Kinshasa, Democratic Republic of the Congo</span></p>
+                    <p>📧 contact@bunshconsulting.com</p>
+                    <p>📞 +243 0979 286 949</p>
+                </div>
+            </div>
+
+            <!-- Section réseaux sociaux -->
+            <div class="footer-social">
+                <h3 data-translate="footer_suivez">Suivez-nous</h3>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/" class="social-icon-large">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="social-icon-large">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="social-icon-large">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="#" class="social-icon-large">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Copyright -->
+            <div class="footer-bottom">
+                <p data-translate="footer_copyright">&copy; 2025 Bunsh - Partenaire de Recherche et d'Evaluation</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to top button -->
+    <button class="scroll-to-top hidden" id="scrollToTop" aria-label="Retour en haut">
+        ↑
+    </button>
+
+    <script src="js/script.js"></script>
+    <script src="js/translation.js"></script>
+    <script>
+        // Fonction pour afficher/masquer le formulaire de candidature
+        function toggleApplicationForm(jobId) {
+            const form = document.getElementById('form-' + jobId);
+            if (form.classList.contains('active')) {
+                form.classList.remove('active');
+            } else {
+                // Fermer tous les autres formulaires
+                document.querySelectorAll('.application-form').forEach(f => {
+                    f.classList.remove('active');
+                });
+                // Ouvrir le formulaire sélectionné
+                form.classList.add('active');
+                // Scroller vers le formulaire
+                setTimeout(() => {
+                    form.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                }, 100);
+            }
+        }
+
+        // Fonction pour afficher le nom du fichier sélectionné
+        function updateFileName(input, targetId) {
+            const target = document.getElementById(targetId);
+            if (input.files && input.files[0]) {
+                const fileName = input.files[0].name;
+                const fileSize = (input.files[0].size / 1024 / 1024).toFixed(2); // Taille en MB
+                target.textContent = `${fileName} (${fileSize} MB)`;
+                target.classList.add('has-file');
+            } else {
+                target.textContent = 'Aucun fichier sélectionné';
+                target.classList.remove('has-file');
+            }
+        }
+
+        // Gestion de la soumission des formulaires
+        document.querySelectorAll('form[id^="applicationForm"]').forEach(form => {
+            form.addEventListener('submit', async function(e) {
+                e.preventDefault();
+                
+                const formId = this.id.replace('applicationForm', '');
+                const messageDiv = document.getElementById('formMessage' + formId);
+                const submitBtn = this.querySelector('button[type="submit"]');
+                
+                // Détecter la langue
+                const currentLang = localStorage.getItem('preferredLanguage') || 'fr';
+                
+                // Validation des fichiers
+                const cvInput = this.querySelector('input[name="cv"]');
+                const lettreInput = this.querySelector('input[name="lettre_motivation"]');
+                
+                if (!cvInput.files[0]) {
+                    messageDiv.className = 'form-message error';
+                    messageDiv.textContent = currentLang === 'fr' ? 'Veuillez joindre votre CV.' : 'Please attach your CV.';
+                    return;
+                }
+                
+                if (!lettreInput.files[0]) {
+                    messageDiv.className = 'form-message error';
+                    messageDiv.textContent = currentLang === 'fr' ? 'Veuillez joindre votre lettre de motivation.' : 'Please attach your cover letter.';
+                    return;
+                }
+
+                // Vérification de la taille des fichiers (max 5 MB chacun)
+                if (cvInput.files[0].size > 5 * 1024 * 1024) {
+                    messageDiv.className = 'form-message error';
+                    messageDiv.textContent = currentLang === 'fr' ? 'Le CV ne doit pas dépasser 5 MB.' : 'CV must not exceed 5 MB.';
+                    return;
+                }
+
+                if (lettreInput.files[0].size > 5 * 1024 * 1024) {
+                    messageDiv.className = 'form-message error';
+                    messageDiv.textContent = currentLang === 'fr' ? 'La lettre de motivation ne doit pas dépasser 5 MB.' : 'Cover letter must not exceed 5 MB.';
+                    return;
+                }
+                
+                // Désactiver le bouton et afficher un message de chargement
+                submitBtn.disabled = true;
+                submitBtn.innerHTML = currentLang === 'fr' ? '<i class="fas fa-spinner fa-spin"></i> Envoi en cours...' : '<i class="fas fa-spinner fa-spin"></i> Sending...';
+                
+                // Préparer les données du formulaire
+                const formData = new FormData(this);
+                
+                try {
+                    const response = await fetch('php/carrieres.php', {
+                        method: 'POST',
+                        body: formData
+                    });
+                    
+                    const result = await response.json();
+                    
+                    if (result.success) {
+                        messageDiv.className = 'form-message success';
+                        messageDiv.textContent = result.message;
+                        this.reset();
+                        // Réinitialiser les noms de fichiers
+                        document.getElementById('cv' + formId + '-name').textContent = currentLang === 'fr' ? 'Aucun fichier sélectionné' : 'No file selected';
+                        document.getElementById('cv' + formId + '-name').classList.remove('has-file');
+                        document.getElementById('lettre' + formId + '-name').textContent = currentLang === 'fr' ? 'Aucun fichier sélectionné' : 'No file selected';
+                        document.getElementById('lettre' + formId + '-name').classList.remove('has-file');
+                    } else {
+                        messageDiv.className = 'form-message error';
+                        messageDiv.textContent = result.message;
+                    }
+                } catch (error) {
+                    messageDiv.className = 'form-message error';
+                    messageDiv.textContent = currentLang === 'fr' ? 'Une erreur est survenue. Veuillez réessayer.' : 'An error occurred. Please try again.';
+                }
+                
+                // Réactiver le bouton
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = currentLang === 'fr' ? '<i class="fas fa-paper-plane"></i> Envoyer ma candidature' : '<i class="fas fa-paper-plane"></i> Submit Application';
+                
+                // Scroller vers le message
+                messageDiv.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            });
+        });
+
+        // Fonction pour afficher/masquer les détails de l'offre
+        function toggleJobDetails(button) {
+            const jobCard = button.closest('.job-card');
+            const details = jobCard.querySelector('.job-details');
+            const icon = button.querySelector('i');
+            const span = button.querySelector('span');
+            const isOpen = details.style.maxHeight && details.style.maxHeight !== '0px';
+            
+            const currentLang = localStorage.getItem('preferredLanguage') || 'fr';
+            
+            if (isOpen) {
+                // Fermer
+                details.style.maxHeight = '0';
+                icon.style.transform = 'rotate(0deg)';
+                span.setAttribute('data-translate', 'carrieres_lire_plus');
+                span.textContent = currentLang === 'fr' ? 'Lire plus de détails' : 'Read more details';
+            } else {
+                // Ouvrir
+                details.style.maxHeight = details.scrollHeight + 'px';
+                icon.style.transform = 'rotate(180deg)';
+                span.setAttribute('data-translate', 'carrieres_lire_moins');
+                span.textContent = currentLang === 'fr' ? 'Lire moins' : 'Read less';
+            }
+        }
+    </script>
+    
+    <style>
+        .read-more-job-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(11, 34, 148, 0.3);
+        }
+        
+        .read-more-job-btn i {
+            transition: transform 0.3s ease;
+        }
+    </style>
+</body>
+</html>
+

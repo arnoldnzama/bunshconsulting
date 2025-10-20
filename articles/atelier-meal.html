@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Atelier MEAL avec International Alert - Renforcement des capacités en suivi-évaluation">
+    <title>Atelier MEAL - International Alert | Bunsh - Partenaire de Recherche et d'Evaluation</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="../img/ico/log_ico.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="../img/ico/log_ico.ico">
+    <link rel="apple-touch-icon" href="../img/logo/logo.png">
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header>
+        <div class="container">
+            <nav>
+                <a href="../index.html" class="logo">
+                    <img src="../img/logo/logo.png" alt="Partenaire de Recherche et d'Evaluation" class="logo-img">
+                </a>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="../index.html" data-translate="nav_accueil">Accueil</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle">
+                            <span data-translate="nav_bunsh">Bunsh</span> <i class="fas fa-chevron-down"></i>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="../about.html"><i class="fas fa-info-circle"></i> <span data-translate="nav_apropos">À propos</span></a></li>
+                            <li><a href="../services.html"><i class="fas fa-cogs"></i> <span data-translate="nav_services">Nos services</span></a></li>
+                            <li><a href="../realisations.html"><i class="fas fa-trophy"></i> <span data-translate="nav_realisations">Nos réalisations</span></a></li>
+                            <li><a href="../ressources.html"><i class="fas fa-book"></i> <span data-translate="nav_ressources">Ressources</span></a></li>
+                        </ul>
+                    </li>
+                    <li><a href="../actualites.html" class="active" data-translate="nav_actualites">Actualités</a></li>
+                    <li><a href="../carrieres.html" data-translate="nav_carrieres">Carrières</a></li>
+                    <li><a href="../adhesion.html" data-translate="nav_adhesion">Adhésion</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle">
+                            <span data-translate="nav_mediatheque">Média</span> <i class="fas fa-chevron-down"></i>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="../photos.html"><i class="fas fa-images"></i> <span data-translate="nav_photos">Photos</span></a></li>
+                            <li><a href="../videos.html"><i class="fas fa-video"></i> <span data-translate="nav_videos">Vidéos</span></a></li>
+                        </ul>
+                    </li>
+                    <li><a href="../contact.html" data-translate="nav_contact">Contact</a></li>
+                </ul>
+                <div class="language-switcher">
+                    <button class="lang-btn active" id="langFr" onclick="changeLanguage('fr')" aria-label="Français">FR</button>
+                    <div class="lang-separator"></div>
+                    <button class="lang-btn" id="langEn" onclick="changeLanguage('en')" aria-label="English">EN</button>
+                </div>
+                <div class="menu-toggle" id="menuToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Article -->
+    <section class="hero" style="background: linear-gradient(135deg, rgba(246, 50, 36, 0.9), rgba(212, 42, 31, 0.9)), url('../img/logo/banner1.jpg'); background-size: cover; background-position: center;">
+        <div class="container" style="max-width: 900px;">
+            <div style="display: inline-block; background: #0b2294; color: white; padding: 0.5rem 1.2rem; border-radius: 20px; font-size: 0.85rem; font-weight: 700; margin-bottom: 1.5rem;">
+                <i class="fas fa-newspaper"></i> <span data-translate="home_nouveau">NOUVEAU</span>
+            </div>
+            <h1 style="font-size: 2.5rem; margin-bottom: 1.5rem;" data-translate="article_meal_titre">Atelier MEAL avec International Alert</h1>
+            <div style="display: flex; flex-wrap: wrap; gap: 2rem; margin-bottom: 1.5rem; font-size: 1rem;">
+                <span><i class="fas fa-calendar"></i> <span data-translate="article_meal_date">12 Septembre 2025</span></span>
+                <span><i class="fas fa-map-marker-alt"></i> <span data-translate="home_article1_lieu">Kinshasa</span></span>
+                <span><i class="fas fa-user"></i> <span data-translate="article_meal_auteur">Équipe Bunsh</span></span>
+                <span><i class="fas fa-clock"></i> <span data-translate="article_meal_lecture">4 min de lecture</span></span>
+            </div>
+            <div style="display: flex; gap: 0.8rem; flex-wrap: wrap;">
+                <span style="background: rgba(255, 255, 255, 0.2); padding: 0.4rem 1rem; border-radius: 15px; font-size: 0.85rem;">
+                    <i class="fas fa-tag"></i> <span data-translate="meta_meal">MEAL</span>
+                </span>
+                <span style="background: rgba(255, 255, 255, 0.2); padding: 0.4rem 1rem; border-radius: 15px; font-size: 0.85rem;">
+                    <i class="fas fa-tag"></i> <span data-translate="meta_formation">Formation</span>
+                </span>
+                <span style="background: rgba(255, 255, 255, 0.2); padding: 0.4rem 1rem; border-radius: 15px; font-size: 0.85rem;">
+                    <i class="fas fa-tag"></i> <span data-translate="article_meal_tag_renforcement">Renforcement de capacités</span>
+                </span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contenu Article -->
+    <section class="section">
+        <div class="container" style="max-width: 900px;">
+            <div style="background: white; padding: 3rem; border-radius: 15px; box-shadow: 0 4px 20px rgba(0,0,0,0.1);">
+                
+                <!-- Contenu -->
+                <div style="border-left: 4px solid #f63224; padding-left: 2rem; margin-bottom: 3rem; background: #fff3f0; padding: 1.5rem 1.5rem 1.5rem 2rem; border-radius: 8px;">
+                    <p style="font-size: 1.15rem; line-height: 1.8; color: #333;" data-translate="article_meal_contenu1">
+                        Retour en images sur l'atelier MEAL (Monitoring, Evaluation, Accountability and Learning) auquel notre équipe a eu l'opportunité de participer cette année avec la facilitation de International Alert.
+                    </p>
+                    <p style="font-size: 1.15rem; line-height: 1.8; color: #333; margin-top: 1rem;" data-translate="article_meal_contenu2">
+                        L'atelier a porté sur l'intégration de la sensibilité aux conflits armés et non armés dans les pratiques MEAL, dans le contexte des défis auxquels notre pays est confronté.
+                    </p>
+                </div>
+
+                <!-- Navigation -->
+                <div style="margin-top: 3rem; padding-top: 2rem; border-top: 2px solid #e0e0e0;">
+                    <a href="../actualites.html" style="display: inline-flex; align-items: center; gap: 0.5rem; background: transparent; color: #0b2294; border: 2px solid #0b2294; padding: 0.8rem 1.5rem; border-radius: 30px; font-weight: 600; text-decoration: none; transition: all 0.3s ease;" onmouseover="this.style.background='#0b2294'; this.style.color='white';" onmouseout="this.style.background='transparent'; this.style.color='#0b2294';">
+                        <i class="fas fa-arrow-left"></i> <span data-translate="article_retour">Retour aux actualités</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Articles similaires -->
+    <section class="section" style="background-color: #f8f9fa;">
+        <div class="container">
+            <h2 class="section-title" data-translate="article_similaires_titre">Articles similaires</h2>
+            <p class="section-subtitle" data-translate="article_similaires_desc">Découvrez d'autres actualités</p>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-top: 2rem;">
+                <a href="rapport-unicef-nsele.html" style="background: white; padding: 1.5rem; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); text-decoration: none;">
+                    <div style="color: #999; font-size: 0.85rem; margin-bottom: 0.5rem;">
+                        <i class="fas fa-calendar"></i> <span data-translate="date_octobre">Octobre</span> 2025
+                    </div>
+                    <h4 style="color: #0b2294; margin-bottom: 0.8rem; font-size: 1.1rem;" data-translate="article_meal_sim1_titre">Rapport UNICEF - Nsele</h4>
+                    <p style="color: #666; font-size: 0.95rem; line-height: 1.6;" data-translate="article_meal_sim1_desc">Présentation des résultats de l'enquête de base...</p>
+                </a>
+                <a href="mission-uvira.html" style="background: white; padding: 1.5rem; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); text-decoration: none;">
+                    <div style="color: #999; font-size: 0.85rem; margin-bottom: 0.5rem;">
+                        <i class="fas fa-calendar"></i> <span data-translate="date_aout">Août</span> 2025
+                    </div>
+                    <h4 style="color: #0b2294; margin-bottom: 0.8rem; font-size: 1.1rem;" data-translate="article_meal_sim2_titre">Mission Terrain à Uvira</h4>
+                    <p style="color: #666; font-size: 0.95rem; line-height: 1.6;" data-translate="article_meal_sim2_desc">Évaluation du projet Elimu ni Njibu...</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-brand">
+                <div class="footer-logo">
+                    <img src="../img/logo/logo.png" alt="Partenaire de Recherche et d'Evaluation" class="footer-logo-img">
+                </div>
+            </div>
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 data-translate="footer_navigation">Navigation</h3>
+                    <ul class="footer-links">
+                        <li><a href="../index.html" data-translate="nav_accueil">Accueil</a></li>
+                        <li><a href="../about.html" data-translate="nav_apropos">À propos</a></li>
+                        <li><a href="../services.html" data-translate="nav_services">Nos services</a></li>
+                        <li><a href="../realisations.html" data-translate="nav_realisations">Nos réalisations</a></li>
+                        <li><a href="../ressources.html" data-translate="nav_ressources">Ressources</a></li>
+                        <li><a href="../photos.html" data-translate="footer_galerie_photos">Galerie Photos</a></li>
+                        <li><a href="../videos.html" data-translate="footer_galerie_videos">Galerie Vidéos</a></li>
+                        <li><a href="../actualites.html" data-translate="nav_actualites">Actualités</a></li>
+                        <li><a href="../carrieres.html" data-translate="nav_carrieres">Carrières</a></li>
+                        <li><a href="../adhesion.html" data-translate="nav_adhesion">Adhésion</a></li>
+                        <li><a href="../contact.html" data-translate="nav_contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3 data-translate="footer_services">Services</h3>
+                    <ul class="footer-links">
+                        <li><a href="../services.html" data-translate="footer_baseline">Études de base (Baseline)</a></li>
+                        <li><a href="../services.html" data-translate="footer_midline">Évaluations Midline</a></li>
+                        <li><a href="../services.html" data-translate="footer_endline">Évaluations Endline</a></li>
+                        <li><a href="../services.html" data-translate="footer_me">Suivi-évaluation (M&E)</a></li>
+                        <li><a href="../services.html" data-translate="footer_renforcement">Renforcement de capacités</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3 data-translate="footer_contact">Contact</h3>
+                    <p>📍 1, Basoko, Safricas, Kinshasa, Democratic Republic of the Congo</p>
+                    <p>📧 contact@bunshconsulting.com</p>
+                    <p>📞 +243 0979 286 949</p>
+                </div>
+            </div>
+            <div class="footer-social">
+                <h3 data-translate="footer_suivez">Suivez-nous</h3>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/" class="social-icon-large"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-icon-large"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-icon-large"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="social-icon-large"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p data-translate="footer_copyright">&copy; 2025 Bunsh - Partenaire de Recherche et d'Evaluation</p>
+            </div>
+        </div>
+    </footer>
+
+    <button class="scroll-to-top hidden" id="scrollToTop" aria-label="Retour en haut">↑</button>
+    <script src="../js/script.js"></script>
+    <script src="../js/translation.js"></script>
+</body>
+</html>
+

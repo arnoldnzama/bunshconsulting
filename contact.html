@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contactez notre partenaire de recherche et d'évaluation à Kinshasa pour vos besoins en évaluation de projets">
+    <title>Contact | Bunsh - Partenaire de Recherche et d'Evaluation</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="img/ico/log_ico.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="img/ico/log_ico.ico">
+    <link rel="apple-touch-icon" href="img/logo/logo.png">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header>
+        <div class="container">
+            <nav>
+                <a href="index.html" class="logo">
+                    <img src="img/logo/logo.png" alt="Partenaire de Recherche et d'Evaluation" class="logo-img">
+                </a>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html" data-translate="nav_accueil">Accueil</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle">
+                            <span data-translate="nav_bunsh">Bunsh</span> <i class="fas fa-chevron-down"></i>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="about.html"><i class="fas fa-info-circle"></i> <span data-translate="nav_apropos">À propos</span></a></li>
+                            <li><a href="services.html"><i class="fas fa-cogs"></i> <span data-translate="nav_services">Nos services</span></a></li>
+                            <li><a href="realisations.html"><i class="fas fa-trophy"></i> <span data-translate="nav_realisations">Nos réalisations</span></a></li>
+                            <li><a href="ressources.html"><i class="fas fa-book"></i> <span data-translate="nav_ressources">Ressources</span></a></li>
+                        </ul>
+                    </li>
+                    <li><a href="actualites.html" data-translate="nav_actualites">Actualités</a></li>
+                    <li><a href="carrieres.html" data-translate="nav_carrieres">Carrières</a></li>
+                    <li><a href="adhesion.html" data-translate="nav_adhesion">Adhésion</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle">
+                            <span data-translate="nav_mediatheque">Média</span> <i class="fas fa-chevron-down"></i>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="photos.html"><i class="fas fa-images"></i> <span data-translate="nav_photos">Photos</span></a></li>
+                            <li><a href="videos.html"><i class="fas fa-video"></i> <span data-translate="nav_videos">Vidéos</span></a></li>
+                        </ul>
+                    </li>
+                    <li><a href="contact.html" class="active" data-translate="nav_contact">Contact</a></li>
+                </ul>
+                <div class="language-switcher">
+                    <button class="lang-btn active" id="langFr" onclick="changeLanguage('fr')" aria-label="Français">FR</button>
+                    <div class="lang-separator"></div>
+                    <button class="lang-btn" id="langEn" onclick="changeLanguage('en')" aria-label="English">EN</button>
+                </div>
+                <div class="menu-toggle" id="menuToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1 data-translate="contact_title">Contactez-nous</h1>
+            <p data-translate="contact_subtitle">Discutons de votre projet d'évaluation. Notre équipe est à votre écoute</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section">
+        <div class="container">
+            <div style="max-width: 800px; margin: 0 auto;">
+                <!-- Contact Form -->
+                <div class="contact-form">
+                    <h2 style="color: #0b2294; margin-bottom: 1.5rem;" data-translate="contact_message_title">Envoyez-nous un message</h2>
+                    
+                    <form id="contactForm" action="php/contact.php" method="POST">
+                        <div class="form-group">
+                            <label for="nom"><span data-translate="contact_nom">Nom complet</span> *</label>
+                            <input type="text" id="nom" name="nom" required data-translate="contact_nom_placeholder" placeholder="Entrez votre nom complet">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email"><span data-translate="contact_email">Email</span> *</label>
+                            <input type="email" id="email" name="email" required data-translate="contact_email_placeholder" placeholder="votre.email@exemple.com">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="telephone" data-translate="contact_telephone">Téléphone</label>
+                            <input type="tel" id="telephone" name="telephone" data-translate="contact_telephone_placeholder" placeholder="+243 XXX XXX XXX">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="organisation" data-translate="contact_organisation">Organisation</label>
+                            <input type="text" id="organisation" name="organisation" data-translate="contact_organisation_placeholder" placeholder="Nom de votre organisation">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="sujet"><span data-translate="contact_sujet">Sujet</span> *</label>
+                            <select id="sujet" name="sujet" required>
+                                <option value="" data-translate="contact_sujet_select">Sélectionnez un sujet</option>
+                                <option value="baseline" data-translate="contact_sujet_baseline">Étude Baseline</option>
+                                <option value="midline" data-translate="contact_sujet_midline">Évaluation Midline</option>
+                                <option value="endline" data-translate="contact_sujet_endline">Évaluation Endline</option>
+                                <option value="me" data-translate="contact_sujet_me">Conception système M&E</option>
+                                <option value="formation" data-translate="contact_sujet_formation">Renforcement de capacités</option>
+                                <option value="data" data-translate="contact_sujet_data">Analyse de données</option>
+                                <option value="autre" data-translate="contact_sujet_autre">Autre demande</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message"><span data-translate="contact_message">Message</span> *</label>
+                            <textarea id="message" name="message" required data-translate="contact_message_placeholder" placeholder="Décrivez votre projet ou votre besoin en évaluation..."></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label style="display: flex; align-items: center; gap: 0.5rem; cursor: pointer;">
+                                <input type="checkbox" required>
+                                <span style="font-size: 0.9rem;" data-translate="contact_accepte">J'accepte que mes données soient utilisées pour répondre à ma demande *</span>
+                            </label>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary" style="width: 100%;"><span data-translate="contact_envoyer">Envoyer le message</span></button>
+                    </form>
+
+                    <div id="formMessage" style="margin-top: 1rem; padding: 1rem; border-radius: 5px; display: none;"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="section" style="background-color: #f8f9fa; padding-top: 0;">
+        <div class="container">
+            <h2 class="section-title" data-translate="contact_localisation">Notre localisation</h2>
+            <p class="section-subtitle" data-translate="contact_localisation_desc">
+                Retrouvez-nous à Kinshasa
+            </p>
+            
+            <div class="map-container">
+                <!-- Google Maps iframe - Remplacez par vos coordonnées réelles -->
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d127496.01733020587!2d15.222168599999998!3d-4.325!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1a6a33f50c72433b%3A0x50a5f38e6c60edd8!2sKinshasa%2C%20RD%20Congo!5e0!3m2!1sfr!2s!4v1234567890123!5m2!1sfr!2s" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade"
+                    title="Carte de localisation Partenaire de Recherche et d'Evaluation">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section" style="background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 50%, #f8f9fa 100%);">
+        <div class="container">
+            <h2 class="section-title" data-translate="contact_questions_freq">Questions fréquentes</h2>
+            <p class="section-subtitle" data-translate="contact_questions_desc">
+                Trouvez rapidement les réponses à vos questions
+            </p>
+
+            <div style="max-width: 900px; margin: 0 auto;">
+                <!-- Question 1 -->
+                <div class="faq-item fade-in" style="margin-bottom: 1.5rem; background: white; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); overflow: hidden; transition: all 0.3s ease;">
+                    <div class="faq-question" onclick="toggleFaq(this)" style="padding: 1.8rem 2rem; cursor: pointer; display: flex; justify-content: space-between; align-items: center; background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%); border-left: 5px solid #0b2294;">
+                        <div style="display: flex; align-items: center; gap: 1rem;">
+                            <div style="width: 45px; height: 45px; background: linear-gradient(135deg, #0b2294, #0d2db0); border-radius: 10px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                                <i class="fas fa-clock" style="color: white; font-size: 1.2rem;"></i>
+                            </div>
+                            <h3 style="color: #0b2294; margin: 0; font-size: 1.15rem; font-weight: 600;" data-translate="contact_faq1_q">Combien de temps prend une évaluation ?</h3>
+                        </div>
+                        <i class="fas fa-chevron-down" style="color: #0b2294; font-size: 1.2rem; transition: transform 0.3s ease;"></i>
+                    </div>
+                    <div class="faq-answer" style="max-height: 0; overflow: hidden; transition: max-height 0.4s ease;">
+                        <div style="padding: 0 2rem 1.8rem 2rem;">
+                            <p style="color: #666; line-height: 1.9; font-size: 1rem; padding-left: 3.8rem;" data-translate="contact_faq1_r">
+                                La durée varie selon la complexité du projet. Une <strong style="color: #0b2294;">baseline simple</strong> peut prendre <strong>6-8 semaines</strong>, tandis qu'une <strong style="color: #0b2294;">évaluation d'impact complète</strong> peut nécessiter <strong>3-4 mois</strong>. Nous vous fournirons un calendrier détaillé lors du cadrage initial.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 2 -->
+                <div class="faq-item fade-in" style="margin-bottom: 1.5rem; background: white; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); overflow: hidden; transition: all 0.3s ease;">
+                    <div class="faq-question" onclick="toggleFaq(this)" style="padding: 1.8rem 2rem; cursor: pointer; display: flex; justify-content: space-between; align-items: center; background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%); border-left: 5px solid #f63224;">
+                        <div style="display: flex; align-items: center; gap: 1rem;">
+                            <div style="width: 45px; height: 45px; background: linear-gradient(135deg, #f63224, #d42a1f); border-radius: 10px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                                <i class="fas fa-dollar-sign" style="color: white; font-size: 1.2rem;"></i>
+                            </div>
+                            <h3 style="color: #0b2294; margin: 0; font-size: 1.15rem; font-weight: 600;" data-translate="contact_faq2_q">Quels sont vos tarifs ?</h3>
+                        </div>
+                        <i class="fas fa-chevron-down" style="color: #0b2294; font-size: 1.2rem; transition: transform 0.3s ease;"></i>
+                    </div>
+                    <div class="faq-answer" style="max-height: 0; overflow: hidden; transition: max-height 0.4s ease;">
+                        <div style="padding: 0 2rem 1.8rem 2rem;">
+                            <p style="color: #666; line-height: 1.9; font-size: 1rem; padding-left: 3.8rem;" data-translate="contact_faq2_r">
+                                Nos tarifs dépendent de la portée de l'évaluation, de la taille de l'échantillon, et de la complexité méthodologique. Nous proposons des <strong style="color: #f63224;">devis gratuits et personnalisés</strong>. Contactez-nous pour discuter de votre budget et obtenir une proposition adaptée à vos besoins.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 3 -->
+                <div class="faq-item fade-in" style="margin-bottom: 1.5rem; background: white; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); overflow: hidden; transition: all 0.3s ease;">
+                    <div class="faq-question" onclick="toggleFaq(this)" style="padding: 1.8rem 2rem; cursor: pointer; display: flex; justify-content: space-between; align-items: center; background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%); border-left: 5px solid #0b2294;">
+                        <div style="display: flex; align-items: center; gap: 1rem;">
+                            <div style="width: 45px; height: 45px; background: linear-gradient(135deg, #0b2294, #0d2db0); border-radius: 10px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                                <i class="fas fa-map-marked-alt" style="color: white; font-size: 1.2rem;"></i>
+                            </div>
+                            <h3 style="color: #0b2294; margin: 0; font-size: 1.15rem; font-weight: 600;" data-translate="contact_faq3_q">Travaillez-vous en dehors de Kinshasa ?</h3>
+                        </div>
+                        <i class="fas fa-chevron-down" style="color: #0b2294; font-size: 1.2rem; transition: transform 0.3s ease;"></i>
+                    </div>
+                    <div class="faq-answer" style="max-height: 0; overflow: hidden; transition: max-height 0.4s ease;">
+                        <div style="padding: 0 2rem 1.8rem 2rem;">
+                            <p style="color: #666; line-height: 1.9; font-size: 1rem; padding-left: 3.8rem;" data-translate="contact_faq3_r">
+                                <strong style="color: #0b2294;">Oui, absolument !</strong> Nous menons des évaluations dans <strong>toute la RDC</strong>. Nous disposons d'un réseau d'enquêteurs formés dans plusieurs provinces (Kinshasa, Kasaï, Katanga, Kivu, etc.) et sommes habitués aux défis logistiques du terrain congolais.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 4 -->
+                <div class="faq-item fade-in" style="margin-bottom: 1.5rem; background: white; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); overflow: hidden; transition: all 0.3s ease;">
+                    <div class="faq-question" onclick="toggleFaq(this)" style="padding: 1.8rem 2rem; cursor: pointer; display: flex; justify-content: space-between; align-items: center; background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%); border-left: 5px solid #f63224;">
+                        <div style="display: flex; align-items: center; gap: 1rem;">
+                            <div style="width: 45px; height: 45px; background: linear-gradient(135deg, #f63224, #d42a1f); border-radius: 10px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                                <i class="fas fa-graduation-cap" style="color: white; font-size: 1.2rem;"></i>
+                            </div>
+                            <h3 style="color: #0b2294; margin: 0; font-size: 1.15rem; font-weight: 600;" data-translate="contact_faq4_q">Proposez-vous des formations ?</h3>
+                        </div>
+                        <i class="fas fa-chevron-down" style="color: #0b2294; font-size: 1.2rem; transition: transform 0.3s ease;"></i>
+                    </div>
+                    <div class="faq-answer" style="max-height: 0; overflow: hidden; transition: max-height 0.4s ease;">
+                        <div style="padding: 0 2rem 1.8rem 2rem;">
+                            <p style="color: #666; line-height: 1.9; font-size: 1rem; padding-left: 3.8rem; margin-bottom: 1rem;" data-translate="contact_faq4_r_intro">
+                                <strong style="color: #f63224;">Oui, nous proposons des formations sur mesure</strong> dans les domaines suivants :
+                            </p>
+                            <ul style="color: #666; line-height: 1.9; padding-left: 5.5rem; margin: 0;">
+                                <li data-translate="contact_faq4_r_item1">Suivi-évaluation (M&E) et cadre logique</li>
+                                <li data-translate="contact_faq4_r_item2">Collecte de données mobile (Kobo Toolbox, ODK)</li>
+                                <li data-translate="contact_faq4_r_item3">Analyse statistique (SPSS, R, Stata)</li>
+                                <li data-translate="contact_faq4_r_item4">Visualisation de données (Power BI, Tableau)</li>
+                                <li data-translate="contact_faq4_r_item5">Méthodologies d'évaluation d'impact</li>
+                            </ul>
+                            <p style="color: #666; line-height: 1.9; font-size: 1rem; padding-left: 3.8rem; margin-top: 1rem;" data-translate="contact_faq4_r_fin">
+                                Les formations peuvent être organisées dans vos locaux ou les nôtres.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 5 -->
+                <div class="faq-item fade-in" style="margin-bottom: 1.5rem; background: white; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); overflow: hidden; transition: all 0.3s ease;">
+                    <div class="faq-question" onclick="toggleFaq(this)" style="padding: 1.8rem 2rem; cursor: pointer; display: flex; justify-content: space-between; align-items: center; background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%); border-left: 5px solid #0b2294;">
+                        <div style="display: flex; align-items: center; gap: 1rem;">
+                            <div style="width: 45px; height: 45px; background: linear-gradient(135deg, #0b2294, #0d2db0); border-radius: 10px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                                <i class="fas fa-shield-alt" style="color: white; font-size: 1.2rem;"></i>
+                            </div>
+                            <h3 style="color: #0b2294; margin: 0; font-size: 1.15rem; font-weight: 600;" data-translate="contact_faq5_q">Comment garantissez-vous la qualité des données ?</h3>
+                        </div>
+                        <i class="fas fa-chevron-down" style="color: #0b2294; font-size: 1.2rem; transition: transform 0.3s ease;"></i>
+                    </div>
+                    <div class="faq-answer" style="max-height: 0; overflow: hidden; transition: max-height 0.4s ease;">
+                        <div style="padding: 0 2rem 1.8rem 2rem;">
+                            <p style="color: #666; line-height: 1.9; font-size: 1rem; padding-left: 3.8rem; margin-bottom: 1rem;" data-translate="contact_faq5_r_intro">
+                                Nous appliquons des <strong style="color: #0b2294;">protocoles rigoureux</strong> à chaque étape :
+                            </p>
+                            <div style="padding-left: 3.8rem;">
+                                <div style="display: flex; gap: 0.8rem; margin-bottom: 0.8rem;">
+                                    <i class="fas fa-check-circle" style="color: #0b2294; margin-top: 0.2rem;"></i>
+                                    <p style="color: #666; margin: 0; line-height: 1.8;" data-translate="contact_faq5_r_item1"><strong>Formation approfondie</strong> des enquêteurs (minimum 5 jours)</p>
+                                </div>
+                                <div style="display: flex; gap: 0.8rem; margin-bottom: 0.8rem;">
+                                    <i class="fas fa-check-circle" style="color: #0b2294; margin-top: 0.2rem;"></i>
+                                    <p style="color: #666; margin: 0; line-height: 1.8;" data-translate="contact_faq5_r_item2"><strong>Pré-test des outils</strong> avant déploiement terrain</p>
+                                </div>
+                                <div style="display: flex; gap: 0.8rem; margin-bottom: 0.8rem;">
+                                    <i class="fas fa-check-circle" style="color: #0b2294; margin-top: 0.2rem;"></i>
+                                    <p style="color: #666; margin: 0; line-height: 1.8;" data-translate="contact_faq5_r_item3"><strong>Supervision rapprochée</strong> avec contrôles aléatoires</p>
+                                </div>
+                                <div style="display: flex; gap: 0.8rem; margin-bottom: 0.8rem;">
+                                    <i class="fas fa-check-circle" style="color: #0b2294; margin-top: 0.2rem;"></i>
+                                    <p style="color: #666; margin: 0; line-height: 1.8;" data-translate="contact_faq5_r_item4"><strong>Contrôles qualité en temps réel</strong> via dashboards</p>
+                                </div>
+                                <div style="display: flex; gap: 0.8rem;">
+                                    <i class="fas fa-check-circle" style="color: #0b2294; margin-top: 0.2rem;"></i>
+                                    <p style="color: #666; margin: 0; line-height: 1.8;" data-translate="contact_faq5_r_item5"><strong>Vérification systématique</strong> et nettoyage des données</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 6 -->
+                <div class="faq-item fade-in" style="margin-bottom: 1.5rem; background: white; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); overflow: hidden; transition: all 0.3s ease;">
+                    <div class="faq-question" onclick="toggleFaq(this)" style="padding: 1.8rem 2rem; cursor: pointer; display: flex; justify-content: space-between; align-items: center; background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%); border-left: 5px solid #f63224;">
+                        <div style="display: flex; align-items: center; gap: 1rem;">
+                            <div style="width: 45px; height: 45px; background: linear-gradient(135deg, #f63224, #d42a1f); border-radius: 10px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                                <i class="fas fa-file-contract" style="color: white; font-size: 1.2rem;"></i>
+                            </div>
+                            <h3 style="color: #0b2294; margin: 0; font-size: 1.15rem; font-weight: 600;" data-translate="contact_faq6_q">Quel est le processus de collaboration ?</h3>
+                        </div>
+                        <i class="fas fa-chevron-down" style="color: #0b2294; font-size: 1.2rem; transition: transform 0.3s ease;"></i>
+                    </div>
+                    <div class="faq-answer" style="max-height: 0; overflow: hidden; transition: max-height 0.4s ease;">
+                        <div style="padding: 0 2rem 1.8rem 2rem;">
+                            <p style="color: #666; line-height: 1.9; font-size: 1rem; padding-left: 3.8rem; margin-bottom: 1rem;" data-translate="contact_faq6_r_intro">
+                                Notre processus en 6 étapes :
+                            </p>
+                            <div style="padding-left: 3.8rem;">
+                                <div style="display: flex; gap: 1rem; margin-bottom: 0.8rem;">
+                                    <span style="width: 28px; height: 28px; background: #0b2294; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.9rem; flex-shrink: 0;">1</span>
+                                    <p style="color: #666; margin: 0; line-height: 1.8;" data-translate="contact_faq6_r_item1"><strong>Contact initial</strong> et compréhension de vos besoins</p>
+                                </div>
+                                <div style="display: flex; gap: 1rem; margin-bottom: 0.8rem;">
+                                    <span style="width: 28px; height: 28px; background: #0b2294; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.9rem; flex-shrink: 0;">2</span>
+                                    <p style="color: #666; margin: 0; line-height: 1.8;" data-translate="contact_faq6_r_item2"><strong>Proposition technique et financière</strong></p>
+                                </div>
+                                <div style="display: flex; gap: 1rem; margin-bottom: 0.8rem;">
+                                    <span style="width: 28px; height: 28px; background: #0b2294; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.9rem; flex-shrink: 0;">3</span>
+                                    <p style="color: #666; margin: 0; line-height: 1.8;" data-translate="contact_faq6_r_item3"><strong>Signature du contrat</strong> et cadrage détaillé</p>
+                                </div>
+                                <div style="display: flex; gap: 1rem; margin-bottom: 0.8rem;">
+                                    <span style="width: 28px; height: 28px; background: #0b2294; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.9rem; flex-shrink: 0;">4</span>
+                                    <p style="color: #666; margin: 0; line-height: 1.8;" data-translate="contact_faq6_r_item4"><strong>Collecte de données</strong> sur le terrain</p>
+                                </div>
+                                <div style="display: flex; gap: 1rem; margin-bottom: 0.8rem;">
+                                    <span style="width: 28px; height: 28px; background: #0b2294; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.9rem; flex-shrink: 0;">5</span>
+                                    <p style="color: #666; margin: 0; line-height: 1.8;" data-translate="contact_faq6_r_item5"><strong>Analyse et rédaction</strong> du rapport</p>
+                                </div>
+                                <div style="display: flex; gap: 1rem;">
+                                    <span style="width: 28px; height: 28px; background: #0b2294; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.9rem; flex-shrink: 0;">6</span>
+                                    <p style="color: #666; margin: 0; line-height: 1.8;" data-translate="contact_faq6_r_item6"><strong>Restitution</strong> des résultats et recommandations</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 7 -->
+                <div class="faq-item fade-in" style="margin-bottom: 1.5rem; background: white; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); overflow: hidden; transition: all 0.3s ease;">
+                    <div class="faq-question" onclick="toggleFaq(this)" style="padding: 1.8rem 2rem; cursor: pointer; display: flex; justify-content: space-between; align-items: center; background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%); border-left: 5px solid #0b2294;">
+                        <div style="display: flex; align-items: center; gap: 1rem;">
+                            <div style="width: 45px; height: 45px; background: linear-gradient(135deg, #0b2294, #0d2db0); border-radius: 10px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                                <i class="fas fa-users" style="color: white; font-size: 1.2rem;"></i>
+                            </div>
+                            <h3 style="color: #0b2294; margin: 0; font-size: 1.15rem; font-weight: 600;" data-translate="contact_faq7_q">Quelle est la taille de votre équipe ?</h3>
+                        </div>
+                        <i class="fas fa-chevron-down" style="color: #0b2294; font-size: 1.2rem; transition: transform 0.3s ease;"></i>
+                    </div>
+                    <div class="faq-answer" style="max-height: 0; overflow: hidden; transition: max-height 0.4s ease;">
+                        <div style="padding: 0 2rem 1.8rem 2rem;">
+                            <p style="color: #666; line-height: 1.9; font-size: 1rem; padding-left: 3.8rem;" data-translate="contact_faq7_r">
+                                Notre équipe permanente compte <strong style="color: #0b2294;">15 professionnels</strong> (économistes, statisticiens, sociologues) et nous disposons d'un <strong style="color: #0b2294;">réseau de plus de 100 enquêteurs</strong> formés et expérimentés que nous mobilisons selon les besoins des projets.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+                <!-- Question 8 -->
+                <div class="faq-item fade-in" style="margin-bottom: 1.5rem; background: white; border-radius: 12px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); overflow: hidden; transition: all 0.3s ease;">
+                    <div class="faq-question" onclick="toggleFaq(this)" style="padding: 1.8rem 2rem; cursor: pointer; display: flex; justify-content: space-between; align-items: center; background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%); border-left: 5px solid #f63224;">
+                        <div style="display: flex; align-items: center; gap: 1rem;">
+                            <div style="width: 45px; height: 45px; background: linear-gradient(135deg, #f63224, #d42a1f); border-radius: 10px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
+                                <i class="fas fa-language" style="color: white; font-size: 1.2rem;"></i>
+                            </div>
+                            <h3 style="color: #0b2294; margin: 0; font-size: 1.15rem; font-weight: 600;" data-translate="contact_faq8_q">Dans quelles langues travaillez-vous ?</h3>
+                        </div>
+                        <i class="fas fa-chevron-down" style="color: #0b2294; font-size: 1.2rem; transition: transform 0.3s ease;"></i>
+                    </div>
+                    <div class="faq-answer" style="max-height: 0; overflow: hidden; transition: max-height 0.4s ease;">
+                        <div style="padding: 0 2rem 1.8rem 2rem;">
+                            <p style="color: #666; line-height: 1.9; font-size: 1rem; padding-left: 3.8rem;" data-translate="contact_faq8_r">
+                                Nous travaillons en <strong style="color: #f63224;">Français</strong> (langue de travail principale) et <strong style="color: #f63224;">Anglais</strong> pour les rapports et communications. Pour la collecte de données terrain, nos enquêteurs maîtrisent les principales <strong style="color: #f63224;">langues locales congolaises</strong> (Lingala, Kikongo, Swahili, Tshiluba).
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function toggleFaq(element) {
+            const faqItem = element.parentElement;
+            const answer = faqItem.querySelector('.faq-answer');
+            const icon = element.querySelector('.fa-chevron-down');
+            const isOpen = answer.style.maxHeight && answer.style.maxHeight !== '0px';
+            
+            // Fermer toutes les autres FAQ
+            document.querySelectorAll('.faq-answer').forEach(item => {
+                if (item !== answer) {
+                    item.style.maxHeight = '0';
+                }
+            });
+            document.querySelectorAll('.fa-chevron-down').forEach(i => {
+                if (i !== icon) {
+                    i.style.transform = 'rotate(0deg)';
+                }
+            });
+            
+            // Toggle la FAQ actuelle
+            if (isOpen) {
+                answer.style.maxHeight = '0';
+                icon.style.transform = 'rotate(0deg)';
+            } else {
+                answer.style.maxHeight = answer.scrollHeight + 'px';
+                icon.style.transform = 'rotate(180deg)';
+            }
+        }
+    </script>
+
+    <style>
+        .faq-item:hover {
+            box-shadow: 0 8px 30px rgba(11, 34, 148, 0.15) !important;
+        }
+        
+        .faq-question:hover {
+            background: linear-gradient(135deg, #e8f0fe 0%, #f8f9fa 100%) !important;
+        }
+    </style>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <!-- Logo et description -->
+            <div class="footer-brand">
+                <div class="footer-logo">
+                    <img src="img/logo/logo.png" alt="Partenaire de Recherche et d'Evaluation" class="footer-logo-img">
+                </div>
+            </div>
+
+            <!-- Contenu principal -->
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 data-translate="footer_navigation">Navigation</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html" data-translate="nav_accueil">Accueil</a></li>
+                        <li><a href="about.html" data-translate="nav_apropos">À propos</a></li>
+                        <li><a href="services.html" data-translate="nav_services">Nos services</a></li>
+                        <li><a href="realisations.html" data-translate="nav_realisations">Nos réalisations</a></li>
+                        <li><a href="ressources.html" data-translate="nav_ressources">Ressources</a></li>
+                        <li><a href="photos.html" data-translate="footer_galerie_photos">Galerie Photos</a></li>
+                        <li><a href="videos.html" data-translate="footer_galerie_videos">Galerie Vidéos</a></li>
+                        <li><a href="actualites.html" data-translate="nav_actualites">Actualités</a></li>
+                        <li><a href="carrieres.html" data-translate="nav_carrieres">Carrières</a></li>
+                        <li><a href="adhesion.html" data-translate="nav_adhesion">Adhésion</a></li>
+                        <li><a href="contact.html" data-translate="nav_contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3 data-translate="footer_services">Services</h3>
+                    <ul class="footer-links">
+                        <li><a href="services.html" data-translate="footer_baseline">Études de base (Baseline)</a></li>
+                        <li><a href="services.html" data-translate="footer_midline">Évaluations Midline</a></li>
+                        <li><a href="services.html" data-translate="footer_endline">Évaluations Endline</a></li>
+                        <li><a href="services.html" data-translate="footer_me">Suivi-évaluation (M&E)</a></li>
+                        <li><a href="services.html" data-translate="footer_renforcement">Renforcement de capacités</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3 data-translate="footer_contact">Contact</h3>
+                    <p><span data-translate="footer_adresse">📍 1, Basoko, Safricas, Kinshasa, Democratic Republic of the Congo</span></p>
+                    <p>📧 contact@bunshconsulting.com</p>
+                    <p>📞 +243 0979 286 949</p>
+                </div>
+            </div>
+
+            <!-- Section réseaux sociaux -->
+            <div class="footer-social">
+                <h3 data-translate="footer_suivez">Suivez-nous</h3>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/" class="social-icon-large">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="social-icon-large">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="social-icon-large">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="#" class="social-icon-large">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Copyright -->
+            <div class="footer-bottom">
+                <p data-translate="footer_copyright">&copy; 2025 Bunsh - Partenaire de Recherche et d'Evaluation</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to top button -->
+    <button class="scroll-to-top hidden" id="scrollToTop" aria-label="Retour en haut">
+        ↑
+    </button>
+
+    <script src="js/script.js"></script>
+    <script src="js/translation.js"></script>
+    <script>
+        // Gestion du formulaire de contact avec support multilingue
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const formData = new FormData(this);
+            const currentLang = localStorage.getItem('preferredLanguage') || 'fr';
+            formData.append('lang', currentLang);
+            
+            const submitButton = this.querySelector('button[type="submit"]');
+            const originalText = submitButton.textContent;
+            submitButton.disabled = true;
+            submitButton.textContent = currentLang === 'fr' ? 'Envoi en cours...' : 'Sending...';
+            
+            fetch('php/contact.php', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                const messageDiv = document.getElementById('formMessage');
+                messageDiv.style.display = 'block';
+                
+                if (data.success) {
+                    messageDiv.style.backgroundColor = '#d4edda';
+                    messageDiv.style.color = '#155724';
+                    messageDiv.style.border = '1px solid #c3e6cb';
+                    messageDiv.textContent = data.message;
+                    document.getElementById('contactForm').reset();
+                } else {
+                    messageDiv.style.backgroundColor = '#f8d7da';
+                    messageDiv.style.color = '#721c24';
+                    messageDiv.style.border = '1px solid #f5c6cb';
+                    messageDiv.textContent = data.message;
+                }
+                
+                submitButton.disabled = false;
+                submitButton.textContent = originalText;
+                
+                // Faire défiler jusqu'au message
+                messageDiv.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            })
+            .catch(error => {
+                const messageDiv = document.getElementById('formMessage');
+                messageDiv.style.display = 'block';
+                messageDiv.style.backgroundColor = '#f8d7da';
+                messageDiv.style.color = '#721c24';
+                messageDiv.style.border = '1px solid #f5c6cb';
+                messageDiv.textContent = currentLang === 'fr' 
+                    ? 'Une erreur est survenue. Veuillez réessayer.' 
+                    : 'An error occurred. Please try again.';
+                
+                submitButton.disabled = false;
+                submitButton.textContent = originalText;
+            });
+        });
+    </script>
+</body>
+</html>
+

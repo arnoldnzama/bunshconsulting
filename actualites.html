@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Actualités et activités du Partenaire de Recherche et d'Evaluation - Projets, missions terrain et événements">
+    <title>Actualités | Bunsh - Partenaire de Recherche et d'Evaluation</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="img/ico/log_ico.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="img/ico/log_ico.ico">
+    <link rel="apple-touch-icon" href="img/logo/logo.png">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .article-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .article-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 35px rgba(11, 34, 148, 0.2);
+        }
+
+        .article-image {
+            width: 100%;
+            height: 250px;
+            background: linear-gradient(135deg, #0b2294, #0d2db0);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .article-image i {
+            font-size: 4rem;
+            color: rgba(255, 255, 255, 0.3);
+            z-index: 1;
+        }
+
+        .article-badge {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: #f63224;
+            color: white;
+            padding: 0.4rem 1rem;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            z-index: 2;
+        }
+
+        .article-content {
+            padding: 2rem;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .article-meta {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            margin-bottom: 1rem;
+            color: #999;
+            font-size: 0.9rem;
+        }
+
+        .article-meta i {
+            color: #0b2294;
+        }
+
+        .article-title {
+            color: #0b2294;
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            line-height: 1.4;
+        }
+
+        .article-excerpt {
+            color: #666;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+            flex-grow: 1;
+        }
+
+        .article-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .tag {
+            background: #e8f0fe;
+            color: #0b2294;
+            padding: 0.3rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        .read-article-btn {
+            background: linear-gradient(135deg, #0b2294, #0d2db0);
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 25px;
+            text-align: center;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .read-article-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(11, 34, 148, 0.3);
+        }
+
+        .articles-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2.5rem;
+            margin-top: 3rem;
+        }
+
+        @media (max-width: 768px) {
+            .articles-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header>
+        <div class="container">
+            <nav>
+                <a href="index.html" class="logo">
+                    <img src="img/logo/logo.png" alt="Partenaire de Recherche et d'Evaluation" class="logo-img">
+                </a>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html" data-translate="nav_accueil">Accueil</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle">
+                            <span data-translate="nav_bunsh">Bunsh</span> <i class="fas fa-chevron-down"></i>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="about.html"><i class="fas fa-info-circle"></i> <span data-translate="nav_apropos">À propos</span></a></li>
+                            <li><a href="services.html"><i class="fas fa-cogs"></i> <span data-translate="nav_services">Nos services</span></a></li>
+                            <li><a href="realisations.html"><i class="fas fa-trophy"></i> <span data-translate="nav_realisations">Nos réalisations</span></a></li>
+                            <li><a href="ressources.html"><i class="fas fa-book"></i> <span data-translate="nav_ressources">Ressources</span></a></li>
+                        </ul>
+                    </li>
+                    <li><a href="actualites.html" class="active" data-translate="nav_actualites">Actualités</a></li>
+                    <li><a href="carrieres.html" data-translate="nav_carrieres">Carrières</a></li>
+                    <li><a href="adhesion.html" data-translate="nav_adhesion">Adhésion</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle">
+                            <span data-translate="nav_mediatheque">Média</span> <i class="fas fa-chevron-down"></i>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="photos.html"><i class="fas fa-images"></i> <span data-translate="nav_photos">Photos</span></a></li>
+                            <li><a href="videos.html"><i class="fas fa-video"></i> <span data-translate="nav_videos">Vidéos</span></a></li>
+                        </ul>
+                    </li>
+                    <li><a href="contact.html" data-translate="nav_contact">Contact</a></li>
+                </ul>
+                <div class="language-switcher">
+                    <button class="lang-btn active" id="langFr" onclick="changeLanguage('fr')" aria-label="Français">FR</button>
+                    <div class="lang-separator"></div>
+                    <button class="lang-btn" id="langEn" onclick="changeLanguage('en')" aria-label="English">EN</button>
+                </div>
+                <div class="menu-toggle" id="menuToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero hero-actualites" style="background-image: url('img/logo/actu.png'); background-size: cover; background-position: center; background-repeat: no-repeat; position: relative;">
+        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(135deg, rgba(11, 34, 148, 0.3) 0%, rgba(13, 45, 176, 0.35) 100%); z-index: 1;"></div>
+        <div class="container" style="position: relative; z-index: 2;">
+        </div>
+    </section>
+    
+    <style>
+        /* Hero Actualités - Desktop */
+        @media (min-width: 769px) {
+            .hero-actualites {
+                min-height: 500px;
+                height: 60vh;
+            }
+        }
+        
+        /* Hero Actualités - Mobile */
+        @media (max-width: 768px) {
+            .hero-actualites {
+                min-height: 300px;
+                height: 40vh;
+            }
+        }
+    </style>
+
+    <!-- Articles récents -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title" data-translate="actualites_title">Actualités récentes</h2>
+            <p class="section-subtitle" data-translate="actualites_subtitle">
+                Suivez nos missions, projets et événements
+            </p>
+
+            <div class="articles-grid">
+                <!-- Article 1 -->
+                <article class="article-card fade-in">
+                    <div class="article-image" style="background: linear-gradient(135deg, rgba(11, 34, 148, 0.8), rgba(13, 45, 176, 0.8)), url('img/logo/banner.jpg'); background-size: cover; background-position: center;">
+                        <span class="article-badge" data-translate="home_nouveau">NOUVEAU</span>
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="article-content">
+                        <div class="article-meta">
+                            <span><i class="fas fa-calendar"></i> <span data-translate="home_article1_date">Octobre 2025</span></span>
+                            <span><i class="fas fa-map-marker-alt"></i> <span data-translate="home_article1_lieu">Kinshasa</span></span>
+                        </div>
+                        <h3 class="article-title" data-translate="article_rapport_unicef">Présentation du Rapport UNICEF - Amélioration de l'Éducation Primaire à Nsele</h3>
+                        <div class="article-tags">
+                            <span class="tag" data-translate="meta_unicef">UNICEF</span>
+                            <span class="tag" data-translate="meta_education">Éducation</span>
+                            <span class="tag" data-translate="meta_baseline">Baseline</span>
+                        </div>
+                        <p class="article-excerpt" data-translate="home_article1_desc">
+                            Présentation du rapport de l'enquête de base du projet « Improvement of Access and Quality of Primary Education in Nsele, Kinshasa (DRC) », financé par l'UNICEF. Cette étude établit la situation de référence pour mesurer l'amélioration de l'accès et de la qualité de l'enseignement primaire dans la zone de Nsele.
+                        </p>
+                        <a href="articles/rapport-unicef-nsele.html" class="read-article-btn">
+                            <i class="fas fa-arrow-right"></i> <span data-translate="home_lire_article">Lire l'article</span>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Article 2 -->
+                <article class="article-card fade-in">
+                    <div class="article-image" style="background: linear-gradient(135deg, rgba(246, 50, 36, 0.8), rgba(212, 42, 31, 0.8)), url('img/logo/banner1.jpg'); background-size: cover; background-position: center;">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="article-content">
+                        <div class="article-meta">
+                            <span><i class="fas fa-calendar"></i> <span data-translate="home_article2_date">Septembre 2025</span></span>
+                            <span><i class="fas fa-map-marker-alt"></i> <span data-translate="home_article1_lieu">Kinshasa</span></span>
+                        </div>
+                        <h3 class="article-title" data-translate="article_atelier_meal">Atelier MEAL avec International Alert</h3>
+                        <div class="article-tags">
+                            <span class="tag" data-translate="meta_meal">MEAL</span>
+                            <span class="tag" data-translate="meta_formation">Formation</span>
+                            <span class="tag" data-translate="footer_renforcement">Renforcement de capacités</span>
+                        </div>
+                        <p class="article-excerpt" data-translate="home_article2_desc">
+                            Retour en images sur l'atelier MEAL (Monitoring, Evaluation, Accountability and Learning) auquel notre équipe a eu l'opportunité de participer cette année avec la facilitation de International Alert. Un moment enrichissant de partage d'expériences et d'apprentissage des meilleures pratiques en suivi-évaluation.
+                        </p>
+                        <a href="articles/atelier-meal.html" class="read-article-btn">
+                            <i class="fas fa-arrow-right"></i> <span data-translate="home_lire_article">Lire l'article</span>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Article 3 -->
+                <article class="article-card fade-in">
+                    <div class="article-image" style="background: linear-gradient(135deg, rgba(11, 34, 148, 0.8), rgba(13, 45, 176, 0.8)), url('img/logo/banner3.jpg'); background-size: cover; background-position: center;">
+                        <i class="fas fa-road"></i>
+                    </div>
+                    <div class="article-content">
+                        <div class="article-meta">
+                            <span><i class="fas fa-calendar"></i> <span data-translate="home_article3_date">Août 2025</span></span>
+                            <span><i class="fas fa-map-marker-alt"></i> <span data-translate="home_article3_lieu">Uvira, Sud-Kivu</span></span>
+                        </div>
+                        <h3 class="article-title" data-translate="article_mission_uvira">Mission Terrain à Uvira - Projet "Elimu ni Njibu" de l'USAID</h3>
+                        <div class="article-tags">
+                            <span class="tag" data-translate="meta_usaid">USAID</span>
+                            <span class="tag" data-translate="meta_terrain">Mission terrain</span>
+                            <span class="tag">Sud-Kivu</span>
+                        </div>
+                        <p class="article-excerpt" data-translate="home_article3_desc">
+                            En passant par la Ruzizi et la route Bugarama dans la République du Rwanda, notre équipe a rejoint avec succès la ville d'Uvira pour une mission de terrain. Rencontre avec deux organisations partenaires : International Rescue Committee (IRC) et l'ONG KUWA, impliquées dans la mise en œuvre du projet « Elimu ni Njibu », financé par l'USAID.
+                        </p>
+                        <a href="articles/mission-uvira.html" class="read-article-btn">
+                            <i class="fas fa-arrow-right"></i> <span data-translate="home_lire_article">Lire l'article</span>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Article 4 -->
+                <article class="article-card fade-in">
+                    <div class="article-image" style="background: linear-gradient(135deg, rgba(11, 34, 148, 0.8), rgba(13, 45, 176, 0.8)), url('img/logo/banner4.jpg'); background-size: cover; background-position: center;">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <div class="article-content">
+                        <div class="article-meta">
+                            <span><i class="fas fa-calendar"></i> <span data-translate="date_juillet">Juillet</span> 2025</span>
+                            <span><i class="fas fa-map-marker-alt"></i> <span data-translate="lieu_bukavu">Bukavu, Sud-Kivu</span></span>
+                        </div>
+                        <h3 class="article-title" data-translate="article_visite_bukavu">Visite à Bukavu - FHI360 et ABFEC</h3>
+                        <div class="article-tags">
+                            <span class="tag" data-translate="meta_usaid">USAID</span>
+                            <span class="tag" data-translate="meta_education">Éducation</span>
+                            <span class="tag" data-translate="meta_partenariat">Partenariat</span>
+                        </div>
+                        <p class="article-excerpt">
+                            Notre équipe a visité à Bukavu #FHI360 et l'ONG #ABFEC, deux organisations partenaires qui ont mis en œuvre le projet "L'Éducation est la réponse" financé par l'USAID. Ces rencontres ont permis d'échanger sur les stratégies d'amélioration de l'accès à l'éducation dans la région.
+                        </p>
+                        <a href="articles/visite-bukavu.html" class="read-article-btn">
+                            <i class="fas fa-arrow-right"></i> <span data-translate="home_lire_article">Lire l'article</span>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Article 5 -->
+                <article class="article-card fade-in">
+                    <div class="article-image" style="background: linear-gradient(135deg, rgba(246, 50, 36, 0.8), rgba(212, 42, 31, 0.8)), url('img/logo/banner5.jpg'); background-size: cover; background-position: center;">
+                        <i class="fas fa-map-marked-alt"></i>
+                    </div>
+                    <div class="article-content">
+                        <div class="article-meta">
+                            <span><i class="fas fa-calendar"></i> <span data-translate="date_juin">Juin</span> 2025</span>
+                            <span><i class="fas fa-map-marker-alt"></i> <span data-translate="lieu_kabare">Kabare, Sud-Kivu</span></span>
+                        </div>
+                        <h3 class="article-title" data-translate="article_terrain_kabare">Terrain à Kabare - Évaluation du Projet USAID</h3>
+                        <div class="article-tags">
+                            <span class="tag" data-translate="meta_usaid">USAID</span>
+                            <span class="tag" data-translate="meta_evaluation">Évaluation</span>
+                            <span class="tag" data-translate="meta_terrain">Terrain</span>
+                        </div>
+                        <p class="article-excerpt">
+                            Avant de rencontrer les différentes parties prenantes du projet "Elimu ni Njibu" à Bukavu, notre équipe a effectué une visite de terrain à Kabare, au Sud-Kivu, dans le cadre de l'évaluation du projet « L'éducation est la réponse » de l'USAID. Collecte de données auprès des bénéficiaires et observation des activités sur le terrain.
+                        </p>
+                        <a href="articles/terrain-kabare.html" class="read-article-btn">
+                            <i class="fas fa-arrow-right"></i> <span data-translate="home_lire_article">Lire l'article</span>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Article 6 -->
+                <article class="article-card fade-in">
+                    <div class="article-image" style="background: linear-gradient(135deg, rgba(11, 34, 148, 0.8), rgba(13, 45, 176, 0.8)), url('img/logo/banner.jpg'); background-size: cover; background-position: center;">
+                        <i class="fas fa-school"></i>
+                    </div>
+                    <div class="article-content">
+                        <div class="article-meta">
+                            <span><i class="fas fa-calendar"></i> <span data-translate="date_mai">Mai</span> 2025</span>
+                            <span><i class="fas fa-map-marker-alt"></i> <span data-translate="lieu_goma">Goma, Nord-Kivu</span></span>
+                        </div>
+                        <h3 class="article-title" data-translate="article_mission_goma">Mission à Goma - Projet "L'éducation est la réponse"</h3>
+                        <div class="article-tags">
+                            <span class="tag" data-translate="meta_usaid">USAID</span>
+                            <span class="tag" data-translate="meta_education">Éducation</span>
+                            <span class="tag" data-translate="meta_impact">Impact</span>
+                        </div>
+                        <p class="article-excerpt">
+                            Notre équipe était à Goma dans le cadre de l'évaluation du projet «L'éducation est la réponse», financé par l'USAID. Cette initiative transformatrice a contribué à l'amélioration de l'accès à une éducation de qualité pour les enfants et les jeunes dans les zones touchées par le conflit. Évaluation de l'impact et documentation des résultats.
+                        </p>
+                        <a href="articles/mission-goma.html" class="read-article-btn">
+                            <i class="fas fa-arrow-right"></i> <span data-translate="home_lire_article">Lire l'article</span>
+                        </a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="section" style="background: linear-gradient(135deg, #f8f9fa 0%, #e8f0fe 50%, #f8f9fa 100%); padding: 3rem 0;">
+        <div class="container">
+            <div style="max-width: 700px; margin: 0 auto; text-align: center; padding: 2rem 1.5rem; background: white; border-radius: 20px; box-shadow: 0 8px 30px rgba(11, 34, 148, 0.15);">
+                <div style="width: 80px; height: 80px; background: linear-gradient(135deg, #0b2294, #0d2db0); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem;">
+                    <i class="fas fa-envelope" style="font-size: 2rem; color: white;"></i>
+                </div>
+                <h2 class="section-title" style="margin-bottom: 1rem;" data-translate="actualites_newsletter">Restez informé</h2>
+               
+                <form style="display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; margin-top: 2rem;">
+                    <input 
+                        type="email" 
+                        placeholder="Votre adresse email" 
+                        data-translate="actualites_email_placeholder"
+                        style="flex: 1; min-width: 250px; padding: 1rem; border: 2px solid #e0e0e0; border-radius: 25px; font-family: 'Poppins', sans-serif; font-size: 1rem;"
+                        required
+                    >
+                    <button type="submit" class="btn btn-primary" style="padding: 1rem 2rem; border-radius: 25px;">
+                        <i class="fas fa-paper-plane"></i> <span data-translate="actualites_abonner">S'abonner</span>
+                    </button>
+                </form>
+                <p style="margin-top: 1rem; color: #999; font-size: 0.85rem;">
+                    <i class="fas fa-lock"></i> <span data-translate="actualites_confidentialite">Nous respectons votre vie privée. Aucun spam, désinscription possible à tout moment.</span>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    
+
+  
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <!-- Logo et description -->
+            <div class="footer-brand">
+                <div class="footer-logo">
+                    <img src="img/logo/logo.png" alt="Partenaire de Recherche et d'Evaluation" class="footer-logo-img">
+                </div>
+            </div>
+
+            <!-- Contenu principal -->
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 data-translate="footer_navigation">Navigation</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html" data-translate="nav_accueil">Accueil</a></li>
+                        <li><a href="about.html" data-translate="nav_apropos">À propos</a></li>
+                        <li><a href="services.html" data-translate="nav_services">Nos services</a></li>
+                        <li><a href="realisations.html" data-translate="nav_realisations">Nos réalisations</a></li>
+                        <li><a href="ressources.html" data-translate="nav_ressources">Ressources</a></li>
+                        <li><a href="photos.html" data-translate="footer_galerie_photos">Galerie Photos</a></li>
+                        <li><a href="videos.html" data-translate="footer_galerie_videos">Galerie Vidéos</a></li>
+                        <li><a href="actualites.html" data-translate="nav_actualites">Actualités</a></li>
+                        <li><a href="carrieres.html" data-translate="nav_carrieres">Carrières</a></li>
+                        <li><a href="adhesion.html" data-translate="nav_adhesion">Adhésion</a></li>
+                        <li><a href="contact.html" data-translate="nav_contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3 data-translate="footer_services">Services</h3>
+                    <ul class="footer-links">
+                        <li><a href="services.html" data-translate="footer_baseline">Études de base (Baseline)</a></li>
+                        <li><a href="services.html" data-translate="footer_midline">Évaluations Midline</a></li>
+                        <li><a href="services.html" data-translate="footer_endline">Évaluations Endline</a></li>
+                        <li><a href="services.html" data-translate="footer_me">Suivi-évaluation (M&E)</a></li>
+                        <li><a href="services.html" data-translate="footer_renforcement">Renforcement de capacités</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3 data-translate="footer_contact">Contact</h3>
+                    <p><span data-translate="footer_adresse">📍 1, Basoko, Safricas, Kinshasa, Democratic Republic of the Congo</span></p>
+                    <p>📧 contact@bunshconsulting.com</p>
+                    <p>📞 +243 0979 286 949</p>
+                </div>
+            </div>
+
+            <!-- Section réseaux sociaux -->
+            <div class="footer-social">
+                <h3 data-translate="footer_suivez">Suivez-nous</h3>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/" class="social-icon-large">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="social-icon-large">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="social-icon-large">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="#" class="social-icon-large">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Copyright -->
+            <div class="footer-bottom">
+                <p data-translate="footer_copyright">&copy; 2025 Bunsh - Partenaire de Recherche et d'Evaluation</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to top button -->
+    <button class="scroll-to-top hidden" id="scrollToTop" aria-label="Retour en haut">
+        ↑
+    </button>
+
+    <script src="js/script.js"></script>
+    <script src="js/translation.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Galerie photos - Découvrez nos missions terrain et activités en images">
+    <title>Galerie Photos | Bunsh - Partenaire de Recherche et d'Evaluation</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="img/ico/log_ico.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="img/ico/log_ico.ico">
+    <link rel="apple-touch-icon" href="img/logo/logo.png">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .album-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2.5rem;
+            margin-top: 3rem;
+        }
+
+        .album-folder {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .album-folder:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 35px rgba(11, 34, 148, 0.2);
+        }
+
+        .folder-icon-container {
+            position: relative;
+            width: 120px;
+            height: 100px;
+            margin: 0 auto 1.5rem;
+        }
+
+        .folder-icon {
+            font-size: 7rem;
+            color: #0b2294;
+            transition: all 0.3s ease;
+            position: relative;
+            z-index: 1;
+        }
+
+        .album-folder:hover .folder-icon {
+            color: #f63224;
+            transform: scale(1.1);
+        }
+
+        .photo-count {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: white;
+            color: #0b2294;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1.1rem;
+            z-index: 2;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .album-title {
+            color: #0b2294;
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 0.8rem;
+        }
+
+        .album-description {
+            color: #666;
+            line-height: 1.6;
+            font-size: 0.95rem;
+            margin-bottom: 1rem;
+        }
+
+        .album-date {
+            color: #999;
+            font-size: 0.85rem;
+            font-style: italic;
+        }
+
+        .album-badge {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: linear-gradient(135deg, #f63224, #d42a1f);
+            color: white;
+            padding: 0.4rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 700;
+        }
+
+        .filter-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: center;
+            margin-bottom: 3rem;
+        }
+
+        .filter-btn {
+            padding: 0.8rem 1.5rem;
+            background: white;
+            border: 2px solid #e0e0e0;
+            border-radius: 25px;
+            color: #666;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .filter-btn:hover,
+        .filter-btn.active {
+            background: linear-gradient(135deg, #0b2294, #0d2db0);
+            color: white;
+            border-color: #0b2294;
+        }
+
+        @media (max-width: 768px) {
+            .album-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header>
+        <div class="container">
+            <nav>
+                <a href="index.html" class="logo">
+                    <img src="img/logo/logo.png" alt="Partenaire de Recherche et d'Evaluation" class="logo-img">
+                </a>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html" data-translate="nav_accueil">Accueil</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle">
+                            <span data-translate="nav_bunsh">Bunsh</span> <i class="fas fa-chevron-down"></i>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="about.html"><i class="fas fa-info-circle"></i> <span data-translate="nav_apropos">À propos</span></a></li>
+                            <li><a href="services.html"><i class="fas fa-cogs"></i> <span data-translate="nav_services">Nos services</span></a></li>
+                            <li><a href="realisations.html"><i class="fas fa-trophy"></i> <span data-translate="nav_realisations">Nos réalisations</span></a></li>
+                            <li><a href="ressources.html"><i class="fas fa-book"></i> <span data-translate="nav_ressources">Ressources</span></a></li>
+                        </ul>
+                    </li>
+                    <li><a href="actualites.html" data-translate="nav_actualites">Actualités</a></li>
+                    <li><a href="carrieres.html" data-translate="nav_carrieres">Carrières</a></li>
+                    <li><a href="adhesion.html" data-translate="nav_adhesion">Adhésion</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle">
+                            <span data-translate="nav_mediatheque">Média</span> <i class="fas fa-chevron-down"></i>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="photos.html" class="active"><i class="fas fa-images"></i> <span data-translate="nav_photos">Photos</span></a></li>
+                            <li><a href="videos.html"><i class="fas fa-video"></i> <span data-translate="nav_videos">Vidéos</span></a></li>
+                        </ul>
+                    </li>
+                    <li><a href="contact.html" data-translate="nav_contact">Contact</a></li>
+                </ul>
+                <div class="language-switcher">
+                    <button class="lang-btn active" id="langFr" onclick="changeLanguage('fr')" aria-label="Français">FR</button>
+                    <div class="lang-separator"></div>
+                    <button class="lang-btn" id="langEn" onclick="changeLanguage('en')" aria-label="English">EN</button>
+                </div>
+                <div class="menu-toggle" id="menuToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" style="background-image: url('img/logo/banner.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat; position: relative;">
+        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(135deg, rgba(11, 34, 148, 0.3) 0%, rgba(13, 45, 176, 0.35) 100%); z-index: 1;"></div>
+        <div class="container" style="position: relative; z-index: 2;">
+            <h1 style="text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7), 0 0 20px rgba(11, 34, 148, 0.5);" data-translate="photos_hero_titre">Galerie Photos</h1>
+            <p style="text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.7), 0 0 15px rgba(11, 34, 148, 0.4);" data-translate="photos_hero_desc">Découvrez nos missions terrain, projets et activités en images</p>
+        </div>
+    </section>
+
+    <!-- Statistiques -->
+    <section class="section" style="background: linear-gradient(135deg, #0b2294 0%, #0d2db0 100%); color: white; padding: 2rem 0;">
+        <div class="container">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; text-align: center;">
+                <div>
+                    <div style="font-size: 2.5rem; font-weight: 700; margin-bottom: 0.5rem;">
+                        <i class="fas fa-folder"></i> 12
+                    </div>
+                    <div style="opacity: 0.9;" data-translate="photos_stat1">Albums disponibles</div>
+                </div>
+                <div>
+                    <div style="font-size: 2.5rem; font-weight: 700; margin-bottom: 0.5rem;">
+                        <i class="fas fa-images"></i> 250+
+                    </div>
+                    <div style="opacity: 0.9;" data-translate="photos_stat2">Photos au total</div>
+                </div>
+                <div>
+                    <div style="font-size: 2.5rem; font-weight: 700; margin-bottom: 0.5rem;">
+                        <i class="fas fa-map-marked-alt"></i> 8
+                    </div>
+                    <div style="opacity: 0.9;" data-translate="photos_stat3">Provinces visitées</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Filtres -->
+    <section class="section" style="background-color: #f8f9fa; padding-bottom: 0;">
+        <div class="container">
+            <h2 class="section-title" data-translate="photos_albums_titre">Albums photos</h2>
+            <p class="section-subtitle" data-translate="photos_albums_desc">
+                Parcourez nos albums par thématique
+            </p>
+
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">
+                    <i class="fas fa-th"></i> <span data-translate="photos_filtre_tous">Tout voir</span>
+                </button>
+                <button class="filter-btn" data-filter="missions">
+                    <i class="fas fa-plane"></i> <span data-translate="photos_filtre_missions">Missions terrain</span>
+                </button>
+                <button class="filter-btn" data-filter="ateliers">
+                    <i class="fas fa-users"></i> <span data-translate="photos_filtre_ateliers">Ateliers & Formations</span>
+                </button>
+                <button class="filter-btn" data-filter="projets">
+                    <i class="fas fa-project-diagram"></i> <span data-translate="photos_filtre_projets">Projets</span>
+                </button>
+                <button class="filter-btn" data-filter="equipe">
+                    <i class="fas fa-user-friends"></i> <span data-translate="photos_filtre_equipe">Équipe</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Albums -->
+    <section class="section" style="background-color: #f8f9fa; padding-top: 2rem;">
+        <div class="container">
+            <div class="album-grid">
+                <!-- Album 1 -->
+                <div class="album-folder fade-in" data-category="missions" onclick="window.location.href='#album-uvira'">
+                    <div class="folder-icon-container">
+                        <i class="fas fa-folder folder-icon"></i>
+                        <div class="photo-count">28</div>
+                    </div>
+                    <h3 class="album-title" data-translate="photos_album1_titre">Mission Uvira</h3>
+                    <p class="album-description" data-translate="photos_album1_desc">
+                        Mission terrain à Uvira pour l'évaluation du projet "Elimu ni Njibu" avec IRC et KUWA
+                    </p>
+                    <p class="album-date"><i class="fas fa-calendar"></i> <span data-translate="date_aout">Août</span> 2025</p>
+                </div>
+
+                <!-- Album 2 -->
+                <div class="album-folder fade-in" data-category="ateliers" onclick="window.location.href='#album-meal'">
+                    <div class="folder-icon-container">
+                        <i class="fas fa-folder folder-icon"></i>
+                        <div class="photo-count">35</div>
+                    </div>
+                    <h3 class="album-title" data-translate="photos_album2_titre">Atelier MEAL</h3>
+                    <p class="album-description" data-translate="photos_album2_desc">
+                        Atelier MEAL avec International Alert - Renforcement des capacités en suivi-évaluation
+                    </p>
+                    <p class="album-date"><i class="fas fa-calendar"></i> <span data-translate="date_septembre">Septembre</span> 2025</p>
+                </div>
+
+                <!-- Album 3 -->
+                <div class="album-folder fade-in" data-category="missions" onclick="window.location.href='#album-bukavu'">
+                    <div class="folder-icon-container">
+                        <i class="fas fa-folder folder-icon"></i>
+                        <div class="photo-count">42</div>
+                    </div>
+                    <h3 class="album-title" data-translate="photos_album3_titre">Bukavu - FHI360 & ABFEC</h3>
+                    <p class="album-description" data-translate="photos_album3_desc">
+                        Visite des partenaires FHI360 et ABFEC dans le cadre du projet "L'éducation est la réponse"
+                    </p>
+                    <p class="album-date"><i class="fas fa-calendar"></i> <span data-translate="date_juillet">Juillet</span> 2025</p>
+                </div>
+
+                <!-- Album 4 -->
+                <div class="album-folder fade-in" data-category="missions" onclick="window.location.href='#album-goma'">
+                    <div class="folder-icon-container">
+                        <i class="fas fa-folder folder-icon"></i>
+                        <div class="photo-count">38</div>
+                    </div>
+                    <h3 class="album-title" data-translate="photos_album4_titre">Mission Goma</h3>
+                    <p class="album-description" data-translate="photos_album4_desc">
+                        Évaluation du projet USAID à Goma - Amélioration de l'accès à l'éducation en zones de conflit
+                    </p>
+                    <p class="album-date"><i class="fas fa-calendar"></i> <span data-translate="date_mai">Mai</span> 2025</p>
+                </div>
+
+                <!-- Album 5 -->
+                <div class="album-folder fade-in" data-category="projets" onclick="window.location.href='#album-nsele'">
+                    <div class="folder-icon-container">
+                        <i class="fas fa-folder folder-icon"></i>
+                        <div class="photo-count">52</div>
+                    </div>
+                    <h3 class="album-title" data-translate="photos_album5_titre">Projet UNICEF Nsele</h3>
+                    <p class="album-description" data-translate="photos_album5_desc">
+                        Enquête de base sur l'amélioration de l'accès et de la qualité de l'éducation primaire à Nsele
+                    </p>
+                    <p class="album-date"><i class="fas fa-calendar"></i> <span data-translate="date_octobre">Octobre</span> 2025</p>
+                </div>
+
+                <!-- Album 6 -->
+                <div class="album-folder fade-in" data-category="missions" onclick="window.location.href='#album-kabare'">
+                    <div class="folder-icon-container">
+                        <i class="fas fa-folder folder-icon"></i>
+                        <div class="photo-count">31</div>
+                    </div>
+                    <h3 class="album-title" data-translate="photos_album6_titre">Terrain Kabare</h3>
+                    <p class="album-description" data-translate="photos_album6_desc">
+                        Mission de collecte de données à Kabare dans le cadre de l'évaluation du projet USAID
+                    </p>
+                    <p class="album-date"><i class="fas fa-calendar"></i> <span data-translate="date_juin">Juin</span> 2025</p>
+                </div>
+
+                <!-- Album 7 -->
+                <div class="album-folder fade-in" data-category="equipe" onclick="window.location.href='#album-equipe'">
+                    <div class="folder-icon-container">
+                        <i class="fas fa-folder folder-icon"></i>
+                        <div class="photo-count">24</div>
+                    </div>
+                    <h3 class="album-title" data-translate="photos_album7_titre">Notre Équipe</h3>
+                    <p class="album-description" data-translate="photos_album7_desc">
+                        Photos de l'équipe, moments de cohésion et activités internes du bureau
+                    </p>
+                    <p class="album-date"><i class="fas fa-calendar"></i> 2025</p>
+                </div>
+
+                <!-- Album 8 -->
+                <div class="album-folder fade-in" data-category="ateliers" onclick="window.location.href='#album-formation-spss'">
+                    <div class="folder-icon-container">
+                        <i class="fas fa-folder folder-icon"></i>
+                        <div class="photo-count">18</div>
+                    </div>
+                    <h3 class="album-title" data-translate="photos_album8_titre">Formation SPSS</h3>
+                    <p class="album-description" data-translate="photos_album8_desc">
+                        Session de formation interne sur l'analyse de données avec SPSS
+                    </p>
+                    <p class="album-date"><i class="fas fa-calendar"></i> <span data-translate="photos_date_avril">Avril</span> 2025</p>
+                </div>
+
+                <!-- Album 9 -->
+                <div class="album-folder fade-in" data-category="projets" onclick="window.location.href='#album-baseline-sante'">
+                    <div class="folder-icon-container">
+                        <i class="fas fa-folder folder-icon"></i>
+                        <div class="photo-count">45</div>
+                    </div>
+                    <h3 class="album-title" data-translate="photos_album9_titre">Baseline Santé Maternelle</h3>
+                    <p class="album-description" data-translate="photos_album9_desc">
+                        Enquête de base sur la santé maternelle et infantile en milieu rural
+                    </p>
+                    <p class="album-date"><i class="fas fa-calendar"></i> <span data-translate="photos_date_mars">Mars</span> 2025</p>
+                </div>
+
+                <!-- Album 10 -->
+                <div class="album-folder fade-in" data-category="ateliers" onclick="window.location.href='#album-restitution'">
+                    <div class="folder-icon-container">
+                        <i class="fas fa-folder folder-icon"></i>
+                        <div class="photo-count">22</div>
+                    </div>
+                    <h3 class="album-title" data-translate="photos_album10_titre">Atelier de Restitution</h3>
+                    <p class="album-description" data-translate="photos_album10_desc">
+                        Restitution des résultats d'évaluation aux parties prenantes du projet
+                    </p>
+                    <p class="album-date"><i class="fas fa-calendar"></i> <span data-translate="photos_date_fevrier">Février</span> 2025</p>
+                </div>
+
+                <!-- Album 11 -->
+                <div class="album-folder fade-in" data-category="missions" onclick="window.location.href='#album-lubumbashi'">
+                    <div class="folder-icon-container">
+                        <i class="fas fa-folder folder-icon"></i>
+                        <div class="photo-count">29</div>
+                    </div>
+                    <h3 class="album-title" data-translate="photos_album11_titre">Mission Lubumbashi</h3>
+                    <p class="album-description" data-translate="photos_album11_desc">
+                        Évaluation midline d'un projet d'autonomisation économique des femmes
+                    </p>
+                    <p class="album-date"><i class="fas fa-calendar"></i> <span data-translate="photos_date_janvier">Janvier</span> 2025</p>
+                </div>
+
+                <!-- Album 12 -->
+                <div class="album-folder fade-in" data-category="equipe" onclick="window.location.href='#album-celebration'">
+                    <div class="folder-icon-container">
+                        <i class="fas fa-folder folder-icon"></i>
+                        <div class="photo-count">16</div>
+                    </div>
+                    <h3 class="album-title" data-translate="photos_album12_titre">Célébrations 2024</h3>
+                    <p class="album-description" data-translate="photos_album12_desc">
+                        Moments de célébration et événements marquants de l'année 2024
+                    </p>
+                    <p class="album-date"><i class="fas fa-calendar"></i> <span data-translate="photos_date_decembre">Décembre</span> 2024</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section" style="background: linear-gradient(135deg, #0b2294 0%, #0d2db0 100%); color: white;">
+        <div class="container" style="text-align: center;">
+            <i class="fas fa-camera" style="font-size: 3rem; margin-bottom: 1rem; opacity: 0.9;"></i>
+            <h2 style="color: white; font-size: 2rem; margin-bottom: 1rem;" data-translate="photos_cta_titre">Vous avez des photos à partager ?</h2>
+            <p style="margin-bottom: 2rem; font-size: 1.1rem;" data-translate="photos_cta_desc">Contactez-nous pour contribuer à notre galerie</p>
+            <a href="contact.html" class="btn btn-primary" data-translate="carrieres_contactez">Nous contacter</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <!-- Logo et description -->
+            <div class="footer-brand">
+                <div class="footer-logo">
+                    <img src="img/logo/logo.png" alt="Partenaire de Recherche et d'Evaluation" class="footer-logo-img">
+                </div>
+            </div>
+
+            <!-- Contenu principal -->
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 data-translate="footer_navigation">Navigation</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html" data-translate="nav_accueil">Accueil</a></li>
+                        <li><a href="about.html" data-translate="nav_apropos">À propos</a></li>
+                        <li><a href="services.html" data-translate="nav_services">Nos services</a></li>
+                        <li><a href="realisations.html" data-translate="nav_realisations">Nos réalisations</a></li>
+                        <li><a href="ressources.html" data-translate="nav_ressources">Ressources</a></li>
+                        <li><a href="photos.html" data-translate="footer_galerie_photos">Galerie Photos</a></li>
+                        <li><a href="videos.html" data-translate="footer_galerie_videos">Galerie Vidéos</a></li>
+                        <li><a href="actualites.html" data-translate="nav_actualites">Actualités</a></li>
+                        <li><a href="carrieres.html" data-translate="nav_carrieres">Carrières</a></li>
+                        <li><a href="adhesion.html" data-translate="nav_adhesion">Adhésion</a></li>
+                        <li><a href="contact.html" data-translate="nav_contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3 data-translate="footer_services">Services</h3>
+                    <ul class="footer-links">
+                        <li><a href="services.html" data-translate="footer_baseline">Études de base (Baseline)</a></li>
+                        <li><a href="services.html" data-translate="footer_midline">Évaluations Midline</a></li>
+                        <li><a href="services.html" data-translate="footer_endline">Évaluations Endline</a></li>
+                        <li><a href="services.html" data-translate="footer_me">Suivi-évaluation (M&E)</a></li>
+                        <li><a href="services.html" data-translate="footer_renforcement">Renforcement de capacités</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3 data-translate="footer_contact">Contact</h3>
+                    <p><span data-translate="footer_adresse">📍 1, Basoko, Safricas, Kinshasa, Democratic Republic of the Congo</span></p>
+                    <p>📧 contact@bunshconsulting.com</p>
+                    <p>📞 +243 0979 286 949</p>
+                </div>
+            </div>
+
+            <!-- Section réseaux sociaux -->
+            <div class="footer-social">
+                <h3 data-translate="footer_suivez">Suivez-nous</h3>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/" class="social-icon-large">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="social-icon-large">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="social-icon-large">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="#" class="social-icon-large">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Copyright -->
+            <div class="footer-bottom">
+                <p data-translate="footer_copyright">&copy; 2025 Bunsh - Partenaire de Recherche et d'Evaluation</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to top button -->
+    <button class="scroll-to-top hidden" id="scrollToTop" aria-label="Retour en haut">
+        ↑
+    </button>
+
+    <script src="js/script.js"></script>
+    <script src="js/translation.js"></script>
+    <script>
+        // Filtrage des albums
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                // Retirer la classe active de tous les boutons
+                document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+                // Ajouter la classe active au bouton cliqué
+                this.classList.add('active');
+                
+                const filter = this.getAttribute('data-filter');
+                const albums = document.querySelectorAll('.album-folder');
+                
+                albums.forEach(album => {
+                    if (filter === 'all' || album.getAttribute('data-category') === filter) {
+                        album.style.display = 'block';
+                        setTimeout(() => album.style.opacity = '1', 10);
+                    } else {
+                        album.style.opacity = '0';
+                        setTimeout(() => album.style.display = 'none', 300);
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
+

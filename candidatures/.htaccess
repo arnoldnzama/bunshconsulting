@@ -1,0 +1,18 @@
+# Protection du dossier candidatures
+# Empêche l'accès direct aux fichiers via le navigateur
+
+# Désactiver l'indexation du répertoire
+Options -Indexes
+
+# Interdire l'accès à tous les fichiers
+<FilesMatch ".*">
+    Order Allow,Deny
+    Deny from all
+</FilesMatch>
+
+# Autoriser uniquement les scripts PHP à accéder aux fichiers
+<FilesMatch "\.(php)$">
+    Order Allow,Deny
+    Allow from all
+</FilesMatch>
+

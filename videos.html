@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Galerie vidéos - Découvrez nos missions terrain et activités en vidéo">
+    <title>Galerie Vidéos | Bunsh - Partenaire de Recherche et d'Evaluation</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="img/ico/log_ico.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="img/ico/log_ico.ico">
+    <link rel="apple-touch-icon" href="img/logo/logo.png">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2.5rem;
+            margin-top: 3rem;
+        }
+
+        .video-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .video-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 35px rgba(11, 34, 148, 0.2);
+        }
+
+        .video-thumbnail {
+            width: 100%;
+            height: 220px;
+            background: linear-gradient(135deg, #0b2294, #0d2db0);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        .video-thumbnail video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .play-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(11, 34, 148, 0.4);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+
+        .video-card:hover .play-overlay {
+            background: rgba(11, 34, 148, 0.6);
+        }
+
+        .play-icon {
+            width: 70px;
+            height: 70px;
+            background: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            color: #0b2294;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+            transition: all 0.3s ease;
+        }
+
+        .video-card:hover .play-icon {
+            transform: scale(1.1);
+            background: #f63224;
+            color: white;
+        }
+
+        .video-badge {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: #f63224;
+            color: white;
+            padding: 0.4rem 1rem;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            z-index: 2;
+        }
+
+        .video-duration {
+            position: absolute;
+            bottom: 1rem;
+            right: 1rem;
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 0.3rem 0.8rem;
+            border-radius: 5px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            z-index: 2;
+        }
+
+        .video-content {
+            padding: 1.8rem;
+        }
+
+        .video-title {
+            color: #0b2294;
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 0.8rem;
+            line-height: 1.4;
+        }
+
+        .video-description {
+            color: #666;
+            line-height: 1.8;
+            margin-bottom: 1rem;
+            font-size: 0.95rem;
+        }
+
+        .video-meta {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            color: #999;
+            font-size: 0.9rem;
+        }
+
+        .video-meta i {
+            color: #0b2294;
+        }
+
+        .filter-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: center;
+            margin-bottom: 3rem;
+        }
+
+        .filter-btn {
+            padding: 0.8rem 1.5rem;
+            background: white;
+            border: 2px solid #e0e0e0;
+            border-radius: 25px;
+            color: #666;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .filter-btn:hover,
+        .filter-btn.active {
+            background: linear-gradient(135deg, #0b2294, #0d2db0);
+            color: white;
+            border-color: #0b2294;
+        }
+
+        @media (max-width: 768px) {
+            .video-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header>
+        <div class="container">
+            <nav>
+                <a href="index.html" class="logo">
+                    <img src="img/logo/logo.png" alt="Partenaire de Recherche et d'Evaluation" class="logo-img">
+                </a>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html" data-translate="nav_accueil">Accueil</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle">
+                            <span data-translate="nav_bunsh">Bunsh</span> <i class="fas fa-chevron-down"></i>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="about.html"><i class="fas fa-info-circle"></i> <span data-translate="nav_apropos">À propos</span></a></li>
+                            <li><a href="services.html"><i class="fas fa-cogs"></i> <span data-translate="nav_services">Nos services</span></a></li>
+                            <li><a href="realisations.html"><i class="fas fa-trophy"></i> <span data-translate="nav_realisations">Nos réalisations</span></a></li>
+                            <li><a href="ressources.html"><i class="fas fa-book"></i> <span data-translate="nav_ressources">Ressources</span></a></li>
+                        </ul>
+                    </li>
+                    <li><a href="actualites.html" data-translate="nav_actualites">Actualités</a></li>
+                    <li><a href="carrieres.html" data-translate="nav_carrieres">Carrières</a></li>
+                    <li><a href="adhesion.html" data-translate="nav_adhesion">Adhésion</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle active">
+                            <span data-translate="nav_mediatheque">Média</span> <i class="fas fa-chevron-down"></i>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="photos.html"><i class="fas fa-images"></i> <span data-translate="nav_photos">Photos</span></a></li>
+                            <li><a href="videos.html" class="active"><i class="fas fa-video"></i> <span data-translate="nav_videos">Vidéos</span></a></li>
+                        </ul>
+                    </li>
+                    <li><a href="contact.html" data-translate="nav_contact">Contact</a></li>
+                </ul>
+                <div class="language-switcher">
+                    <button class="lang-btn active" id="langFr" onclick="changeLanguage('fr')" aria-label="Français">FR</button>
+                    <div class="lang-separator"></div>
+                    <button class="lang-btn" id="langEn" onclick="changeLanguage('en')" aria-label="English">EN</button>
+                </div>
+                <div class="menu-toggle" id="menuToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" style="background-image: url('img/logo/banner3.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat; position: relative;">
+        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(135deg, rgba(11, 34, 148, 0.3) 0%, rgba(13, 45, 176, 0.35) 100%); z-index: 1;"></div>
+        <div class="container" style="position: relative; z-index: 2;">
+            <h1 style="text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7), 0 0 20px rgba(11, 34, 148, 0.5);" data-translate="videos_hero_titre">Galerie Vidéos</h1>
+            <p style="text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.7), 0 0 15px rgba(11, 34, 148, 0.4);" data-translate="videos_hero_desc">Revivez nos missions, projets et événements en vidéo</p>
+        </div>
+    </section>
+
+    <!-- Statistiques -->
+    <section class="section" style="background: linear-gradient(135deg, #0b2294 0%, #0d2db0 100%); color: white; padding: 2rem 0;">
+        <div class="container">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; text-align: center;">
+                <div>
+                    <div style="font-size: 2.5rem; font-weight: 700; margin-bottom: 0.5rem;">
+                        <i class="fas fa-video"></i> 8
+                    </div>
+                    <div style="opacity: 0.9;" data-translate="videos_stat1">Vidéos disponibles</div>
+                </div>
+                <div>
+                    <div style="font-size: 2.5rem; font-weight: 700; margin-bottom: 0.5rem;">
+                        <i class="fas fa-play-circle"></i> 2.5K+
+                    </div>
+                    <div style="opacity: 0.9;" data-translate="videos_stat2">Vues totales</div>
+                </div>
+                <div>
+                    <div style="font-size: 2.5rem; font-weight: 700; margin-bottom: 0.5rem;">
+                        <i class="fas fa-map-marker-alt"></i> 6
+                    </div>
+                    <div style="opacity: 0.9;" data-translate="videos_stat3">Lieux filmés</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Filtres -->
+    <section class="section" style="background-color: #f8f9fa; padding-bottom: 0;">
+        <div class="container">
+            <h2 class="section-title" data-translate="videos_titre">Nos vidéos</h2>
+            <p class="section-subtitle" data-translate="videos_desc">
+                Découvrez nos activités et missions à travers ces vidéos
+            </p>
+
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">
+                    <i class="fas fa-th"></i> <span data-translate="photos_filtre_tous">Tout voir</span>
+                </button>
+                <button class="filter-btn" data-filter="missions">
+                    <i class="fas fa-plane"></i> <span data-translate="photos_filtre_missions">Missions terrain</span>
+                </button>
+                <button class="filter-btn" data-filter="ateliers">
+                    <i class="fas fa-users"></i> <span data-translate="photos_filtre_ateliers">Ateliers & Formations</span>
+                </button>
+                <button class="filter-btn" data-filter="projets">
+                    <i class="fas fa-project-diagram"></i> <span data-translate="photos_filtre_projets">Projets</span>
+                </button>
+                <button class="filter-btn" data-filter="presentations">
+                    <i class="fas fa-presentation"></i> <span data-translate="videos_filtre_presentations">Présentations</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vidéos -->
+    <section class="section" style="background-color: #f8f9fa; padding-top: 2rem;">
+        <div class="container">
+            <div class="video-grid">
+                <!-- Vidéo 1 -->
+                <div class="video-card fade-in" data-category="missions">
+                    <div class="video-thumbnail">
+                        <video src="img/vid/actu.mp4" muted></video>
+                        <div class="play-overlay">
+                            <div class="play-icon">
+                                <i class="fas fa-play"></i>
+                            </div>
+                        </div>
+                        <span class="video-duration">3:45</span>
+                    </div>
+                    <div class="video-content">
+                        <h3 class="video-title" data-translate="videos_video1_titre">Mission Terrain Uvira 2025</h3>
+                        <p class="video-description" data-translate="videos_video1_desc">
+                            Découvrez notre mission de terrain à Uvira dans le cadre du projet "Elimu ni Njibu". Rencontre avec les partenaires IRC et KUWA, collecte de données et témoignages des bénéficiaires.
+                        </p>
+                        <div class="video-meta">
+                            <span><i class="fas fa-calendar"></i> <span data-translate="date_aout">Août</span> 2025</span>
+                            <span><i class="fas fa-map-marker-alt"></i> <span data-translate="lieu_uvira">Uvira, Sud-Kivu</span></span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Vidéo 2 -->
+                <div class="video-card fade-in" data-category="ateliers">
+                    <div class="video-thumbnail">
+                        <div style="width: 100%; height: 100%; background: linear-gradient(135deg, rgba(246, 50, 36, 0.8), rgba(212, 42, 31, 0.8)), url('img/logo/banner1.jpg'); background-size: cover; background-position: center;"></div>
+                        <div class="play-overlay">
+                            <div class="play-icon">
+                                <i class="fas fa-play"></i>
+                            </div>
+                        </div>
+                        <span class="video-duration">5:12</span>
+                    </div>
+                    <div class="video-content">
+                        <h3 class="video-title" data-translate="videos_video2_titre">Atelier MEAL - International Alert</h3>
+                        <p class="video-description" data-translate="videos_video2_desc">
+                            Retour en vidéo sur l'atelier MEAL avec International Alert. Formation sur les méthodologies de suivi-évaluation et partage d'expériences entre professionnels du secteur.
+                        </p>
+                        <div class="video-meta">
+                            <span><i class="fas fa-calendar"></i> <span data-translate="date_septembre">Septembre</span> 2025</span>
+                            <span><i class="fas fa-map-marker-alt"></i> <span data-translate="lieu_kinshasa">Kinshasa</span></span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Vidéo 3 -->
+                <div class="video-card fade-in" data-category="presentations">
+                    <div class="video-thumbnail">
+                        <div style="width: 100%; height: 100%; background: linear-gradient(135deg, rgba(11, 34, 148, 0.8), rgba(13, 45, 176, 0.8)), url('img/logo/banner.jpg'); background-size: cover; background-position: center;"></div>
+                        <div class="play-overlay">
+                            <div class="play-icon">
+                                <i class="fas fa-play"></i>
+                            </div>
+                        </div>
+                        <span class="video-duration">8:30</span>
+                    </div>
+                    <div class="video-content">
+                        <h3 class="video-title" data-translate="videos_video3_titre">Présentation Rapport UNICEF Nsele</h3>
+                        <p class="video-description" data-translate="videos_video3_desc">
+                            Présentation officielle du rapport d'évaluation baseline du projet UNICEF sur l'amélioration de l'accès à l'éducation primaire à Nsele, Kinshasa.
+                        </p>
+                        <div class="video-meta">
+                            <span><i class="fas fa-calendar"></i> <span data-translate="date_octobre">Octobre</span> 2025</span>
+                            <span><i class="fas fa-map-marker-alt"></i> <span data-translate="lieu_kinshasa">Kinshasa</span></span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Vidéo 4 -->
+                <div class="video-card fade-in" data-category="missions">
+                    <div class="video-thumbnail">
+                        <div style="width: 100%; height: 100%; background: linear-gradient(135deg, rgba(11, 34, 148, 0.8), rgba(13, 45, 176, 0.8)), url('img/logo/banner4.jpg'); background-size: cover; background-position: center;"></div>
+                        <div class="play-overlay">
+                            <div class="play-icon">
+                                <i class="fas fa-play"></i>
+                            </div>
+                        </div>
+                        <span class="video-duration">4:25</span>
+                    </div>
+                    <div class="video-content">
+                        <h3 class="video-title" data-translate="videos_video4_titre">Visite Bukavu - FHI360 et ABFEC</h3>
+                        <p class="video-description" data-translate="videos_video4_desc">
+                            Notre équipe à Bukavu pour rencontrer les partenaires FHI360 et ABFEC. Échanges sur le projet "L'éducation est la réponse" financé par l'USAID.
+                        </p>
+                        <div class="video-meta">
+                            <span><i class="fas fa-calendar"></i> <span data-translate="date_juillet">Juillet</span> 2025</span>
+                            <span><i class="fas fa-map-marker-alt"></i> <span data-translate="lieu_bukavu">Bukavu, Sud-Kivu</span></span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Vidéo 5 -->
+                <div class="video-card fade-in" data-category="projets">
+                    <div class="video-thumbnail">
+                        <div style="width: 100%; height: 100%; background: linear-gradient(135deg, rgba(11, 34, 148, 0.8), rgba(13, 45, 176, 0.8)), url('img/logo/banner5.jpg'); background-size: cover; background-position: center;"></div>
+                        <div class="play-overlay">
+                            <div class="play-icon">
+                                <i class="fas fa-play"></i>
+                            </div>
+                        </div>
+                        <span class="video-duration">6:15</span>
+                    </div>
+                    <div class="video-content">
+                        <h3 class="video-title" data-translate="videos_video5_titre">Collecte de données Kabare</h3>
+                        <p class="video-description" data-translate="videos_video5_desc">
+                            Immersion dans notre processus de collecte de données à Kabare. De la formation des enquêteurs à l'administration des questionnaires sur le terrain.
+                        </p>
+                        <div class="video-meta">
+                            <span><i class="fas fa-calendar"></i> <span data-translate="date_juin">Juin</span> 2025</span>
+                            <span><i class="fas fa-map-marker-alt"></i> <span data-translate="lieu_kabare">Kabare, Sud-Kivu</span></span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Vidéo 6 -->
+                <div class="video-card fade-in" data-category="missions">
+                    <div class="video-thumbnail">
+                        <div style="width: 100%; height: 100%; background: linear-gradient(135deg, rgba(246, 50, 36, 0.8), rgba(212, 42, 31, 0.8)), url('img/logo/banner.jpg'); background-size: cover; background-position: center;"></div>
+                        <div class="play-overlay">
+                            <div class="play-icon">
+                                <i class="fas fa-play"></i>
+                            </div>
+                        </div>
+                        <span class="video-duration">3:50</span>
+                    </div>
+                    <div class="video-content">
+                        <h3 class="video-title" data-translate="videos_video6_titre">Mission Goma - USAID</h3>
+                        <p class="video-description" data-translate="videos_video6_desc">
+                            Évaluation du projet "L'éducation est la réponse" à Goma. Témoignages d'élèves, d'enseignants et de parties prenantes sur l'impact du projet.
+                        </p>
+                        <div class="video-meta">
+                            <span><i class="fas fa-calendar"></i> <span data-translate="date_mai">Mai</span> 2025</span>
+                            <span><i class="fas fa-map-marker-alt"></i> <span data-translate="lieu_goma">Goma, Nord-Kivu</span></span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Vidéo 7 -->
+                <div class="video-card fade-in" data-category="ateliers">
+                    <div class="video-thumbnail">
+                        <div style="width: 100%; height: 100%; background: linear-gradient(135deg, rgba(11, 34, 148, 0.8), rgba(13, 45, 176, 0.8)), url('img/logo/banner4.jpg'); background-size: cover; background-position: center;"></div>
+                        <div class="play-overlay">
+                            <div class="play-icon">
+                                <i class="fas fa-play"></i>
+                            </div>
+                        </div>
+                        <span class="video-duration">7:20</span>
+                    </div>
+                    <div class="video-content">
+                        <h3 class="video-title" data-translate="videos_video7_titre">Formation Kobo Toolbox</h3>
+                        <p class="video-description" data-translate="videos_video7_desc">
+                            Session de formation sur la collecte de données mobile avec Kobo Toolbox. De la création de formulaires à la synchronisation des données.
+                        </p>
+                        <div class="video-meta">
+                            <span><i class="fas fa-calendar"></i> <span data-translate="photos_date_avril">Avril</span> 2025</span>
+                            <span><i class="fas fa-map-marker-alt"></i> <span data-translate="lieu_kinshasa">Kinshasa</span></span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Vidéo 8 -->
+                <div class="video-card fade-in" data-category="presentations">
+                    <div class="video-thumbnail">
+                        <div style="width: 100%; height: 100%; background: linear-gradient(135deg, rgba(246, 50, 36, 0.8), rgba(212, 42, 31, 0.8)), url('img/logo/banner5.jpg'); background-size: cover; background-position: center;"></div>
+                        <div class="play-overlay">
+                            <div class="play-icon">
+                                <i class="fas fa-play"></i>
+                            </div>
+                        </div>
+                        <span class="video-duration">10:05</span>
+                    </div>
+                    <div class="video-content">
+                        <h3 class="video-title" data-translate="videos_video8_titre">Présentation Bureau d'Études</h3>
+                        <p class="video-description" data-translate="videos_video8_desc">
+                            Découvrez notre bureau d'études, notre équipe, nos services et notre approche méthodologique en évaluation de projets de développement.
+                        </p>
+                        <div class="video-meta">
+                            <span><i class="fas fa-calendar"></i> <span data-translate="photos_date_mars">Mars</span> 2025</span>
+                            <span><i class="fas fa-map-marker-alt"></i> <span data-translate="lieu_kinshasa">Kinshasa</span></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section" style="background: linear-gradient(135deg, #0b2294 0%, #0d2db0 100%); color: white;">
+        <div class="container" style="text-align: center;">
+            <i class="fas fa-video" style="font-size: 3rem; margin-bottom: 1rem; opacity: 0.9;"></i>
+            <h2 style="color: white; font-size: 2rem; margin-bottom: 1rem;" data-translate="videos_cta_titre">Intéressé par nos services ?</h2>
+            <p style="margin-bottom: 2rem; font-size: 1.1rem;" data-translate="videos_cta_desc">Contactez-nous pour discuter de votre projet d'évaluation</p>
+            <a href="contact.html" class="btn btn-primary" data-translate="carrieres_contactez">Nous contacter</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <!-- Logo et description -->
+            <div class="footer-brand">
+                <div class="footer-logo">
+                    <img src="img/logo/logo.png" alt="Partenaire de Recherche et d'Evaluation" class="footer-logo-img">
+                </div>
+            </div>
+
+            <!-- Contenu principal -->
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 data-translate="footer_navigation">Navigation</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html" data-translate="nav_accueil">Accueil</a></li>
+                        <li><a href="about.html" data-translate="nav_apropos">À propos</a></li>
+                        <li><a href="services.html" data-translate="nav_services">Nos services</a></li>
+                        <li><a href="realisations.html" data-translate="nav_realisations">Nos réalisations</a></li>
+                        <li><a href="ressources.html" data-translate="nav_ressources">Ressources</a></li>
+                        <li><a href="photos.html" data-translate="footer_galerie_photos">Galerie Photos</a></li>
+                        <li><a href="videos.html" data-translate="footer_galerie_videos">Galerie Vidéos</a></li>
+                        <li><a href="actualites.html" data-translate="nav_actualites">Actualités</a></li>
+                        <li><a href="carrieres.html" data-translate="nav_carrieres">Carrières</a></li>
+                        <li><a href="adhesion.html" data-translate="nav_adhesion">Adhésion</a></li>
+                        <li><a href="contact.html" data-translate="nav_contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3 data-translate="footer_services">Services</h3>
+                    <ul class="footer-links">
+                        <li><a href="services.html" data-translate="footer_baseline">Études de base (Baseline)</a></li>
+                        <li><a href="services.html" data-translate="footer_midline">Évaluations Midline</a></li>
+                        <li><a href="services.html" data-translate="footer_endline">Évaluations Endline</a></li>
+                        <li><a href="services.html" data-translate="footer_me">Suivi-évaluation (M&E)</a></li>
+                        <li><a href="services.html" data-translate="footer_renforcement">Renforcement de capacités</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3 data-translate="footer_contact">Contact</h3>
+                    <p><span data-translate="footer_adresse">📍 1, Basoko, Safricas, Kinshasa, Democratic Republic of the Congo</span></p>
+                    <p>📧 contact@bunshconsulting.com</p>
+                    <p>📞 +243 0979 286 949</p>
+                </div>
+            </div>
+
+            <!-- Section réseaux sociaux -->
+            <div class="footer-social">
+                <h3 data-translate="footer_suivez">Suivez-nous</h3>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/" class="social-icon-large">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="social-icon-large">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="social-icon-large">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="#" class="social-icon-large">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Copyright -->
+            <div class="footer-bottom">
+                <p data-translate="footer_copyright">&copy; 2025 Bunsh - Partenaire de Recherche et d'Evaluation</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to top button -->
+    <button class="scroll-to-top hidden" id="scrollToTop" aria-label="Retour en haut">
+        ↑
+    </button>
+
+    <script src="js/script.js"></script>
+    <script src="js/translation.js"></script>
+    <script>
+        // Filtrage des vidéos
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                // Retirer la classe active de tous les boutons
+                document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+                // Ajouter la classe active au bouton cliqué
+                this.classList.add('active');
+                
+                const filter = this.getAttribute('data-filter');
+                const videos = document.querySelectorAll('.video-card');
+                
+                videos.forEach(video => {
+                    if (filter === 'all' || video.getAttribute('data-category') === filter) {
+                        video.style.display = 'block';
+                        setTimeout(() => video.style.opacity = '1', 10);
+                    } else {
+                        video.style.opacity = '0';
+                        setTimeout(() => video.style.display = 'none', 300);
+                    }
+                });
+            });
+        });
+
+        // Gestion de la lecture des vidéos
+        document.querySelectorAll('.video-card').forEach(card => {
+            card.addEventListener('click', function(e) {
+                // Empêcher la propagation si on clique sur la vidéo elle-même
+                if (e.target.tagName === 'VIDEO') return;
+                
+                const video = this.querySelector('video');
+                if (video) {
+                    if (video.paused) {
+                        // Mettre en pause toutes les autres vidéos
+                        document.querySelectorAll('video').forEach(v => {
+                            if (v !== video) v.pause();
+                        });
+                        video.play();
+                        this.querySelector('.play-overlay').style.opacity = '0';
+                    } else {
+                        video.pause();
+                        this.querySelector('.play-overlay').style.opacity = '1';
+                    }
+                }
+            });
+        });
+
+        // Réinitialiser l'overlay quand la vidéo se termine
+        document.querySelectorAll('video').forEach(video => {
+            video.addEventListener('ended', function() {
+                this.closest('.video-card').querySelector('.play-overlay').style.opacity = '1';
+            });
+        });
+    </script>
+</body>
+</html>
+

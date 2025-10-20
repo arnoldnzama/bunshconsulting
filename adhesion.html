@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Devenez membre de notre réseau - Adhésion au Partenaire de Recherche et d'Evaluation">
+    <title>Adhésion | Bunsh - Partenaire de Recherche et d'Evaluation</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="img/ico/log_ico.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="img/ico/log_ico.ico">
+    <link rel="apple-touch-icon" href="img/logo/logo.png">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .membership-types {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .membership-card {
+            background: white;
+            border-radius: 15px;
+            padding: 2.5rem;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .membership-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(135deg, #0b2294 0%, #0d2db0 100%);
+        }
+
+        .membership-card.featured::before {
+            height: 8px;
+            background: linear-gradient(135deg, #f63224 0%, #d42a1f 100%);
+        }
+
+        .membership-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 30px rgba(11, 34, 148, 0.2);
+        }
+
+        .membership-card.featured {
+            border: 2px solid var(--color-accent-red);
+        }
+
+        .membership-badge {
+            display: inline-block;
+            padding: 0.4rem 1rem;
+            background-color: var(--color-accent-red);
+            color: white;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .membership-card h3 {
+            color: var(--color-accent-blue);
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .membership-price {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--color-secondary);
+            margin-bottom: 0.5rem;
+        }
+
+        .membership-price span {
+            font-size: 1rem;
+            color: #666;
+            font-weight: 400;
+        }
+
+        .membership-description {
+            color: #666;
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+
+        .membership-benefits {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 2rem;
+        }
+
+        .membership-benefits li {
+            padding: 0.7rem 0;
+            color: #666;
+            display: flex;
+            align-items: start;
+            gap: 0.7rem;
+        }
+
+        .membership-benefits li i {
+            color: #0b2294;
+            font-size: 1.1rem;
+            margin-top: 0.2rem;
+        }
+
+        .membership-card .btn {
+            width: 100%;
+            text-align: center;
+        }
+
+        .form-section {
+            background: white;
+            border-radius: 15px;
+            padding: 3rem;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .form-section h3 {
+            color: var(--color-accent-blue);
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        .form-section p {
+            text-align: center;
+            color: #666;
+            margin-bottom: 2rem;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+        }
+
+        .checkbox-group {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .checkbox-group input[type="checkbox"] {
+            width: auto;
+            margin: 0;
+        }
+
+        .checkbox-group label {
+            margin: 0;
+            font-weight: 400;
+        }
+
+        .form-message {
+            padding: 1rem;
+            border-radius: 5px;
+            margin-top: 1rem;
+            display: none;
+        }
+
+        .form-message.success {
+            background-color: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+            display: block;
+        }
+
+        .form-message.error {
+            background-color: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+            display: block;
+        }
+
+        .benefits-overview {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .benefit-box {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: var(--transition);
+        }
+
+        .benefit-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 25px rgba(11, 34, 148, 0.2);
+        }
+
+        .benefit-box i {
+            font-size: 3rem;
+            color: var(--color-accent-blue);
+            margin-bottom: 1rem;
+        }
+
+        .benefit-box h4 {
+            color: var(--color-secondary);
+            margin-bottom: 0.8rem;
+        }
+
+        .benefit-box p {
+            color: #666;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        @media (max-width: 768px) {
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+
+            .form-section {
+                padding: 2rem 1.5rem;
+            }
+
+            .membership-price {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header>
+        <div class="container">
+            <nav>
+                <a href="index.html" class="logo">
+                    <img src="img/logo/logo.png" alt="Partenaire de Recherche et d'Evaluation" class="logo-img">
+                </a>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html" data-translate="nav_accueil">Accueil</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle">
+                            <span data-translate="nav_bunsh">Bunsh</span> <i class="fas fa-chevron-down"></i>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="about.html"><i class="fas fa-info-circle"></i> <span data-translate="nav_apropos">À propos</span></a></li>
+                            <li><a href="services.html"><i class="fas fa-cogs"></i> <span data-translate="nav_services">Nos services</span></a></li>
+                            <li><a href="realisations.html"><i class="fas fa-trophy"></i> <span data-translate="nav_realisations">Nos réalisations</span></a></li>
+                            <li><a href="ressources.html"><i class="fas fa-book"></i> <span data-translate="nav_ressources">Ressources</span></a></li>
+                        </ul>
+                    </li>
+                    <li><a href="actualites.html" data-translate="nav_actualites">Actualités</a></li>
+                    <li><a href="carrieres.html" data-translate="nav_carrieres">Carrières</a></li>
+                    <li><a href="adhesion.html" class="active" data-translate="nav_adhesion">Adhésion</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle">
+                            <span data-translate="nav_mediatheque">Média</span> <i class="fas fa-chevron-down"></i>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="photos.html"><i class="fas fa-images"></i> <span data-translate="nav_photos">Photos</span></a></li>
+                            <li><a href="videos.html"><i class="fas fa-video"></i> <span data-translate="nav_videos">Vidéos</span></a></li>
+                        </ul>
+                    </li>
+                    <li><a href="contact.html" data-translate="nav_contact">Contact</a></li>
+                </ul>
+                <div class="language-switcher">
+                    <button class="lang-btn active" id="langFr" onclick="changeLanguage('fr')" aria-label="Français">FR</button>
+                    <div class="lang-separator"></div>
+                    <button class="lang-btn" id="langEn" onclick="changeLanguage('en')" aria-label="English">EN</button>
+                </div>
+                <div class="menu-toggle" id="menuToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1 data-translate="adhesion_hero_titre">Devenez membre de notre réseau</h1>
+            <p data-translate="adhesion_hero_desc">Rejoignez une communauté de professionnels engagés dans l'évaluation et le développement en RDC. Accédez à des ressources exclusives, des formations et un réseau d'experts.</p>
+        </div>
+    </section>
+
+    <!-- Avantages de l'adhésion -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title" data-translate="adhesion_pourquoi_titre">Pourquoi adhérer ?</h2>
+            <p class="section-subtitle" data-translate="adhesion_pourquoi_desc">
+                L'adhésion vous ouvre la porte à un écosystème professionnel unique
+            </p>
+            <div class="benefits-overview">
+                <div class="benefit-box fade-in">
+                    <i class="fas fa-graduation-cap"></i>
+                    <h4 data-translate="adhesion_avantage1_titre">Formations continues</h4>
+                    <p data-translate="adhesion_avantage1_desc">Accès à des formations exclusives en méthodologie d'évaluation et analyse de données</p>
+                </div>
+                <div class="benefit-box fade-in">
+                    <i class="fas fa-network-wired"></i>
+                    <h4 data-translate="adhesion_avantage2_titre">Réseau professionnel</h4>
+                    <p data-translate="adhesion_avantage2_desc">Connectez-vous avec des experts et praticiens du secteur du développement</p>
+                </div>
+                <div class="benefit-box fade-in">
+                    <i class="fas fa-book-open"></i>
+                    <h4 data-translate="adhesion_avantage3_titre">Ressources exclusives</h4>
+                    <p data-translate="adhesion_avantage3_desc">Bibliothèque de guides méthodologiques, rapports d'études et outils pratiques</p>
+                </div>
+                <div class="benefit-box fade-in">
+                    <i class="fas fa-briefcase"></i>
+                    <h4 data-translate="adhesion_avantage4_titre">Opportunités professionnelles</h4>
+                    <p data-translate="adhesion_avantage4_desc">Accès prioritaire aux offres d'emploi et missions de consultance</p>
+                </div>
+                <div class="benefit-box fade-in">
+                    <i class="fas fa-certificate"></i>
+                    <h4 data-translate="adhesion_avantage5_titre">Certification</h4>
+                    <p data-translate="adhesion_avantage5_desc">Obtenez des certifications reconnues en suivi-évaluation</p>
+                </div>
+                <div class="benefit-box fade-in">
+                    <i class="fas fa-users"></i>
+                    <h4 data-translate="adhesion_avantage6_titre">Événements exclusifs</h4>
+                    <p data-translate="adhesion_avantage6_desc">Participez à des webinaires, ateliers et conférences sectorielles</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Formulaire d'adhésion -->
+    <section class="section" id="formulaire">
+        <div class="container">
+            <div class="form-section">
+                <h3><i class="fas fa-edit"></i> <span data-translate="adhesion_formulaire_titre">Formulaire d'adhésion</span></h3>
+                <p data-translate="adhesion_formulaire_desc">Remplissez ce formulaire pour devenir membre de notre réseau</p>
+
+                <form class="contact-form" id="adhesionForm">
+                    <div class="form-group">
+                        <label for="type_adhesion"><span data-translate="adhesion_type_label">Type d'adhésion</span> <span style="color: red;">*</span></label>
+                        <select id="type_adhesion" name="type_adhesion" required>
+                            <option value="" data-translate="adhesion_type_select">Sélectionnez un type</option>
+                            <option value="individuelle" data-translate="adhesion_type_individuelle">Individuelle (50 $ / an)</option>
+                            <option value="etudiante" data-translate="adhesion_type_etudiante">Étudiante (20 $ / an)</option>
+                            <option value="organisationnelle" data-translate="adhesion_type_organisationnelle">Organisationnelle (300 $ / an)</option>
+                        </select>
+                    </div>
+
+                    <!-- Informations personnelles -->
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="nom"><span data-translate="adhesion_nom">Nom complet</span> <span style="color: red;">*</span></label>
+                            <input type="text" id="nom" name="nom" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="prenom"><span data-translate="adhesion_prenom">Prénom</span> <span style="color: red;">*</span></label>
+                            <input type="text" id="prenom" name="prenom" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="email"><span data-translate="contact_email">Email</span> <span style="color: red;">*</span></label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="telephone"><span data-translate="contact_telephone">Téléphone</span> <span style="color: red;">*</span></label>
+                            <input type="tel" id="telephone" name="telephone" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="adresse" data-translate="adhesion_adresse">Adresse complète</label>
+                        <input type="text" id="adresse" name="adresse" data-translate="adhesion_adresse_placeholder" placeholder="Ville, Commune, Quartier">
+                    </div>
+
+                    <!-- Informations professionnelles -->
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="profession" data-translate="adhesion_profession">Profession / Fonction</label>
+                            <input type="text" id="profession" name="profession" data-translate="adhesion_profession_placeholder" placeholder="Ex: Chargé de M&E">
+                        </div>
+                        <div class="form-group">
+                            <label for="organisation" data-translate="contact_organisation">Organisation</label>
+                            <input type="text" id="organisation" name="organisation" data-translate="adhesion_organisation_placeholder" placeholder="Nom de votre organisation">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="secteur" data-translate="adhesion_secteur">Secteur d'activité</label>
+                        <select id="secteur" name="secteur">
+                            <option value="" data-translate="adhesion_secteur_select">Sélectionnez un secteur</option>
+                            <option value="education" data-translate="real_filtre_education">Éducation</option>
+                            <option value="sante" data-translate="real_filtre_sante">Santé</option>
+                            <option value="agriculture" data-translate="real_filtre_agriculture">Agriculture</option>
+                            <option value="gouvernance" data-translate="real_filtre_gouvernance">Gouvernance</option>
+                            <option value="environnement" data-translate="real_filtre_environnement">Environnement</option>
+                            <option value="protection" data-translate="adhesion_secteur_protection">Protection</option>
+                            <option value="humanitarian" data-translate="adhesion_secteur_humanitaire">Humanitaire</option>
+                            <option value="autre" data-translate="adhesion_secteur_autre">Autre</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="experience" data-translate="adhesion_experience">Années d'expérience en M&E ou développement</label>
+                        <select id="experience" name="experience">
+                            <option value="" data-translate="adhesion_experience_select">Sélectionnez</option>
+                            <option value="0-2" data-translate="adhesion_exp_0_2">0-2 ans</option>
+                            <option value="3-5" data-translate="adhesion_exp_3_5">3-5 ans</option>
+                            <option value="6-10" data-translate="adhesion_exp_6_10">6-10 ans</option>
+                            <option value="10+" data-translate="adhesion_exp_10_plus">Plus de 10 ans</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="motivations" data-translate="adhesion_motivations">Vos motivations pour adhérer</label>
+                        <textarea id="motivations" name="motivations" rows="4" data-translate="adhesion_motivations_placeholder" placeholder="Parlez-nous de vos motivations et de ce que vous attendez de cette adhésion..."></textarea>
+                    </div>
+
+                    <!-- Domaines d'intérêt -->
+                    <div class="form-group">
+                        <label style="margin-bottom: 1rem; display: block;" data-translate="adhesion_interets_titre">Domaines d'intérêt (cochez tous ceux qui s'appliquent)</label>
+                        <div class="checkbox-group">
+                            <input type="checkbox" id="int_baseline" name="interets[]" value="baseline">
+                            <label for="int_baseline" data-translate="adhesion_interet_baseline">Études Baseline</label>
+                        </div>
+                        <div class="checkbox-group">
+                            <input type="checkbox" id="int_evaluation" name="interets[]" value="evaluation">
+                            <label for="int_evaluation" data-translate="adhesion_interet_evaluation">Évaluations d'impact</label>
+                        </div>
+                        <div class="checkbox-group">
+                            <input type="checkbox" id="int_collecte" name="interets[]" value="collecte">
+                            <label for="int_collecte" data-translate="adhesion_interet_collecte">Collecte de données</label>
+                        </div>
+                        <div class="checkbox-group">
+                            <input type="checkbox" id="int_analyse" name="interets[]" value="analyse">
+                            <label for="int_analyse" data-translate="adhesion_interet_analyse">Analyse statistique</label>
+                        </div>
+                        <div class="checkbox-group">
+                            <input type="checkbox" id="int_formation" name="interets[]" value="formation">
+                            <label for="int_formation" data-translate="adhesion_interet_formation">Formation et renforcement de capacités</label>
+                        </div>
+                    </div>
+
+                    <!-- Conditions -->
+                    <div class="form-group">
+                        <div class="checkbox-group" style="align-items: start;">
+                            <input type="checkbox" id="accepte_conditions" name="accepte_conditions" required>
+                            <label for="accepte_conditions" data-translate="adhesion_accepte_conditions">
+                                J'accepte les <a href="#" style="color: var(--color-accent-blue); text-decoration: underline;">conditions générales</a> et la <a href="#" style="color: var(--color-accent-blue); text-decoration: underline;">politique de confidentialité</a> <span style="color: red;">*</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary" style="width: 100%;">
+                        <i class="fas fa-check-circle"></i> <span data-translate="adhesion_confirmer">Confirmer mon adhésion</span>
+                    </button>
+
+                    <div class="form-message" id="formMessage"></div>
+
+                    <p style="text-align: center; margin-top: 1.5rem; color: #666; font-size: 0.9rem;">
+                        <i class="fas fa-info-circle"></i> <span data-translate="adhesion_info_paiement">Après validation de votre demande, vous recevrez un email avec les instructions de paiement.</span>
+                    </p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section" style="background-color: #f8f9fa;">
+        <div class="container">
+            <h2 class="section-title" data-translate="adhesion_faq_titre">Questions fréquentes</h2>
+            <div style="max-width: 800px; margin: 0 auto;">
+                <div class="value-card fade-in">
+                    <h3><i class="fas fa-question-circle"></i> <span data-translate="adhesion_faq1_q">Comment effectuer le paiement ?</span></h3>
+                    <p data-translate="adhesion_faq1_r">Après soumission de votre formulaire, vous recevrez un email avec les instructions de paiement (virement bancaire, mobile money ou cash). Votre adhésion sera activée dès réception du paiement.</p>
+                </div>
+                <div class="value-card fade-in">
+                    <h3><i class="fas fa-question-circle"></i> <span data-translate="adhesion_faq2_q">L'adhésion est-elle renouvelable ?</span></h3>
+                    <p data-translate="adhesion_faq2_r">Oui, l'adhésion est valable pour une année civile. Vous recevrez un rappel avant expiration pour renouveler votre adhésion.</p>
+                </div>
+                <div class="value-card fade-in">
+                    <h3><i class="fas fa-question-circle"></i> <span data-translate="adhesion_faq3_q">Puis-je annuler mon adhésion ?</span></h3>
+                    <p data-translate="adhesion_faq3_r">Oui, vous pouvez annuler votre adhésion à tout moment. Cependant, les frais d'adhésion ne sont pas remboursables.</p>
+                </div>
+                <div class="value-card fade-in">
+                    <h3><i class="fas fa-question-circle"></i> <span data-translate="adhesion_faq4_q">Proposez-vous des adhésions en groupe ?</span></h3>
+                    <p data-translate="adhesion_faq4_r">Oui, notre formule Organisationnelle permet d'inscrire jusqu'à 5 membres de votre équipe. Pour plus de membres, contactez-nous pour un devis personnalisé.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section" style="background: linear-gradient(135deg, #0b2294 0%, #0d2db0 100%); color: white;">
+        <div class="container" style="text-align: center;">
+            <h2 style="color: white; font-size: 2rem; margin-bottom: 1rem;" data-translate="adhesion_cta_titre">Des questions ?</h2>
+            <p style="margin-bottom: 2rem; font-size: 1.1rem;" data-translate="adhesion_cta_desc">Contactez-nous pour plus d'informations sur l'adhésion</p>
+            <a href="contact.html" class="btn btn-primary" data-translate="carrieres_contactez">Nous contacter</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <!-- Logo et description -->
+            <div class="footer-brand">
+                <div class="footer-logo">
+                    <img src="img/logo/logo.png" alt="Partenaire de Recherche et d'Evaluation" class="footer-logo-img">
+                </div>
+            </div>
+
+            <!-- Contenu principal -->
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3 data-translate="footer_navigation">Navigation</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html" data-translate="nav_accueil">Accueil</a></li>
+                        <li><a href="about.html" data-translate="nav_apropos">À propos</a></li>
+                        <li><a href="services.html" data-translate="nav_services">Nos services</a></li>
+                        <li><a href="realisations.html" data-translate="nav_realisations">Nos réalisations</a></li>
+                        <li><a href="ressources.html" data-translate="nav_ressources">Ressources</a></li>
+                        <li><a href="photos.html" data-translate="footer_galerie_photos">Galerie Photos</a></li>
+                        <li><a href="videos.html" data-translate="footer_galerie_videos">Galerie Vidéos</a></li>
+                        <li><a href="actualites.html" data-translate="nav_actualites">Actualités</a></li>
+                        <li><a href="carrieres.html" data-translate="nav_carrieres">Carrières</a></li>
+                        <li><a href="adhesion.html" data-translate="nav_adhesion">Adhésion</a></li>
+                        <li><a href="contact.html" data-translate="nav_contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3 data-translate="footer_services">Services</h3>
+                    <ul class="footer-links">
+                        <li><a href="services.html" data-translate="footer_baseline">Études de base (Baseline)</a></li>
+                        <li><a href="services.html" data-translate="footer_midline">Évaluations Midline</a></li>
+                        <li><a href="services.html" data-translate="footer_endline">Évaluations Endline</a></li>
+                        <li><a href="services.html" data-translate="footer_me">Suivi-évaluation (M&E)</a></li>
+                        <li><a href="services.html" data-translate="footer_renforcement">Renforcement de capacités</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3 data-translate="footer_contact">Contact</h3>
+                    <p><span data-translate="footer_adresse">📍 1, Basoko, Safricas, Kinshasa, Democratic Republic of the Congo</span></p>
+                    <p>📧 contact@bunshconsulting.com</p>
+                    <p>📞 +243 0979 286 949</p>
+                </div>
+            </div>
+
+            <!-- Section réseaux sociaux -->
+            <div class="footer-social">
+                <h3 data-translate="footer_suivez">Suivez-nous</h3>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/" class="social-icon-large">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="social-icon-large">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="social-icon-large">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="#" class="social-icon-large">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Copyright -->
+            <div class="footer-bottom">
+                <p data-translate="footer_copyright">&copy; 2025 Bunsh - Partenaire de Recherche et d'Evaluation</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to top button -->
+    <button class="scroll-to-top hidden" id="scrollToTop" aria-label="Retour en haut">
+        ↑
+    </button>
+
+    <script src="js/script.js"></script>
+    <script src="js/translation.js"></script>
+    <script>
+        // Gestion de la soumission du formulaire d'adhésion
+        document.getElementById('adhesionForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            const messageDiv = document.getElementById('formMessage');
+            const submitBtn = this.querySelector('button[type="submit"]');
+            const currentLang = localStorage.getItem('preferredLanguage') || 'fr';
+            
+            // Désactiver le bouton et afficher un message de chargement
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = currentLang === 'fr' 
+                ? '<i class="fas fa-spinner fa-spin"></i> Traitement en cours...' 
+                : '<i class="fas fa-spinner fa-spin"></i> Processing...';
+            
+            // Préparer les données du formulaire
+            const formData = new FormData(this);
+            formData.append('lang', currentLang);
+            
+            try {
+                const response = await fetch('php/adhesion.php', {
+                    method: 'POST',
+                    body: formData
+                });
+                
+                const result = await response.json();
+                
+                if (result.success) {
+                    messageDiv.className = 'form-message success';
+                    messageDiv.textContent = result.message;
+                    this.reset();
+                } else {
+                    messageDiv.className = 'form-message error';
+                    messageDiv.textContent = result.message;
+                }
+            } catch (error) {
+                messageDiv.className = 'form-message error';
+                messageDiv.textContent = currentLang === 'fr' 
+                    ? 'Une erreur est survenue. Veuillez réessayer.' 
+                    : 'An error occurred. Please try again.';
+            }
+            
+            // Réactiver le bouton
+            submitBtn.disabled = false;
+            submitBtn.innerHTML = currentLang === 'fr' 
+                ? '<i class="fas fa-check-circle"></i> Confirmer mon adhésion' 
+                : '<i class="fas fa-check-circle"></i> Confirm Membership';
+            
+            // Scroller vers le message
+            messageDiv.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        });
+    </script>
+</body>
+</html>
+

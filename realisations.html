@@ -31,10 +31,10 @@
                             <li><a href="about.html"><i class="fas fa-info-circle"></i> <span data-translate="nav_apropos">À propos</span></a></li>
                             <li><a href="services.html"><i class="fas fa-cogs"></i> <span data-translate="nav_services">Nos services</span></a></li>
                             <li><a href="realisations.html" class="active"><i class="fas fa-trophy"></i> <span data-translate="nav_realisations">Nos réalisations</span></a></li>
-                            <li><a href="ressources.html"><i class="fas fa-book"></i> <span data-translate="nav_ressources">Ressources</span></a></li>
+                            <li><a href="ressources.html"><i class="fas fa-book"></i> <span data-translate="nav_ressources">Nos rapports</span></a></li>
                         </ul>
                     </li>
-                    <li><a href="actualites.html" data-translate="nav_actualites">Actualités</a></li>
+                    <li><a href="actualites.html" data-translate="nav_actualites">Publications</a></li>
                     <li><a href="carrieres.html" data-translate="nav_carrieres">Carrières</a></li>
                     <li><a href="adhesion.html" data-translate="nav_adhesion">Adhésion</a></li>
                     <li class="dropdown">
@@ -97,7 +97,7 @@
     <!-- Projects Section -->
     <section class="section">
         <div class="container">
-            <h2 class="section-title" data-translate="real_projets_titre">Nos projets par secteur</h2>
+            <h2 class="section-title" data-translate="real_projets_titre">Nos secteurs d'activité</h2>
             <p class="section-subtitle" data-translate="real_projets_desc">
                 Filtrez nos réalisations par secteur d'intervention
             </p>
@@ -105,46 +105,35 @@
             <!-- Filters -->
             <div class="projects-filters">
                 <button class="filter-btn active" data-filter="tous" data-translate="real_filtre_tous">Tous</button>
-                <button class="filter-btn" data-filter="education" data-translate="real_filtre_education">Éducation</button>
-                <button class="filter-btn" data-filter="sante" data-translate="real_filtre_sante">Santé</button>
-                <button class="filter-btn" data-filter="agriculture" data-translate="real_filtre_agriculture">Agriculture</button>
-                <button class="filter-btn" data-filter="gouvernance" data-translate="real_filtre_gouvernance">Gouvernance</button>
+                <button class="filter-btn" data-filter="education" data-translate="real_filtre_education">Secteur de l'éducation</button>
+                <button class="filter-btn" data-filter="sante" data-translate="real_filtre_sante">Secteur de la Santé</button>
+                <button class="filter-btn" data-filter="agriculture" data-translate="real_filtre_agriculture">Secteur de l'agriculture</button>
                 <button class="filter-btn" data-filter="environnement" data-translate="real_filtre_environnement">Environnement</button>
+                <button class="filter-btn" data-filter="conflits" data-translate="real_filtre_conflits">Management des Conflits</button>
             </div>
 
             <!-- Projects Grid -->
             <div class="projects-grid" id="projectsGrid">
                 <!-- Éducation -->
                 <div class="project-card" data-category="education">
+                    <div class="project-image"><i class="fas fa-graduation-cap"></i></div>
+                    <div class="project-content">
+                        <span class="project-category" data-translate="real_filtre_education">Secteur de l'éducation</span>
+                        <h3 data-translate="real_projet_edu1_titre">Base de référence de l'enseignement primaire à Kinshasa, N'sele</h3>
+                        <p data-translate="real_projet_edu1_desc">Enquête de base sur l'amélioration de l'accès et de la qualité de l'enseignement primaire à Kinshasa, dans la commune de N'sele.</p>
+                        <p class="project-client" data-translate="real_projet_edu1_client">Client : UNICEF</p>
+                        <p class="project-year"><span data-translate="real_projet_annee">Année :</span> 2025</p>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="education">
                     <div class="project-image"><i class="fas fa-school"></i></div>
                     <div class="project-content">
-                        <span class="project-category" data-translate="real_filtre_education">Éducation</span>
-                        <h3 data-translate="real_projet_edu1_titre">Évaluation Endline - Programme d'accès à l'éducation primaire</h3>
-                        <p data-translate="real_projet_edu1_desc">Évaluation finale d'un programme visant à améliorer l'accès et la qualité de l'éducation primaire dans 120 écoles de Kinshasa. Mesure de l'amélioration des taux de scolarisation et des performances scolaires.</p>
-                        <p class="project-client" data-translate="real_projet_edu1_client">Client : ONG Internationale - Éducation pour Tous</p>
-                        <p class="project-year"><span data-translate="real_projet_annee">Année :</span> 2024</p>
-                    </div>
-                </div>
-
-                <div class="project-card" data-category="education">
-                    <div class="project-image"><i class="fas fa-book-reader"></i></div>
-                    <div class="project-content">
-                        <span class="project-category" data-translate="real_filtre_education">Éducation</span>
-                        <h3 data-translate="real_projet_edu2_titre">Étude Baseline - Alphabétisation des adultes</h3>
-                        <p data-translate="real_projet_edu2_desc">Étude de référence pour un programme d'alphabétisation fonctionnelle destiné aux adultes en milieu rural. Cartographie des besoins et définition des indicateurs de succès.</p>
-                        <p class="project-client" data-translate="real_projet_edu2_client">Client : UNESCO Kinshasa</p>
-                        <p class="project-year"><span data-translate="real_projet_annee">Année :</span> 2024</p>
-                    </div>
-                </div>
-
-                <div class="project-card" data-category="education">
-                    <div class="project-image"><i class="fas fa-chalkboard-teacher"></i></div>
-                    <div class="project-content">
-                        <span class="project-category" data-translate="real_filtre_education">Éducation</span>
-                        <h3 data-translate="real_projet_edu3_titre">Évaluation Midline - Formation des enseignants</h3>
-                        <p data-translate="real_projet_edu3_desc">Évaluation à mi-parcours d'un programme de formation continue de 500 enseignants du secondaire. Mesure de l'amélioration des pratiques pédagogiques.</p>
-                        <p class="project-client" data-translate="real_projet_edu3_client">Client : Ministère de l'Éducation (EPST)</p>
-                        <p class="project-year"><span data-translate="real_projet_annee">Année :</span> 2023</p>
+                        <span class="project-category" data-translate="real_filtre_education">Secteur de l'éducation</span>
+                        <h3 data-translate="real_projet_edu2_titre">L'évaluation de l'éducation est la réponse de l'USAID</h3>
+                        <p data-translate="real_projet_edu2_desc">Évaluation du programme éducatif de l'USAID axé sur l'amélioration de la qualité de l'enseignement et l'accès à l'éducation en République démocratique du Congo.</p>
+                        <p class="project-client" data-translate="real_projet_edu2_client">Client : USAID</p>
+                        <p class="project-year"><span data-translate="real_projet_annee">Année :</span> 2025</p>
                     </div>
                 </div>
 
@@ -152,7 +141,7 @@
                 <div class="project-card" data-category="sante">
                     <div class="project-image"><i class="fas fa-hospital"></i></div>
                     <div class="project-content">
-                        <span class="project-category" data-translate="real_filtre_sante">Santé</span>
+                        <span class="project-category" data-translate="real_filtre_sante">Secteur de la Santé</span>
                         <h3 data-translate="real_projet_sante1_titre">Étude Baseline - Santé maternelle et infantile</h3>
                         <p data-translate="real_projet_sante1_desc">Établissement de la situation de référence pour un programme de réduction de la mortalité maternelle et infantile dans 5 zones de santé. Collecte de données auprès de 1500 ménages.</p>
                         <p class="project-client" data-translate="real_projet_sante1_client">Client : Ministère de la Santé Publique</p>
@@ -163,7 +152,7 @@
                 <div class="project-card" data-category="sante">
                     <div class="project-image"><i class="fas fa-pills"></i></div>
                     <div class="project-content">
-                        <span class="project-category" data-translate="real_filtre_sante">Santé</span>
+                        <span class="project-category" data-translate="real_filtre_sante">Secteur de la Santé</span>
                         <h3 data-translate="real_projet_sante2_titre">Évaluation Endline - Lutte contre le paludisme</h3>
                         <p data-translate="real_projet_sante2_desc">Évaluation finale d'un programme de distribution de moustiquaires imprégnées et d'éducation sanitaire. Mesure de la réduction de l'incidence du paludisme.</p>
                         <p class="project-client" data-translate="real_projet_sante2_client">Client : Fonds Mondial</p>
@@ -174,7 +163,7 @@
                 <div class="project-card" data-category="sante">
                     <div class="project-image"><i class="fas fa-syringe"></i></div>
                     <div class="project-content">
-                        <span class="project-category" data-translate="real_filtre_sante">Santé</span>
+                        <span class="project-category" data-translate="real_filtre_sante">Secteur de la Santé</span>
                         <h3 data-translate="real_projet_sante3_titre">Évaluation Midline - Campagne de vaccination</h3>
                         <p data-translate="real_projet_sante3_desc">Suivi à mi-parcours d'une campagne de vaccination élargie. Analyse des taux de couverture vaccinale et des obstacles à la vaccination.</p>
                         <p class="project-client" data-translate="real_projet_sante3_client">Client : OMS / UNICEF</p>
@@ -186,7 +175,7 @@
                 <div class="project-card" data-category="agriculture">
                     <div class="project-image"><i class="fas fa-seedling"></i></div>
                     <div class="project-content">
-                        <span class="project-category" data-translate="real_filtre_agriculture">Agriculture</span>
+                        <span class="project-category" data-translate="real_filtre_agriculture">Secteur de l'agriculture</span>
                         <h3 data-translate="real_projet_agri1_titre">Évaluation Midline - Sécurité alimentaire et nutrition</h3>
                         <p data-translate="real_projet_agri1_desc">Évaluation intermédiaire d'un programme d'amélioration de la sécurité alimentaire touchant 3000 ménages agricoles. Mesure de l'augmentation de la production et des revenus.</p>
                         <p class="project-client" data-translate="real_projet_agri1_client">Client : PAM (Programme Alimentaire Mondial)</p>
@@ -197,7 +186,7 @@
                 <div class="project-card" data-category="agriculture">
                     <div class="project-image"><i class="fas fa-tractor"></i></div>
                     <div class="project-content">
-                        <span class="project-category" data-translate="real_filtre_agriculture">Agriculture</span>
+                        <span class="project-category" data-translate="real_filtre_agriculture">Secteur de l'agriculture</span>
                         <h3 data-translate="real_projet_agri2_titre">Étude Baseline - Renforcement des coopératives agricoles</h3>
                         <p data-translate="real_projet_agri2_desc">Étude de référence pour un projet d'appui aux coopératives de producteurs. Diagnostic organisationnel et identification des besoins en renforcement de capacités.</p>
                         <p class="project-client" data-translate="real_projet_agri2_client">Client : FAO Congo</p>
@@ -208,7 +197,7 @@
                 <div class="project-card" data-category="agriculture">
                     <div class="project-image"><i class="fas fa-horse-head"></i></div>
                     <div class="project-content">
-                        <span class="project-category" data-translate="real_filtre_agriculture">Agriculture</span>
+                        <span class="project-category" data-translate="real_filtre_agriculture">Secteur de l'agriculture</span>
                         <h3 data-translate="real_projet_agri3_titre">Évaluation Endline - Projet d'élevage communautaire</h3>
                         <p data-translate="real_projet_agri3_desc">Évaluation finale d'un projet d'élevage de petits ruminants. Analyse de la viabilité économique et de l'impact sur les revenus des ménages.</p>
                         <p class="project-client" data-translate="real_projet_agri3_client">Client : ONG Développement Rural</p>
@@ -216,37 +205,15 @@
                     </div>
                 </div>
 
-                <!-- Gouvernance -->
-                <div class="project-card" data-category="gouvernance">
-                    <div class="project-image"><i class="fas fa-balance-scale"></i></div>
+                <!-- Management des Conflits -->
+                <div class="project-card" data-category="conflits">
+                    <div class="project-image"><i class="fas fa-dove"></i></div>
                     <div class="project-content">
-                        <span class="project-category" data-translate="real_filtre_gouvernance">Gouvernance</span>
-                        <h3 data-translate="real_projet_gouv1_titre">Évaluation Midline - Renforcement de la gouvernance locale</h3>
-                        <p data-translate="real_projet_gouv1_desc">Évaluation à mi-parcours d'un programme de renforcement des capacités de 50 administrations locales. Mesure de l'amélioration de la transparence et de la redevabilité.</p>
-                        <p class="project-client" data-translate="real_projet_gouv1_client">Client : PNUD Congo</p>
+                        <span class="project-category" data-translate="real_filtre_conflits">Management des Conflits</span>
+                        <h3 data-translate="real_projet_conflits1_titre">Évaluation de la consolidation de la paix et de la stabilité en RDC</h3>
+                        <p data-translate="real_projet_conflits1_desc">Évaluation sur la consolidation de la paix et de la stabilité en République démocratique du Congo à travers la réduction des risques explosifs et de la violence armée.</p>
+                        <p class="project-client" data-translate="real_projet_conflits1_client">Client : KOICA</p>
                         <p class="project-year"><span data-translate="real_projet_annee">Année :</span> 2024</p>
-                    </div>
-                </div>
-
-                <div class="project-card" data-category="gouvernance">
-                    <div class="project-image"><i class="fas fa-vote-yea"></i></div>
-                    <div class="project-content">
-                        <span class="project-category" data-translate="real_filtre_gouvernance">Gouvernance</span>
-                        <h3 data-translate="real_projet_gouv2_titre">Étude Baseline - Participation citoyenne</h3>
-                        <p data-translate="real_projet_gouv2_desc">Étude de référence sur la participation citoyenne aux processus décisionnels locaux. Enquête auprès de 2000 citoyens et 100 leaders communautaires.</p>
-                        <p class="project-client" data-translate="real_projet_gouv2_client">Client : Union Européenne</p>
-                        <p class="project-year"><span data-translate="real_projet_annee">Année :</span> 2023</p>
-                    </div>
-                </div>
-
-                <div class="project-card" data-category="gouvernance">
-                    <div class="project-image"><i class="fas fa-scroll"></i></div>
-                    <div class="project-content">
-                        <span class="project-category" data-translate="real_filtre_gouvernance">Gouvernance</span>
-                        <h3 data-translate="real_projet_gouv3_titre">Évaluation Endline - Accès à la justice</h3>
-                        <p data-translate="real_projet_gouv3_desc">Évaluation finale d'un programme d'amélioration de l'accès à la justice pour les populations vulnérables. Mesure de l'augmentation du taux de résolution des litiges.</p>
-                        <p class="project-client" data-translate="real_projet_gouv3_client">Client : USAID Justice for All</p>
-                        <p class="project-year"><span data-translate="real_projet_annee">Année :</span> 2023</p>
                     </div>
                 </div>
 
@@ -304,7 +271,7 @@
                     <p style="color: #999; font-size: 0.9rem;" data-translate="real_temoignage1_role">Chef de projet, ONG Internationale</p>
                 </div>
 
-                <div style="background: white; padding: 2rem; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); border-left: 4px solid #f63224;">
+                <div style="background: white; padding: 2rem; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); border-left: 4px solid #fe290b;">
                     <p style="color: #666; font-style: italic; margin-bottom: 1rem; line-height: 1.8;" data-translate="real_temoignage2">
                         "Des professionnels rigoureux et à l'écoute. La collecte de données sur le terrain s'est déroulée de manière exemplaire avec un haut niveau de qualité."
                     </p>
@@ -351,10 +318,10 @@
                         <li><a href="about.html" data-translate="nav_apropos">À propos</a></li>
                         <li><a href="services.html" data-translate="nav_services">Nos services</a></li>
                         <li><a href="realisations.html" data-translate="nav_realisations">Nos réalisations</a></li>
-                        <li><a href="ressources.html" data-translate="nav_ressources">Ressources</a></li>
+                        <li><a href="ressources.html" data-translate="nav_ressources">Nos rapports</a></li>
                         <li><a href="photos.html" data-translate="footer_galerie_photos">Galerie Photos</a></li>
                         <li><a href="videos.html" data-translate="footer_galerie_videos">Galerie Vidéos</a></li>
-                        <li><a href="actualites.html" data-translate="nav_actualites">Actualités</a></li>
+                        <li><a href="actualites.html" data-translate="nav_actualites">Publications</a></li>
                         <li><a href="carrieres.html" data-translate="nav_carrieres">Carrières</a></li>
                         <li><a href="adhesion.html" data-translate="nav_adhesion">Adhésion</a></li>
                         <li><a href="contact.html" data-translate="nav_contact">Contact</a></li>

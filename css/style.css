@@ -4,15 +4,16 @@
    =================================== */
 
 /* Import Google Fonts - Poppins */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap'); */
 
 /* Variables CSS */
 :root {
     --color-primary: #ffffff;
-    --color-secondary: #000c0c;
+    --color-secondary: #047c3a;
     --color-accent-blue: #0b2294;
-    --color-accent-red: #f63224;
-    --font-main: 'Poppins', sans-serif;
+    --color-accent-green: #047c3a;
+    --color-accent-red: #fe290b;
+    --font-main: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     --transition: all 0.3s ease;
 }
 
@@ -81,9 +82,9 @@ nav {
 }
 
 .logo-img {
-    height: 70px;
+    height: 55px;
     width: auto;
-    max-width: 200px;
+    max-width: 180px;
     transition: var(--transition);
 }
 
@@ -303,9 +304,9 @@ nav {
 }
 
 .btn-primary:hover {
-    background-color: #d42a1f;
+    background-color: #d42109;
     transform: translateY(-2px);
-    box-shadow: 0 4px 15px rgba(246, 50, 36, 0.3);
+    box-shadow: 0 4px 15px rgba(254, 41, 11, 0.3);
 }
 
 .btn-secondary {
@@ -804,9 +805,9 @@ footer {
 }
 
 .footer-logo-img {
-    height: 150px;
+    height: 100px;
     width: auto;
-    max-width: 350px;
+    max-width: 250px;
     transition: var(--transition);
 }
 
@@ -1057,13 +1058,13 @@ footer {
 @media (max-width: 768px) {
     /* Logo responsive mobile */
     .logo-img {
-        height: 60px;
-        max-width: 180px;
+        height: 50px;
+        max-width: 160px;
     }
 
     .footer-logo-img {
-        height: 100px;
-        max-width: 250px;
+        height: 80px;
+        max-width: 200px;
     }
 
     header {

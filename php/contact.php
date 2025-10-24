@@ -67,7 +67,7 @@ $translations = [
         'confirmation_footer1' => 'Bunsh - Partenaire de Recherche et d\'Evaluation',
         'confirmation_footer2' => 'Mesurer aujourd\'hui pour transformer demain',
         'success_message' => 'Merci pour votre message ! Nous vous répondrons dans les plus brefs délais.',
-        'error_message' => 'Une erreur est survenue lors de l\'envoi. Veuillez nous contacter directement à contact@bunshconsulting.com'
+        'error_message' => 'Une erreur est survenue lors de l\'envoi. Veuillez nous contacter directement à contact@bunshinternational.com'
     ],
     'en' => [
         'invalid_method' => 'Invalid request method.',
@@ -104,7 +104,7 @@ $translations = [
         'confirmation_footer1' => 'Bunsh - Research and Evaluation Partner',
         'confirmation_footer2' => 'Measure today to transform tomorrow',
         'success_message' => 'Thank you for your message! We will respond to you as soon as possible.',
-        'error_message' => 'An error occurred while sending. Please contact us directly at contact@bunshconsulting.com'
+        'error_message' => 'An error occurred while sending. Please contact us directly at contact@bunshinternational.com'
     ]
 ];
 
@@ -161,7 +161,7 @@ if (!empty($errors)) {
 }
 
 // Configuration de l'email
-$to = "contact@bunshconsulting.com"; // Email réel
+$to = "contact@bunshinternational.com"; // Email réel
 $subject_map = [
     'baseline' => t('subject_baseline', $lang, $translations),
     'midline' => t('subject_midline', $lang, $translations),
@@ -265,11 +265,11 @@ if ($mail_sent || $file_saved) {
     $confirmation_body .= "---\n";
     $confirmation_body .= t('confirmation_footer1', $lang, $translations) . "\n";
     $confirmation_body .= t('confirmation_footer2', $lang, $translations) . "\n";
-    $confirmation_body .= "Email: contact@bunshconsulting.com\n";
+    $confirmation_body .= "Email: contact@bunshinternational.com\n";
     $confirmation_body .= "Tél: +243 0979 286 949\n";
     
-    $confirmation_headers = "From: contact@bunshconsulting.com\r\n";
-    $confirmation_headers .= "Reply-To: contact@bunshconsulting.com\r\n";
+    $confirmation_headers = "From: contact@bunshinternational.com\r\n";
+    $confirmation_headers .= "Reply-To: contact@bunshinternational.com\r\n";
     $confirmation_headers .= "Content-Type: text/plain; charset=utf-8\r\n";
     
     @mail($email, $confirmation_subject, $confirmation_body, $confirmation_headers);

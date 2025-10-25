@@ -256,7 +256,7 @@
                             <span data-translate="nav_bunsh">Bunsh</span> <i class="fas fa-chevron-down"></i>
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a href="about.html"><i class="fas fa-info-circle"></i> <span data-translate="nav_apropos">Équipe</span></a></li>
+                            <li><a href="about.html"><i class="fas fa-info-circle"></i> <span data-translate="nav_apropos">À propos de nous</span></a></li>
                             <li><a href="services.html"><i class="fas fa-cogs"></i> <span data-translate="nav_services">Nos services</span></a></li>
                             <li><a href="realisations.html"><i class="fas fa-trophy"></i> <span data-translate="nav_realisations">Nos réalisations</span></a></li>
                             <li><a href="ressources.html"><i class="fas fa-book"></i> <span data-translate="nav_ressources">Ressources</span></a></li>
@@ -264,7 +264,6 @@
                     </li>
                     <li><a href="actualites.html" data-translate="nav_actualites">Actualités</a></li>
                     <li><a href="carrieres.html" class="active" data-translate="nav_carrieres">Carrières</a></li>
-                    <li><a href="adhesion.html" data-translate="nav_adhesion">Adhésion</a></li>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle">
                             <span data-translate="nav_mediatheque">Média</span> <i class="fas fa-chevron-down"></i>
@@ -291,11 +290,11 @@
     </header>
 
     <!-- Hero Section -->
-    <section class="hero" style="background-image: url('img/logo/banner5.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat; position: relative;">
+    <section class="hero" style="background-image: url('img/logo/banner5.jpeg'); background-size: cover; background-position: center; background-repeat: no-repeat; position: relative;">
         <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(135deg, rgba(11, 34, 148, 0.3) 0%, rgba(13, 45, 176, 0.35) 100%); z-index: 1;"></div>
         <div class="container" style="position: relative; z-index: 2;">
             <h1 style="text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7), 0 0 20px rgba(11, 34, 148, 0.5);" data-translate="carrieres_title">Rejoignez notre équipe</h1>
-            <p style="text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.7), 0 0 15px rgba(11, 34, 148, 0.4);" data-translate="carrieres_subtitle">Participez à des projets qui transforment des vies. Rejoignez une équipe passionnée et engagée dans la mesure de l'impact au service du développement.</p>
+            <p style="text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.7), 0 0 15px rgba(11, 34, 148, 0.4);" data-translate="carrieres_subtitle">Rejoignez une équipe passionnée et résolument engagée dans la quête de l’excellence.</p>
         </div>
     </section>
 
@@ -303,9 +302,7 @@
     <section class="section">
         <div class="container">
             <h2 class="section-title" data-translate="carrieres_pourquoi_title">Pourquoi travailler avec nous ?</h2>
-            <p class="section-subtitle" data-translate="carrieres_pourquoi_desc">
-                Nous offrons bien plus qu'un emploi : une opportunité de contribuer au développement de la RDC
-            </p>
+            <p class="section-subtitle" data-translate="carrieres_pourquoi_desc">Une opportunité de contribuer à l’amélioration de la vie des communautés.</p>
             <div class="benefits-grid">
                 <div class="benefit-item fade-in">
                     <div class="benefit-icon">
@@ -419,56 +416,56 @@
                 <!-- Formulaire de candidature -->
                 <div class="application-form" id="form-job1">
                     <h4 style="color: var(--color-accent-blue); margin-bottom: 1.5rem;">
-                        <i class="fas fa-file-upload"></i> Formulaire de candidature
+                        <i class="fas fa-file-upload"></i> <span data-translate="carrieres_formulaire_candidature">Formulaire de candidature</span>
                     </h4>
                     <form class="contact-form" id="applicationForm1" enctype="multipart/form-data">
                         <input type="hidden" name="poste" value="Chargé(e) de Suivi-Évaluation (M&E Officer)">
                         
                         <div class="form-group">
-                            <label for="nom1">Nom complet <span style="color: red;">*</span></label>
+                            <label for="nom1"><span data-translate="carrieres_nom_complet">Nom complet</span> <span style="color: red;">*</span></label>
                             <input type="text" id="nom1" name="nom" required>
                         </div>
 
                         <div class="form-group">
-                            <label for="email1">Email <span style="color: red;">*</span></label>
+                            <label for="email1"><span data-translate="carrieres_email">Email</span> <span style="color: red;">*</span></label>
                             <input type="email" id="email1" name="email" required>
                         </div>
 
                         <div class="form-group">
-                            <label for="telephone1">Téléphone <span style="color: red;">*</span></label>
+                            <label for="telephone1"><span data-translate="carrieres_telephone">Téléphone</span> <span style="color: red;">*</span></label>
                             <input type="tel" id="telephone1" name="telephone" required>
                         </div>
 
                         <div class="form-group">
-                            <label for="cv1">Curriculum Vitae (PDF) <span style="color: red;">*</span></label>
+                            <label for="cv1"><span data-translate="carrieres_cv_label">Curriculum Vitae (PDF)</span> <span style="color: red;">*</span></label>
                             <div class="file-input-wrapper">
                                 <label for="cv1" class="file-input-label">
                                     <i class="fas fa-cloud-upload-alt"></i>
-                                    <span>Cliquez pour joindre votre CV (PDF uniquement)</span>
+                                    <span data-translate="carrieres_joindre_cv">Cliquez pour joindre votre CV (PDF uniquement)</span>
                                 </label>
                                 <input type="file" id="cv1" name="cv" class="file-input" accept=".pdf" required onchange="updateFileName(this, 'cv1-name')">
-                                <div class="file-name" id="cv1-name">Aucun fichier sélectionné</div>
+                                <div class="file-name" id="cv1-name" data-translate="carrieres_aucun_fichier">Aucun fichier sélectionné</div>
                             </div>
                         </div>
 
                         <div class="form-group">
-                            <label for="lettre1">Lettre de motivation (PDF) <span style="color: red;">*</span></label>
+                            <label for="lettre1"><span data-translate="carrieres_lettre_label">Lettre de motivation (PDF)</span> <span style="color: red;">*</span></label>
                             <div class="file-input-wrapper">
                                 <label for="lettre1" class="file-input-label">
                                     <i class="fas fa-cloud-upload-alt"></i>
-                                    <span>Cliquez pour joindre votre lettre de motivation (PDF uniquement)</span>
+                                    <span data-translate="carrieres_joindre_lettre">Cliquez pour joindre votre lettre de motivation (PDF uniquement)</span>
                                 </label>
                                 <input type="file" id="lettre1" name="lettre_motivation" class="file-input" accept=".pdf" required onchange="updateFileName(this, 'lettre1-name')">
-                                <div class="file-name" id="lettre1-name">Aucun fichier sélectionné</div>
+                                <div class="file-name" id="lettre1-name" data-translate="carrieres_aucun_fichier">Aucun fichier sélectionné</div>
                             </div>
                         </div>
 
                         <div class="form-group">
-                            <label for="message1">Message complémentaire (optionnel)</label>
-                            <textarea id="message1" name="message" rows="4" placeholder="Parlez-nous de votre motivation et de votre expérience..."></textarea>
+                            <label for="message1" data-translate="carrieres_message_complementaire">Message complémentaire (optionnel)</label>
+                            <textarea id="message1" name="message" rows="4" data-translate="carrieres_message_placeholder" placeholder="Parlez-nous de votre motivation et de votre expérience..."></textarea>
                         </div>
 
-                        <button type="submit" class="btn btn-primary">
+                        <button type="submit" class="btn btn-primary" data-translate="carrieres_envoyer_candidature">
                             <i class="fas fa-paper-plane"></i> Envoyer ma candidature
                         </button>
 
@@ -529,56 +526,56 @@
                 <!-- Formulaire de candidature -->
                 <div class="application-form" id="form-job2">
                     <h4 style="color: var(--color-accent-blue); margin-bottom: 1.5rem;">
-                        <i class="fas fa-file-upload"></i> Formulaire de candidature
+                        <i class="fas fa-file-upload"></i> <span data-translate="carrieres_formulaire_candidature">Formulaire de candidature</span>
                     </h4>
                     <form class="contact-form" id="applicationForm2" enctype="multipart/form-data">
                         <input type="hidden" name="poste" value="Enquêteur(trice) de terrain">
                         
                         <div class="form-group">
-                            <label for="nom2">Nom complet <span style="color: red;">*</span></label>
+                            <label for="nom2" data-translate="carrieres_nom_complet">Nom complet <span style="color: red;">*</span></label>
                             <input type="text" id="nom2" name="nom" required>
                         </div>
 
                         <div class="form-group">
-                            <label for="email2">Email <span style="color: red;">*</span></label>
+                            <label for="email2" data-translate="carrieres_email">Email <span style="color: red;">*</span></label>
                             <input type="email" id="email2" name="email" required>
                         </div>
 
                         <div class="form-group">
-                            <label for="telephone2">Téléphone <span style="color: red;">*</span></label>
+                            <label for="telephone2" data-translate="carrieres_telephone">Téléphone <span style="color: red;">*</span></label>
                             <input type="tel" id="telephone2" name="telephone" required>
                         </div>
 
                         <div class="form-group">
-                            <label for="cv2">Curriculum Vitae (PDF) <span style="color: red;">*</span></label>
+                            <label for="cv2" data-translate="carrieres_cv_label">Curriculum Vitae (PDF) <span style="color: red;">*</span></label>
                             <div class="file-input-wrapper">
                                 <label for="cv2" class="file-input-label">
                                     <i class="fas fa-cloud-upload-alt"></i>
-                                    <span>Cliquez pour joindre votre CV (PDF uniquement)</span>
+                                    <span data-translate="carrieres_joindre_cv">Cliquez pour joindre votre CV (PDF uniquement)</span>
                                 </label>
                                 <input type="file" id="cv2" name="cv" class="file-input" accept=".pdf" required onchange="updateFileName(this, 'cv2-name')">
-                                <div class="file-name" id="cv2-name">Aucun fichier sélectionné</div>
+                                <div class="file-name" id="cv2-name" data-translate="carrieres_aucun_fichier">Aucun fichier sélectionné</div>
                             </div>
                         </div>
 
                         <div class="form-group">
-                            <label for="lettre2">Lettre de motivation (PDF) <span style="color: red;">*</span></label>
+                            <label for="lettre2" data-translate="carrieres_lettre_label">Lettre de motivation (PDF) <span style="color: red;">*</span></label>
                             <div class="file-input-wrapper">
                                 <label for="lettre2" class="file-input-label">
                                     <i class="fas fa-cloud-upload-alt"></i>
-                                    <span>Cliquez pour joindre votre lettre de motivation (PDF uniquement)</span>
+                                    <span data-translate="carrieres_joindre_lettre">Cliquez pour joindre votre lettre de motivation (PDF uniquement)</span>
                                 </label>
                                 <input type="file" id="lettre2" name="lettre_motivation" class="file-input" accept=".pdf" required onchange="updateFileName(this, 'lettre2-name')">
-                                <div class="file-name" id="lettre2-name">Aucun fichier sélectionné</div>
+                                <div class="file-name" id="lettre2-name" data-translate="carrieres_aucun_fichier">Aucun fichier sélectionné</div>
                             </div>
                         </div>
 
                         <div class="form-group">
-                            <label for="message2">Message complémentaire (optionnel)</label>
-                            <textarea id="message2" name="message" rows="4" placeholder="Parlez-nous de votre motivation et de votre expérience..."></textarea>
+                            <label for="message2" data-translate="carrieres_message_complementaire">Message complémentaire (optionnel)</label>
+                            <textarea id="message2" name="message" rows="4" data-translate="carrieres_message_placeholder" placeholder="Parlez-nous de votre motivation et de votre expérience..."></textarea>
                         </div>
 
-                        <button type="submit" class="btn btn-primary">
+                        <button type="submit" class="btn btn-primary" data-translate="carrieres_envoyer_candidature">
                             <i class="fas fa-paper-plane"></i> Envoyer ma candidature
                         </button>
 
@@ -639,56 +636,56 @@
                 <!-- Formulaire de candidature -->
                 <div class="application-form" id="form-job3">
                     <h4 style="color: var(--color-accent-blue); margin-bottom: 1.5rem;">
-                        <i class="fas fa-file-upload"></i> Formulaire de candidature
+                        <i class="fas fa-file-upload"></i> <span data-translate="carrieres_formulaire_candidature">Formulaire de candidature</span>
                     </h4>
                     <form class="contact-form" id="applicationForm3" enctype="multipart/form-data">
                         <input type="hidden" name="poste" value="Analyste de données">
                         
                         <div class="form-group">
-                            <label for="nom3">Nom complet <span style="color: red;">*</span></label>
+                            <label for="nom3"><span data-translate="carrieres_nom_complet">Nom complet</span> <span style="color: red;">*</span></label>
                             <input type="text" id="nom3" name="nom" required>
                         </div>
 
                         <div class="form-group">
-                            <label for="email3">Email <span style="color: red;">*</span></label>
+                            <label for="email3"><span data-translate="carrieres_email">Email</span> <span style="color: red;">*</span></label>
                             <input type="email" id="email3" name="email" required>
                         </div>
 
                         <div class="form-group">
-                            <label for="telephone3">Téléphone <span style="color: red;">*</span></label>
+                            <label for="telephone3"><span data-translate="carrieres_telephone">Téléphone</span> <span style="color: red;">*</span></label>
                             <input type="tel" id="telephone3" name="telephone" required>
                         </div>
 
                         <div class="form-group">
-                            <label for="cv3">Curriculum Vitae (PDF) <span style="color: red;">*</span></label>
+                            <label for="cv3"><span data-translate="carrieres_cv_label">Curriculum Vitae (PDF)</span> <span style="color: red;">*</span></label>
                             <div class="file-input-wrapper">
                                 <label for="cv3" class="file-input-label">
                                     <i class="fas fa-cloud-upload-alt"></i>
-                                    <span>Cliquez pour joindre votre CV (PDF uniquement)</span>
+                                    <span data-translate="carrieres_joindre_cv">Cliquez pour joindre votre CV (PDF uniquement)</span>
                                 </label>
                                 <input type="file" id="cv3" name="cv" class="file-input" accept=".pdf" required onchange="updateFileName(this, 'cv3-name')">
-                                <div class="file-name" id="cv3-name">Aucun fichier sélectionné</div>
+                                <div class="file-name" id="cv3-name" data-translate="carrieres_aucun_fichier">Aucun fichier sélectionné</div>
                             </div>
                         </div>
 
                         <div class="form-group">
-                            <label for="lettre3">Lettre de motivation (PDF) <span style="color: red;">*</span></label>
+                            <label for="lettre3"><span data-translate="carrieres_lettre_label">Lettre de motivation (PDF)</span> <span style="color: red;">*</span></label>
                             <div class="file-input-wrapper">
                                 <label for="lettre3" class="file-input-label">
                                     <i class="fas fa-cloud-upload-alt"></i>
-                                    <span>Cliquez pour joindre votre lettre de motivation (PDF uniquement)</span>
+                                    <span data-translate="carrieres_joindre_lettre">Cliquez pour joindre votre lettre de motivation (PDF uniquement)</span>
                                 </label>
                                 <input type="file" id="lettre3" name="lettre_motivation" class="file-input" accept=".pdf" required onchange="updateFileName(this, 'lettre3-name')">
-                                <div class="file-name" id="lettre3-name">Aucun fichier sélectionné</div>
+                                <div class="file-name" id="lettre3-name" data-translate="carrieres_aucun_fichier">Aucun fichier sélectionné</div>
                             </div>
                         </div>
 
                         <div class="form-group">
-                            <label for="message3">Message complémentaire (optionnel)</label>
-                            <textarea id="message3" name="message" rows="4" placeholder="Parlez-nous de votre motivation et de votre expérience..."></textarea>
+                            <label for="message3" data-translate="carrieres_message_complementaire">Message complémentaire (optionnel)</label>
+                            <textarea id="message3" name="message" rows="4" data-translate="carrieres_message_placeholder" placeholder="Parlez-nous de votre motivation et de votre expérience..."></textarea>
                         </div>
 
-                        <button type="submit" class="btn btn-primary">
+                        <button type="submit" class="btn btn-primary" data-translate="carrieres_envoyer_candidature">
                             <i class="fas fa-paper-plane"></i> Envoyer ma candidature
                         </button>
 
@@ -725,7 +722,7 @@
                     <h3 data-translate="footer_navigation">Navigation</h3>
                     <ul class="footer-links">
                         <li><a href="index.html" data-translate="nav_accueil">Accueil</a></li>
-                        <li><a href="about.html" data-translate="nav_apropos">Équipe</a></li>
+                        <li><a href="about.html" data-translate="nav_apropos">À propos de nous</a></li>
                         <li><a href="services.html" data-translate="nav_services">Nos services</a></li>
                         <li><a href="realisations.html" data-translate="nav_realisations">Nos réalisations</a></li>
                         <li><a href="ressources.html" data-translate="nav_ressources">Ressources</a></li>
@@ -733,7 +730,6 @@
                         <li><a href="videos.html" data-translate="footer_galerie_videos">Galerie Vidéos</a></li>
                         <li><a href="actualites.html" data-translate="nav_actualites">Actualités</a></li>
                         <li><a href="carrieres.html" data-translate="nav_carrieres">Carrières</a></li>
-                        <li><a href="adhesion.html" data-translate="nav_adhesion">Adhésion</a></li>
                         <li><a href="contact.html" data-translate="nav_contact">Contact</a></li>
                     </ul>
                 </div>
@@ -759,13 +755,13 @@
             <div class="footer-social">
                 <h3 data-translate="footer_suivez">Suivez-nous</h3>
                 <div class="social-links">
-                    <a href="https://www.facebook.com/" class="social-icon-large">
+                    <a href="https://www.facebook.com/share/1D2Mmd8N9H/?mibextid=wwXIfr" class="social-icon-large">
                         <i class="fab fa-facebook-f"></i>
                     </a>
                     <a href="#" class="social-icon-large">
                         <i class="fab fa-twitter"></i>
                     </a>
-                    <a href="#" class="social-icon-large">
+                    <a href="https://www.linkedin.com/company/bunsh/" class="social-icon-large">
                         <i class="fab fa-linkedin-in"></i>
                     </a>
                 </div>

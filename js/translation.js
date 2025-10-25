@@ -10,7 +10,7 @@ const translations = {
         // Navigation
         "nav_accueil": "Accueil",
         "nav_bunsh": "Bunsh",
-        "nav_apropos": "Équipe",
+        "nav_apropos": "À propos de nous",
         "nav_services": "Nos services",
         "nav_realisations": "Nos réalisations",
         "nav_ressources": "Nos rapports",
@@ -44,7 +44,7 @@ const translations = {
         "home_btn_etudes": "Nos études",
         "home_btn_contact": "Nous contacter",
         "home_qui_sommes": "Qui sommes-nous ?",
-        "home_qui_desc": "Nous sommes un bureau d'études spécialisé dans la recherche et l'évaluation de projets et de programmes de développement et humanitaires. Grâce à une expertise éprouvée et à l'application de méthodologies rigoureuses conformes aux standards internationaux, nous accompagnons les partenaires nationaux et internationaux dans la mesure, la compréhension et l'amélioration de réadaptation de leurs interventions.",
+        "home_qui_desc": "Nous sommes un bureau d'études spécialisé dans la recherche et l'évaluation de projets et de programmes de développement et d’assistance humanitaires.\n                                Grâce à une expertise approuvée et à l'application de méthodologies rigoureuses conformes aux standards internationaux, nous accompagnons les partenaires nationaux et internationaux à mesurer, comprendre et réadapter leurs interventions.",
         "home_en_savoir_plus": "En savoir plus sur nous",
         "home_actualites_recentes": "Actualités récentes",
         "home_actualites_desc": "Découvrez nos dernières missions et activités terrain",
@@ -81,7 +81,7 @@ const translations = {
         "about_partenaires_title": "Nos partenaires",
         "about_partenaires_desc": "Ils nous font confiance pour mesurer l'impact de leurs projets",
         "about_rejoindre_title": "Rejoignez nos partenaires",
-        "about_rejoindre_desc": "Travaillons ensemble pour mesurer et maximiser l'impact de vos projets",
+        "about_rejoindre_desc": "Travaillons ensemble afin de transformer vos initiatives en résultats mesurables et durables.",
         "about_contactez": "Contactez-nous",
         
         // Page Services
@@ -115,7 +115,7 @@ const translations = {
         
         // Page Contact
         "contact_title": "Contactez-nous",
-        "contact_subtitle": "Discutons de votre projet d'évaluation. Notre équipe est à votre écoute",
+        "contact_subtitle": "Discutons de votre projet d'évaluation. Notre équipe est à votre écoute.",
         "contact_message_title": "Envoyez-nous un message",
         "contact_nom": "Nom complet",
         "contact_nom_placeholder": "Entrez votre nom complet",
@@ -147,7 +147,7 @@ const translations = {
         "contact_faq2_q": "Quels sont vos tarifs ?",
         "contact_faq2_r": "Nos tarifs dépendent de la portée de l'évaluation, de la taille de l'échantillon, et de la complexité méthodologique. Nous proposons des devis gratuits et personnalisés. Contactez-nous pour discuter de votre budget et obtenir une proposition adaptée à vos besoins.",
         "contact_faq3_q": "Travaillez-vous en dehors de Kinshasa ?",
-        "contact_faq3_r": "Oui, absolument ! Nous menons des évaluations dans toute la RDC. Nous disposons d'un réseau d'enquêteurs formés dans plusieurs provinces (Kinshasa, Kasaï, Katanga, Kivu, etc.) et sommes habitués aux défis logistiques du terrain congolais.",
+        "contact_faq3_r": "Oui, dans toute l’Afrique !  Nous nous appuyons sur un réseau de consultants nationaux et internationaux expérimentés dans l’analyse et l’intervention en contextes fragiles.",
         "contact_faq4_q": "Proposez-vous des formations ?",
         "contact_faq4_r_intro": "Oui, nous proposons des formations sur mesure dans les domaines suivants :",
         "contact_faq4_r_item1": "Collecte de données et cadre logique",
@@ -172,9 +172,9 @@ const translations = {
         "contact_faq6_r_item5": "Analyse et rédaction du rapport",
         "contact_faq6_r_item6": "Restitution des résultats et recommandations",
         "contact_faq7_q": "Quelle est la taille de votre équipe ?",
-        "contact_faq7_r": "Notre équipe permanente compte 15 professionnels (économistes, statisticiens, sociologues) et nous disposons d'un réseau de plus de 100 enquêteurs formés et expérimentés que nous mobilisons selon les besoins des projets.",
+        "contact_faq7_r": "Notre équipe permanente compte 15 professionnels (économistes, statisticiens, sociologues, psychologues, spécialistes en éducation, spécialistes en santé, environnementalistes, experts en liées à l’agriculture et experts en management de conflits) et nous disposons d'un réseau de plus de 100 enquêteurs formés et expérimentés que nous mobilisons selon les besoins des projets.",
         "contact_faq8_q": "Dans quelles langues travaillez-vous ?",
-        "contact_faq8_r": "Nous travaillons en Français (langue de travail principale) et Anglais pour les rapports et communications. Pour la collecte de données terrain, nos enquêteurs maîtrisent les principales langues locales congolaises (Lingala, Kikongo, Swahili, Tshiluba).",
+        "contact_faq8_r": "Nous avons une équipe multiculturelle qui parle anglais, français ainsi que les langues nationales africaines et asiatiques.",
         
         // Page Actualités
         "actualites_title": "Actualités récentes",
@@ -186,9 +186,9 @@ const translations = {
         
         // Page Carrières
         "carrieres_title": "Rejoignez notre équipe",
-        "carrieres_subtitle": "Participez à des projets qui transforment des vies. Rejoignez une équipe passionnée et engagée dans la mesure de l'impact au service du développement.",
+        "carrieres_subtitle": "Rejoignez une équipe passionnée et résolument engagée dans la quête de l’excellence.",
         "carrieres_pourquoi_title": "Pourquoi travailler avec nous ?",
-        "carrieres_pourquoi_desc": "Nous offrons bien plus qu'un emploi : une opportunité de contribuer au développement de la RDC",
+        "carrieres_pourquoi_desc": "Une opportunité de contribuer à l’amélioration de la vie des communautés.",
         "carrieres_avantage1_titre": "Croissance professionnelle",
         "carrieres_avantage1_desc": "Formations continues et développement de compétences",
         "carrieres_avantage2_titre": "Équipe dynamique",
@@ -221,6 +221,18 @@ const translations = {
         "carrieres_profil": "Profil recherché",
         "carrieres_lire_plus": "Lire plus de détails",
         "carrieres_lire_moins": "Lire moins",
+        "carrieres_formulaire_candidature": "Formulaire de candidature",
+        "carrieres_nom_complet": "Nom complet",
+        "carrieres_email": "Email",
+        "carrieres_telephone": "Téléphone",
+        "carrieres_cv_label": "Curriculum Vitae (PDF)",
+        "carrieres_joindre_cv": "Cliquez pour joindre votre CV (PDF uniquement)",
+        "carrieres_lettre_label": "Lettre de motivation (PDF)",
+        "carrieres_joindre_lettre": "Cliquez pour joindre votre lettre de motivation (PDF uniquement)",
+        "carrieres_aucun_fichier": "Aucun fichier sélectionné",
+        "carrieres_message_complementaire": "Message complémentaire (optionnel)",
+        "carrieres_message_placeholder": "Parlez-nous de votre motivation et de votre expérience...",
+        "carrieres_envoyer_candidature": "Envoyer ma candidature",
         
         // Offre 1 - M&E Officer
         "carrieres_offre1_titre": "Chargé(e) de Suivi-Évaluation (M&E Officer)",
@@ -451,10 +463,19 @@ const translations = {
         "lieu_kabare": "Kabare, Sud-Kivu",
         
         // Rôles d'équipe
-        "role_directeur_general": "CEO",
+        "role_directeur_general": "Expert en Evaluation et Chercheur",
         "role_directrice_operations": "Consultant International et chercheur",
         "role_responsable_data": "Responsable Data & Analyse",
         "role_chargee_recherche": "Chargée de Recherche",
+        "role_emile": "Consultant International",
+        "role_grace": "Consultant en Suivi et Évaluation",
+        "role_junhee": "Consultante Internationale et Chercheuse",
+        "role_damaris": "Consultante en santé publique",
+        "role_patrick": "Responsable Data & Analyse",
+        
+        // Lire plus pour équipe
+        "lire_plus_equipe": "... Lire plus",
+        "lire_moins_equipe": "... Voir moins",
         
         // Articles/Actualités
         "article_rapport_unicef": "Présentation du Rapport UNICEF - Amélioration de l'Éducation Primaire à Nsele",
@@ -603,6 +624,10 @@ const translations = {
         "about_team_lumbu_bio": "Begench possède 7+ ans d'expérience en technologies pédagogiques, e-learning et développement des compétences numériques, collaborant avec divers acteurs du monde universitaire, du gouvernement et des organisations internationales.",
         "about_team_nkulu_bio": "Statisticien spécialisé en analyse de données complexes. Maîtrise de SPSS, R, Python et Power BI. Master en Statistiques Appliquées.",
         "about_team_monga_bio": "Sociologue spécialisée en méthodes qualitatives. Experte en focus groups, entretiens approfondis et analyse thématique.",
+        "about_team_emile_bio": "Conseiller expérimenté, éducateur et professionnel de la santé mentale possédant une expérience riche et diversifiée dans les opérations humanitaires et de développement. Ses compétences de base comprennent la réalisation d'évaluations psychologiques, l'animation de séances de groupe et individuelles, l'élaboration et la prestation de programmes de formation et la collaboration avec plusieurs équipes et partenaires.",
+        "about_team_grace_bio": "10+ ans d'expérience dans les secteurs humanitaire et du développement. Spécialisé en gestion de bases de données, analyse statistique et gestion axée sur les résultats. Il a en outre une expérience avérée dans la conception et la mise en œuvre de systèmes M&E, la réinsertion socio-économique des ex-combattants, les moyens de subsistance, les transferts monétaires, l'eau, l'hygiène, ainsi que la consolidation de la paix.",
+        "about_team_junhee_bio": "Spécialisée dans les violences sexuelles liées aux conflits en RDC, elle adopte une approche intersectionnelle centrée sur la justice de genre et la valorisation des voix marginalisées. Son parcours allie recherche, plaidoyer juridique et action communautaire, avec un engagement fort pour l'égalité et les droits humains.",
+        "about_team_patrick_bio": "Statisticien spécialisé en analyse de données complexes. Maîtrise de SPSS, R, Python et Power BI. Master en Statistiques Appliquées.",
         "about_methodo_titre": "Nos méthodologies et références",
         "about_methodo_soustitre": "Nous utilisons des cadres méthodologiques reconnus internationalement",
         "about_cadre_logique": "Cadre logique",
@@ -619,7 +644,7 @@ const translations = {
         "about_outils_num_desc": "Utilisation de Kobo Toolbox, ODK, SPSS, R, Power BI pour une collecte et analyse de données efficace et moderne.",
         "about_partenaires_soustitre": "Ils nous ont fait confiance",
         "about_rejoindre_titre": "Rejoignez nos partenaires",
-        "about_rejoindre_desc": "Travaillons ensemble pour mesurer et maximiser l'impact de vos projets",
+        "about_rejoindre_desc": "Travaillons ensemble afin de transformer vos initiatives en résultats mesurables et durables.",
         
         // Ressources - Page Ressources
         "ressources_hero_titre": "Nos rapports",
@@ -690,7 +715,7 @@ const translations = {
         "real_stat1_label": "Projets évalués",
         "real_stat2_nombre": "5",
         "real_stat2_label": "Secteurs d'intervention",
-        "real_stat3_nombre": "10 000+",
+        "real_stat3_nombre": "10K+",
         "real_stat3_label": "Bénéficiaires touchés",
         "real_stat4_nombre": "7+",
         "real_stat4_label": "Partenaires",
@@ -891,7 +916,7 @@ const translations = {
         // Navigation
         "nav_accueil": "Home",
         "nav_bunsh": "Bunsh",
-        "nav_apropos": "Team",
+        "nav_apropos": "About Us",
         "nav_services": "Our Services",
         "nav_realisations": "Our Achievements",
         "nav_ressources": "Our reports",
@@ -925,7 +950,7 @@ const translations = {
         "home_btn_etudes": "Our Studies",
         "home_btn_contact": "Contact Us",
         "home_qui_sommes": "Who We Are?",
-        "home_qui_desc": "We are a consulting firm specialized in the research and evaluation of development and humanitarian projects and programs. With proven expertise and the application of rigorous methodologies in line with international standards, we support national and international partners in measuring, understanding, and improving the adaptation of their interventions.",
+        "home_qui_desc": "We are a design office specializing in research and evaluation of development and humanitarian assistance projects and programs.\n                                Thanks to proven expertise and the application of rigorous methodologies in line with international standards, we accompany national and international partners in measuring, understanding, and readapting their interventions.",
         "home_en_savoir_plus": "Learn More About Us",
         "home_actualites_recentes": "Recent News",
         "home_actualites_desc": "Discover our latest missions and field activities",
@@ -962,7 +987,7 @@ const translations = {
         "about_partenaires_title": "Our Partners",
         "about_partenaires_desc": "They trust us to measure the impact of their projects",
         "about_rejoindre_title": "Join Our Partners",
-        "about_rejoindre_desc": "Let's work together to measure and maximize the impact of your projects",
+        "about_rejoindre_desc": "Let's work together to transform your initiatives into measurable and sustainable results.",
         "about_contactez": "Contact Us",
         
         // Page Services
@@ -996,7 +1021,7 @@ const translations = {
         
         // Page Contact
         "contact_title": "Contact Us",
-        "contact_subtitle": "Let's discuss your evaluation project. Our team is at your service",
+        "contact_subtitle": "Let's discuss your evaluation project. Our team is at your service.",
         "contact_message_title": "Send Us a Message",
         "contact_nom": "Full Name",
         "contact_nom_placeholder": "Enter your full name",
@@ -1028,7 +1053,7 @@ const translations = {
         "contact_faq2_q": "What are your rates?",
         "contact_faq2_r": "Our rates depend on the scope of the evaluation, sample size, and methodological complexity. We offer free and personalized quotes. Contact us to discuss your budget and get a proposal tailored to your needs.",
         "contact_faq3_q": "Do you work outside of Kinshasa?",
-        "contact_faq3_r": "Yes, absolutely! We conduct evaluations throughout the DRC. We have a network of trained enumerators in several provinces (Kinshasa, Kasaï, Katanga, Kivu, etc.) and are accustomed to the logistical challenges of the Congolese field.",
+        "contact_faq3_r": "Yes, throughout Africa !  We rely on a network of national and international consultants experienced in analysis and intervention in fragile contexts.",
         "contact_faq4_q": "Do you offer training?",
         "contact_faq4_r_intro": "Yes, we offer customized training in the following areas:",
         "contact_faq4_r_item1": "Data collection and logical framework",
@@ -1053,9 +1078,9 @@ const translations = {
         "contact_faq6_r_item5": "Analysis and report writing",
         "contact_faq6_r_item6": "Results presentation and recommendations",
         "contact_faq7_q": "What is the size of your team?",
-        "contact_faq7_r": "Our permanent team has 15 professionals (economists, statisticians, sociologists) and we have a network of over 100 trained and experienced enumerators that we mobilize according to project needs.",
+        "contact_faq7_r": "Our permanent team has 15 professionals (economists, statisticians, sociologists, psychologists, education specialists, health specialists, environmentalists, agriculture-related experts and conflict management experts) and we have a network of over 100 trained and experienced enumerators that we mobilize according to project needs.",
         "contact_faq8_q": "In which languages do you work?",
-        "contact_faq8_r": "We work in French (primary working language) and English for reports and communications. For field data collection, our enumerators master the main Congolese local languages (Lingala, Kikongo, Swahili, Tshiluba).",
+        "contact_faq8_r": "We have a multicultural team who speak English, French as well as African and Asian national languages.",
         
         // Page Actualités
         "actualites_title": "Recent News",
@@ -1067,9 +1092,9 @@ const translations = {
         
         // Page Carrières
         "carrieres_title": "Join Our Team",
-        "carrieres_subtitle": "Participate in projects that transform lives. Join a passionate team committed to measuring impact for development.",
+        "carrieres_subtitle": "Join a passionate team resolutely committed to the quest for excellence.",
         "carrieres_pourquoi_title": "Why Work With Us?",
-        "carrieres_pourquoi_desc": "We offer much more than a job: an opportunity to contribute to the development of the DRC",
+        "carrieres_pourquoi_desc": "An opportunity to contribute to improving the lives of communities",
         "carrieres_avantage1_titre": "Professional Growth",
         "carrieres_avantage1_desc": "Continuous training and skills development",
         "carrieres_avantage2_titre": "Dynamic Team",
@@ -1102,6 +1127,18 @@ const translations = {
         "carrieres_profil": "Required Profile",
         "carrieres_lire_plus": "Read more details",
         "carrieres_lire_moins": "Read less",
+        "carrieres_formulaire_candidature": "Application Form",
+        "carrieres_nom_complet": "Full Name",
+        "carrieres_email": "Email",
+        "carrieres_telephone": "Phone",
+        "carrieres_cv_label": "Curriculum Vitae (PDF)",
+        "carrieres_joindre_cv": "Click to attach your CV (PDF only)",
+        "carrieres_lettre_label": "Cover Letter (PDF)",
+        "carrieres_joindre_lettre": "Click to attach your cover letter (PDF only)",
+        "carrieres_aucun_fichier": "No file selected",
+        "carrieres_message_complementaire": "Additional message (optional)",
+        "carrieres_message_placeholder": "Tell us about your motivation and experience...",
+        "carrieres_envoyer_candidature": "Submit Application",
         
         // Offre 1 - M&E Officer
         "carrieres_offre1_titre": "M&E Officer",
@@ -1332,10 +1369,19 @@ const translations = {
         "lieu_kabare": "Kabare, South Kivu",
         
         // Rôles d'équipe
-        "role_directeur_general": "CEO",
+        "role_directeur_general": "Expert in Evaluation and Researcher",
         "role_directrice_operations": "International Consultant and Researcher",
         "role_responsable_data": "Data & Analysis Manager",
         "role_chargee_recherche": "Research Officer",
+        "role_emile": "International Consultant",
+        "role_grace": "Monitoring and Evaluation Consultant",
+        "role_junhee": "International Consultant and Researcher",
+        "role_damaris": "Public Health Consultant",
+        "role_patrick": "Data & Analysis Manager",
+        
+        // Read more for team
+        "lire_plus_equipe": "... Read more",
+        "lire_moins_equipe": "... Show less",
         
         // Articles/Actualités
         "article_rapport_unicef": "UNICEF Report Presentation - Improving Primary Education in Nsele",
@@ -1484,6 +1530,10 @@ const translations = {
         "about_team_lumbu_bio": "Begench has 7+ years of experience in educational technologies, e-learning, and digital skills development, collaborating with various actors from academia, government, and international organizations.",
         "about_team_nkulu_bio": "Statistician specialized in complex data analysis. Proficient in SPSS, R, Python, and Power BI. Master's in Applied Statistics.",
         "about_team_monga_bio": "Sociologist specialized in qualitative methods. Expert in focus groups, in-depth interviews, and thematic analysis.",
+        "about_team_emile_bio": "Experienced counselor, educator, and mental health professional with rich and diverse experience in humanitarian and development operations. Core competencies include conducting psychological assessments, facilitating group and individual sessions, developing and delivering training programs, and collaborating with multiple teams and partners.",
+        "about_team_grace_bio": "10+ years of experience in humanitarian and development sectors. Specialized in database management, statistical analysis, and results-based management. Has proven experience in designing and implementing M&E systems, socio-economic reintegration of ex-combatants, livelihoods, cash transfers, water, sanitation, as well as peace consolidation.",
+        "about_team_junhee_bio": "Specialized in conflict-related sexual violence in DRC, she adopts an intersectional approach focused on gender justice and amplifying marginalized voices. Her background combines research, legal advocacy, and community action, with a strong commitment to equality and human rights.",
+        "about_team_patrick_bio": "Statistician specialized in complex data analysis. Proficient in SPSS, R, Python, and Power BI. Master's in Applied Statistics.",
         "about_methodo_titre": "Our Methodologies and References",
         "about_methodo_soustitre": "We use internationally recognized methodological frameworks",
         "about_cadre_logique": "Logical Framework",
@@ -1571,7 +1621,7 @@ const translations = {
         "real_stat1_label": "Projects Evaluated",
         "real_stat2_nombre": "5",
         "real_stat2_label": "Intervention Sectors",
-        "real_stat3_nombre": "10,000+",
+        "real_stat3_nombre": "10K+",
         "real_stat3_label": "Beneficiaries Reached",
         "real_stat4_nombre": "7+",
         "real_stat4_label": "Partners",

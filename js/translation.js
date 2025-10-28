@@ -21,7 +21,7 @@ const translations = {
         "nav_photos": "Photos",
         "nav_videos": "Vidéos",
         "nav_contact": "Contact",
-        
+
         // Footer
         "footer_navigation": "Navigation",
         "footer_services": "Services",
@@ -36,7 +36,7 @@ const translations = {
         "footer_renforcement": "Renforcement de capacités",
         "footer_adresse": "📍 Adresse: 1, Socimat, Gombe, Kinshasa-RDC",
         "footer_copyright": "© 2025 Bunsh - Partenaire en Recherche et Evaluation",
-        
+
         // Page d'accueil
         "home_title": "Votre Partenaire en Recherche et Évaluation",
         "home_subtitle": "Nous réalisons des études et des évaluations de projets et de programmes, afin de permettre aux organisations de générer un impact durable.",
@@ -50,7 +50,7 @@ const translations = {
         "home_actualites_desc": "Découvrez nos dernières missions et activités terrain",
         "home_lire_article": "Lire l'article",
         "home_nouveau": "NOUVEAU",
-        
+
         // Page À propos
         "about_title": "À propos de nous",
         "about_subtitle": "Découvrez notre mission, nos valeurs et l'équipe qui œuvre pour mesurer et maximiser l'impact de vos projets",
@@ -77,7 +77,7 @@ const translations = {
         "about_equipe_title": "Notre Équipe",
         "about_equipe_soustitre": "Une équipe pluridisciplinaire et multiculturelle réunissant des experts en évaluation, forts d'une expérience internationale reconnue.",
         "about_equipe_desc": "Une équipe pluridisciplinaire d'experts en évaluation, statistiques et développement",
-        
+
         // Équipe - Rôles
         "role_directeur_general": "Expert en Evaluation et Chercheur",
         "role_directrice_operations": "Consultant International et chercheur",
@@ -85,41 +85,41 @@ const translations = {
         "role_grace": "Consultant en Suivi et Évaluation",
         "role_junhee": "Consultante Internationale et Chercheuse",
         "role_damaris": "Consultante en Santé Publique",
-        
+
         // Équipe - Biographies
-        "about_team_kabongo_bio": "Ridi est un économiste et expert en éducation et développement international spécialisé dans le suivi et l'évaluation de projets et de programmes dans divers secteurs, avec 7+ ans d'expérience dans la réalisation d'évaluations et d'études pour des organisations internationales.",
-        
+        "about_team_Ridi_bio": "Ridi est un économiste et expert en éducation et développement international spécialisé dans le suivi et l'évaluation de projets et de programmes dans divers secteurs, avec 7+ ans d'expérience dans la réalisation d'évaluations et d'études pour des organisations internationales.",
+
         // Biographies courtes
         "bio_begench_short": "Expert en technologies pédagogiques avec 7+ ans d'expérience",
         "bio_emile_short": "Expert en santé mentale et psychosociale",
         "bio_grace_short": "Spécialiste en M&E et gestion de projets",
         "bio_junhee_short": "Expert en violences sexuelles et droit international",
         "bio_damaris_short": "Spécialisée en Santé Publique et Développement Communautaire",
-        
+
         // Biographies complètes
         "bio_begench_full": "Begench possède 7+ ans d'expérience en technologies pédagogiques, e-learning et développement des compétences numériques, collaborant avec divers acteurs du monde universitaire, du gouvernement et des organisations internationales.",
         "bio_emile_full": "Conseiller expérimenté, éducateur et professionnel de la santé mentale possédant une expérience riche et diversifiée dans les opérations humanitaires et de développement. Ses compétences de base comprennent la réalisation d'évaluations psychologiques, l'animation de séances de groupe et individuelles, l'élaboration et la prestation de programmes de formation.",
         "bio_grace_full": "10+ ans d'expérience dans les secteurs humanitaire et du développement. Spécialisé en gestion de bases de données, analyse statistique et gestion axée sur les résultats. Expérience avérée dans la conception et la mise en œuvre de systèmes M&E, la réinsertion socio-économique des ex-combattants, les moyens de subsistance, les transferts monétaires, l'eau, l'hygiène, ainsi que la consolidation de la paix.",
         "bio_junhee_full": "Spécialiste des questions liées aux violences sexuelles liées aux conflits en RDC, elle adopte une approche intersectionnelle centrée sur la justice de genre et la valorisation des voix marginalisées. Son parcours allie recherche, plaidoyer juridique et action communautaire, avec un engagement fort pour l'égalité et les droits humains.",
         "bio_damaris_full": "Professionnelle de la santé publique spécialiste en gestion, suivi et évaluation de projets axés sur la santé, la nutrition et le développement social. Expérience dans la conception et l'analyse d'initiatives communautaires visant à renforcer l'équité, la prévention des maladies et la santé maternelle et infantile.",
-        
+
         // Boutons équipe
         "lire_plus_equipe": "... Lire plus",
-        "lire_moins_equipe": "... Voir moins",
-        
+        "lire_moins_equipe": "... Lire moins",
+
         // Section À propos - Détails
         "about_raison_titre": "Notre raison d'être",
         "about_raison_soustitre": "Ce qui nous guide dans notre mission d'excellence",
         "about_vision_titre": "Notre Vision",
         "about_vision_p1": "Notre vision est d'être un partenaire africain de référence, reconnu pour son excellence dans le suivi et l'évaluation de projets et de programmes tant de développement qu’humanitaires.",
         "about_vision_p2": "Nous aspirons à renforcer la prise de décision fondée sur les données et à contribuer durablement à l'amélioration des vies en Afrique et à travers le monde.",
-        "about_mission_titre": "Notre Mission", 
+        "about_mission_titre": "Notre Mission",
         "about_mission_p1": "Fournir des services d'évaluation de la plus haute qualité, permettant aux organisations nationales et internationales de mesurer leurs interventions, d'en optimiser l'efficacité afin d'assurer un changement durable au sein des communautés qu'elles accompagnent.",
         "about_mission_p2": "Nous nous engageons à produire des données fiables, des analyses rigoureuses et des recommandations stratégiques et opérationnelles, afin d'éclairer la prise de décision et d'amplifier les résultats des actions de développement et humanitaires.",
         "about_valeurs_titre": "Nos Valeurs",
         "about_rigueur": "Rigueur",
         "about_rigueur_desc": "Méthodologies scientifiques éprouvées",
-        "about_integrite": "Intégrité", 
+        "about_integrite": "Intégrité",
         "about_integrite_desc": "Transparence et éthique professionnelle",
         "about_excellence": "Excellence",
         "about_excellence_desc": "Qualité irréprochable dans tous nos livrables",
@@ -139,7 +139,7 @@ const translations = {
         "about_rejoindre_title": "Rejoignez nos partenaires",
         "about_rejoindre_desc": "Travaillons ensemble afin de transformer vos initiatives en résultats mesurables et durables.",
         "about_contactez": "Contactez-nous",
-        
+
         // Page Services
         "services_title": "Nos services",
         "services_subtitle": "Des solutions complètes en évaluation et suivi de projets de développement",
@@ -168,7 +168,7 @@ const translations = {
         "services_etape6": "Restitution et suivi",
         "services_etape6_desc": "Présentation des résultats et accompagnement dans la mise en œuvre",
         "services_demander_devis": "Demander un devis",
-        
+
         // Page Contact
         "contact_title": "Contactez-nous",
         "contact_subtitle": "Discutons de votre projet d'évaluation. Notre équipe est à votre écoute.",
@@ -231,7 +231,7 @@ const translations = {
         "contact_faq7_r": "Notre équipe permanente compte 15 professionnels (économistes, statisticiens, sociologues, psychologues, spécialistes en éducation, spécialistes en santé, environnementalistes, experts des questions liées à l’agriculture et experts en management de conflits) et nous disposons d'un réseau de plus de 100 enquêteurs formés et expérimentés que nous mobilisons selon les besoins des projets.",
         "contact_faq8_q": "Dans quelles langues travaillez-vous ?",
         "contact_faq8_r": "Nous avons une équipe multiculturelle qui parle anglais, français ainsi que les langues nationales africaines et asiatiques.",
-        
+
         // Page Actualités
         "actualites_title": "Actualités récentes",
         "actualites_subtitle": "Suivez nos missions, projets et événements",
@@ -239,7 +239,7 @@ const translations = {
         "actualites_email_placeholder": "Votre adresse email",
         "actualites_abonner": "S'abonner",
         "actualites_confidentialite": "Nous respectons votre vie privée. Aucun spam, désinscription possible à tout moment.",
-        
+
         // Page Carrières
         "carrieres_title": "Rejoignez notre équipe",
         "carrieres_subtitle": "Rejoignez une équipe passionnée et résolument engagée dans la quête de l’excellence.",
@@ -265,7 +265,7 @@ const translations = {
         "carrieres_contactez": "Nous contacter",
         "carrieres_aucune_offre": "Aucune offre ne correspond à votre profil ?",
         "carrieres_envoyez_cv": "Envoyez-nous votre CV et lettre de motivation",
-        
+
         // Offres d'emploi - Commun
         "carrieres_cdi": "CDI",
         "carrieres_cdd": "CDD",
@@ -289,7 +289,7 @@ const translations = {
         "carrieres_message_complementaire": "Message complémentaire (optionnel)",
         "carrieres_message_placeholder": "Parlez-nous de votre motivation et de votre expérience...",
         "carrieres_envoyer_candidature": "Envoyer ma candidature",
-        
+
         // Offre 1 - M&E Officer
         "carrieres_offre1_titre": "Chargé(e) de Suivi-Évaluation (M&E Officer)",
         "carrieres_offre1_desc": "Nous recherchons un(e) Chargé(e) de Suivi-Évaluation pour rejoindre notre équipe. Vous serez responsable de la conception d'outils de collecte des données, de la supervision des enquêtes de terrain et de l'analyse des données pour nos projets d'évaluation.",
@@ -304,7 +304,7 @@ const translations = {
         "carrieres_offre1_prof4": "Maîtrise du français (écrit et oral), l'anglais est un atout",
         "carrieres_offre1_prof5": "Capacité à travailler en équipe et sous pression",
         "carrieres_offre1_prof6": "Disponibilité pour des déplacements sur le terrain",
-        
+
         // Offre 2 - Enquêteur
         "carrieres_offre2_titre": "Enquêteur(trice) de terrain",
         "carrieres_offre2_desc": "Nous recrutons des enquêteurs/enquêtrices pour la collecte des données dans le cadre de nos projets d'évaluation. Vous interviendrez sur le terrain pour administrer des questionnaires et mener des entretiens auprès des bénéficiaires de projets.",
@@ -319,7 +319,7 @@ const translations = {
         "carrieres_offre2_prof4": "Maîtrise du français et d'au moins une langue locale",
         "carrieres_offre2_prof5": "Capacité à utiliser des outils numériques (tablettes, smartphones)",
         "carrieres_offre2_prof6": "Disponibilité immédiate et flexibilité pour des missions de terrain",
-        
+
         // Offre 3 - Analyste de données
         "carrieres_offre3_titre": "Analyste de données",
         "carrieres_offre3_desc": "Nous recherchons un(e) Analyste de données expérimenté(e) pour traiter et analyser les données de nos études d'évaluation. Vous travaillerez sur des bases de données complexes et produirez des analyses statistiques avancées.",
@@ -334,7 +334,7 @@ const translations = {
         "carrieres_offre3_prof4": "Maîtrise des méthodes statistiques (régression, tests d'hypothèses, etc.)",
         "carrieres_offre3_prof5": "Expérience avec Power BI ou Tableau (un plus)",
         "carrieres_offre3_prof6": "Rigueur, attention aux détails et capacité à respecter les délais",
-        
+
         // Page Adhésion
         "adhesion_title": "Devenez membre",
         "adhesion_subtitle": "Rejoignez notre réseau de professionnels de l'évaluation",
@@ -403,7 +403,7 @@ const translations = {
         "adhesion_cta_desc": "Contactez-nous pour plus d'informations sur l'adhésion",
         "adhesion_types": "Types d'adhésion",
         "adhesion_souscrire": "Souscrire maintenant",
-        
+
         // Page Photos
         "photos_hero_titre": "Galerie Photos",
         "photos_hero_desc": "Découvrez nos missions terrain, projets et activités en images",
@@ -448,7 +448,7 @@ const translations = {
         "photos_date_decembre": "Décembre",
         "photos_cta_titre": "Vous avez des photos à partager ?",
         "photos_cta_desc": "Contactez-nous pour contribuer à notre galerie",
-        
+
         // Page Vidéos
         "videos_hero_titre": "Galerie Vidéos",
         "videos_hero_desc": "Revivez nos missions, projets et événements en vidéo",
@@ -476,21 +476,21 @@ const translations = {
         "videos_video8_desc": "Découvrez notre bureau d'études, notre équipe, nos services et notre approche méthodologique en évaluation de projets de développement.",
         "videos_cta_titre": "Intéressé par nos services ?",
         "videos_cta_desc": "Contactez-nous pour discuter de votre projet d'évaluation",
-        
+
         // Page Ressources
         "ressources_title": "Ressources",
         "ressources_subtitle": "Guides méthodologiques et publications sur l'évaluation d'impact et le développement",
         "ressources_rapports": "Nos Rapports",
         "ressources_rapports_desc": "Consultez nos derniers rapports d'évaluation et publications",
         "ressources_telecharger": "Télécharger",
-        
+
         // Boutons et actions communs
         "btn_lire_plus": "Lire plus",
         "btn_telecharger": "Télécharger",
         "btn_postuler": "Postuler",
         "btn_decouvrir": "Découvrir",
         "btn_retour_haut": "Retour en haut",
-        
+
         // Métadonnées et balises
         "meta_baseline": "Baseline",
         "meta_midline": "Midline",
@@ -504,20 +504,20 @@ const translations = {
         "meta_meal": "MEAL",
         "meta_partenariat": "Partenariat",
         "meta_impact": "Impact",
-        
+
         // Dates et lieux
         "date_octobre": "Octobre",
         "date_septembre": "Septembre",
         "date_aout": "Août",
         "date_juillet": "Juillet",
         "date_juin": "Juin",
-        "date_mai": "Mai",
+        "date_janvier": "Janvier",
         "lieu_kinshasa": "Kinshasa",
         "lieu_goma": "Goma, Nord-Kivu",
         "lieu_bukavu": "Bukavu, Sud-Kivu",
         "lieu_uvira": "Uvira, Sud-Kivu",
         "lieu_kabare": "Kabare, Sud-Kivu",
-        
+
         // Rôles d'équipe
         "role_directeur_general": "Expert en Evaluation et Chercheur",
         "role_directrice_operations": "Consultant International et chercheur",
@@ -528,11 +528,11 @@ const translations = {
         "role_junhee": "Consultante Internationale et Chercheuse",
         "role_damaris": "Consultante en Santé Publique",
         "role_patrick": "Responsable Data & Analyse",
-        
+
         // Lire plus pour équipe
         "lire_plus_equipe": "... Lire plus",
-        "lire_moins_equipe": "... Voir moins",
-        
+        "lire_moins_equipe": "... Lire moins",
+
         // Articles/Actualités
         "article_rapport_unicef": "Présentation du Rapport UNICEF - Amélioration de l'Éducation Primaire à Nsele",
         "article_atelier_meal": "Atelier MEAL avec International Alert",
@@ -540,10 +540,10 @@ const translations = {
         "article_visite_bukavu": "Visite à Bukavu - FHI360 et ABFEC",
         "article_terrain_kabare": "Terrain à Kabare - Évaluation du Projet USAID",
         "article_mission_goma": "Mission à Goma - Projet \"L'éducation est la réponse\"",
-        
+
         // Article UNICEF (rapport-unicef-nsele.html)
         "article_unicef_titre": "Présentation du Rapport de l'Enquête de Base du Projet UNICEF",
-        "article_unicef_date": "15 Octobre 2025",
+        "article_unicef_date": "Avril 2025",
         "article_unicef_lieu": "Nsele, Kinshasa",
         "article_unicef_auteur": "Équipe M&E",
         "article_unicef_lecture": "5 min de lecture",
@@ -556,10 +556,10 @@ const translations = {
         "article_goma_desc": "Évaluation du projet USAID à Goma...",
         "article_atelier_titre": "Atelier MEAL avec International Alert",
         "article_atelier_desc": "Formation en suivi-évaluation...",
-        
+
         // Article MEAL (atelier-meal.html)
         "article_meal_titre": "Atelier MEAL avec International Alert",
-        "article_meal_date": "12 Septembre 2025",
+        "article_meal_date": "Mars 2025",
         "article_meal_auteur": "Équipe Bunsh",
         "article_meal_lecture": "4 min de lecture",
         "article_meal_tag_renforcement": "Renforcement de capacités",
@@ -569,10 +569,10 @@ const translations = {
         "article_meal_sim1_desc": "Présentation des résultats de l'enquête de base...",
         "article_meal_sim2_titre": "Mission Terrain à Uvira",
         "article_meal_sim2_desc": "Évaluation du projet Elimu ni Njibu...",
-        
+
         // Article Uvira (mission-uvira.html)
         "article_uvira_titre": "Mission Terrain à Uvira - Projet \"Elimu ni Njibu\"",
-        "article_uvira_date": "20 Août 2025",
+        "article_uvira_date": "Janvier 2025",
         "article_uvira_auteur": "Équipe Terrain",
         "article_uvira_lecture": "6 min de lecture",
         "article_uvira_tag_sudkivu": "Sud-Kivu",
@@ -581,7 +581,7 @@ const translations = {
         "article_uvira_sim1_desc": "Rencontre avec FHI360 et ABFEC...",
         "article_uvira_sim2_titre": "Terrain à Kabare",
         "article_uvira_sim2_desc": "Collecte des données au Sud-Kivu...",
-        
+
         // Index - Projets/Réalisations
         "home_projets_title": "Quelques-uns de nos projets",
         "home_projets_desc": "Découvrez un aperçu de nos évaluations récentes",
@@ -596,28 +596,28 @@ const translations = {
         "project_ministere_sante": "Ministère de la Santé",
         "project_bailleur_intl": "Bailleur international",
         "voir_realisations": "Voir toutes nos réalisations",
-        
+
         // Index - Articles
         "home_article1_badge": "NOUVEAU",
-        "home_article1_date": "Octobre 2025",
+        "home_article1_date": "Avril 2025",
         "home_article1_lieu": "Kinshasa",
         "home_article1_titre": "Présentation du Rapport UNICEF - Nsele",
         "home_article1_desc": "Présentation du rapport de l'enquête de base du projet « Improvement of Access and Quality of Primary Education in Nsele, Kinshasa ».",
-        "home_article2_date": "Septembre 2025",
+        "home_article2_date": "Mars 2025",
         "home_article2_titre": "Atelier MEAL avec International Alert",
         "home_article2_desc": "Retour en images sur l'atelier MEAL auquel notre équipe a eu l'opportunité de participer avec la facilitation de International Alert.",
-        "home_article3_date": "Août 2025",
+        "home_article3_date": "Janvier 2025",
         "home_article3_lieu": "Uvira, Sud-Kivu",
         "home_article3_titre": "Mission Terrain à Uvira - USAID",
         "home_article3_desc": "Notre équipe a rejoint avec succès la ville d'Uvira pour une mission de terrain dans le cadre du projet « Elimu ni Njibu ».",
-        "home_article4_date": "Juillet 2025",
+        "home_article4_date": "Janvier 2025",
         "home_article4_lieu": "Bukavu, Sud-Kivu",
-        "home_article5_date": "Juin 2025",
+        "home_article5_date": "Janvier 2025",
         "home_article5_lieu": "Kabare, Sud-Kivu",
-        "home_article6_date": "Mai 2025",
+        "home_article6_date": "Janvier 2025",
         "home_article6_lieu": "Goma, Nord-Kivu",
         "home_voir_articles": "Voir tous les articles",
-        
+
         // Index - Services Preview
         "home_services_titre": "Nos services principaux",
         "home_services_desc": "Nous accompagnons vos projets à chaque étape de leur cycle de vie",
@@ -634,12 +634,12 @@ const translations = {
         "home_projet1_client": "Client : ONG Internationale",
         "home_projet2_titre": "Étude Baseline - Santé maternelle et infantile",
         "home_projet3_titre": "Évaluation Midline - Sécurité alimentaire",
-        
+
         // Index - CTA
         "cta_evaluation_title": "Besoin d'une évaluation de qualité ?",
         "cta_evaluation_desc": "Contactez-nous pour discuter de votre projet et obtenir un devis personnalisé",
         "cta_evaluation_btn": "Contactez-nous maintenant",
-        
+
         // Communs
         "lire_plus": "Lire plus",
         "en_savoir_plus": "En savoir plus",
@@ -648,7 +648,7 @@ const translations = {
         "postuler": "Postuler",
         "souscrire": "Souscrire",
         "retour_haut": "Retour en haut",
-        
+
         // About - Page À propos - Contenu détaillé
         "about_hero_title": "À propos de nous",
         "about_hero_subtitle": "Découvrez notre mission, nos valeurs et l'équipe qui œuvre pour mesurer et maximiser l'impact de vos projets",
@@ -676,7 +676,7 @@ const translations = {
         "about_histoire_p2": "Fondé par Ridi Bunshani, le Bureau d'études Bunsh  réuni d'experts africains, européens, asiatiques et américains issus de divers horizons disciplinaires. Le bureau se veut être un partenaire de confiance pour les organisations nationales et internationales.",
         "about_histoire_p3": "Grâce à son ancrage en Afrique et à son ouverture sur le monde, le bureau d'études Bunsh combine une compréhension fine des réalités locales avec des standards méthodologiques internationaux, offrant ainsi des analyses solides, des données fiables et des solutions adaptées aux défis du développement et de l'assistance humanitaire.",
         "about_equipe_soustitre": "Une équipe pluridisciplinaire et multiculturelle réunissant des experts en évaluation, forts d'une expérience internationale reconnue.",
-        "about_team_kabongo_bio": "Ridi est un économiste et expert en éducation et développement international spécialisé dans le suivi et l'évaluation de projets et de programmes dans divers secteurs, avec 7+ ans d'expérience dans la réalisation d'évaluations et d'études pour des organisations internationales.",
+        "about_team_Ridi_bio": "Ridi est un économiste et expert en éducation et développement international spécialisé dans le suivi et l'évaluation de projets et de programmes dans divers secteurs, avec 7+ ans d'expérience dans la réalisation d'évaluations et d'études pour des organisations internationales.",
         "about_team_lumbu_bio": "Begench possède 7+ ans d'expérience en technologies pédagogiques, e-learning et développement des compétences numériques, collaborant avec divers acteurs du monde universitaire, du gouvernement et des organisations internationales.",
         "about_team_nkulu_bio": "Statisticien spécialisé en analyse de données complexes. Maîtrise de SPSS, R, Python et Power BI. Master en Statistiques Appliquées.",
         "about_team_monga_bio": "Sociologue spécialisée en méthodes qualitatives. Experte en focus groups, entretiens approfondis et analyse thématique.",
@@ -701,7 +701,7 @@ const translations = {
         "about_partenaires_soustitre": "Ils nous ont fait confiance",
         "about_rejoindre_titre": "Rejoignez nos partenaires",
         "about_rejoindre_desc": "Travaillons ensemble afin de transformer vos initiatives en résultats mesurables et durables.",
-        
+
         // Ressources - Page Ressources
         "ressources_hero_titre": "Nos rapports",
         "ressources_hero_desc": "Guides méthodologiques et publications sur l'évaluation d'impact et le développement",
@@ -710,7 +710,7 @@ const translations = {
         "ressources_rapport1_badge": "NOUVEAU",
         "ressources_rapport1_categorie": "RAPPORT HUMANITAIRE",
         "ressources_rapport1_titre": "Rapport de Situation Humanitaire",
-        "ressources_rapport1_periode": "Avril - Juin 2025",
+        "ressources_rapport1_periode": "Janvier 2025",
         "ressources_rapport1_desc": "Analyse approfondie de la situation humanitaire en RDC pour le second trimestre 2025. Évaluation des besoins, tendances et recommandations stratégiques pour les interventions d'urgence.",
         "ressources_rapport2_categorie": "DATA INSIGHTS",
         "ressources_rapport2_titre": "Plateforme de Données Globales",
@@ -749,7 +749,7 @@ const translations = {
         "ressources_theme6_desc": "Leçons apprises et retours d'expérience",
         "ressources_cta_titre": "Une question sur nos méthodes ?",
         "ressources_cta_desc": "N'hésitez pas à nous contacter pour échanger sur vos besoins",
-        
+
         // Rapports réels
         "rapport_unicef_fr_categorie": "ÉVALUATION BASELINE",
         "rapport_unicef_fr_titre": "Enseignement Primaire - Nsele",
@@ -763,15 +763,15 @@ const translations = {
         "rapport_paix_titre": "Consolidation de la Paix",
         "rapport_paix_meta": "Sécurité & Stabilité | 2024",
         "rapport_paix_desc": "Rapport d'évaluation sur la consolidation de la paix et de la stabilité en République démocratique du Congo à travers la réduction des risques explosifs et de la violence armée.",
-        
+
         // Réalisations - Page Nos réalisations
         "real_hero_titre": "Nos réalisations",
-        "real_hero_desc": "Plus de 50 études et évaluations menées à bien dans divers secteurs de développement et d’assistance humanitaire.",
+        "real_hero_desc": "Plus de 5 études et évaluations menées à bien dans divers secteurs de développement et d’assistance humanitaire.",
         "real_stat1_nombre": "5+",
         "real_stat1_label": "Projets évalués",
         "real_stat2_nombre": "5",
         "real_stat2_label": "Secteurs d'intervention",
-        "real_stat3_nombre": "10K+",
+        "real_stat3_nombre": "10.000",
         "real_stat3_label": "Bénéficiaires touchés",
         "real_stat4_nombre": "7+",
         "real_stat4_label": "Partenaires",
@@ -809,7 +809,7 @@ const translations = {
         "real_cta_titre": "Prêt à évaluer votre projet ?",
         "real_cta_desc": "Contactez-nous pour discuter de vos besoins en évaluation",
         "real_cta_btn": "Parlons de votre projet",
-        
+
         // Réalisations - Projets détaillés
         "real_projet_edu1_titre": "Base de référence de l'enseignement primaire à Kinshasa, N'sele",
         "real_projet_edu1_desc": "Enquête de base sur l'amélioration de l'accès et de la qualité de l'enseignement primaire à Kinshasa, dans la commune de N'sele.",
@@ -848,13 +848,13 @@ const translations = {
         "real_projet_env3_desc": "Évaluation finale d'un projet d'installation de points d'eau potable en milieu rural. Mesure de l'amélioration de l'accès et de la réduction des maladies hydriques.",
         "real_projet_env3_client": "Client : UNICEF / Ministère de l'Eau",
         "real_projet_annee": "Année :",
-        
+
         // Page Services
         "serv_hero_titre": "Nos services",
         "serv_hero_desc": "Des solutions d'évaluation intégrées pour appuyer la conception, la mise en œuvre et la réadaptation continue de vos interventions de développement ou humanitaires.",
         "serv_poles_titre": "Nos trois pôles d'évaluation",
         "serv_poles_desc": "Nous vous accompagnons tout au long du cycle de vie de votre projet",
-        
+
         // Services principaux - Baseline
         "serv_baseline_titre": "Études de Base (Baseline)",
         "serv_baseline_desc": "Établissement d'une situation de référence avant le démarrage de votre projet pour mesurer ultérieurement les changements et l'impact.",
@@ -870,7 +870,7 @@ const translations = {
         "serv_baseline_livr2": "• Base de données brutes et nettoyées",
         "serv_baseline_livr3": "• Cadre de mesure des résultats",
         "serv_baseline_livr4": "• Outils de collecte validés",
-        
+
         // Services principaux - Midline
         "serv_midline_titre": "Évaluation Mi-Parcours (Midline)",
         "serv_midline_desc": "Suivi et mesure des progrès à mi-parcours pour ajuster les stratégies et optimiser les résultats en cours de projet.",
@@ -886,7 +886,7 @@ const translations = {
         "serv_midline_livr2": "• Tableau de bord des indicateurs",
         "serv_midline_livr3": "• Note de recommandations stratégiques",
         "serv_midline_livr4": "• Présentation PowerPoint des résultats",
-        
+
         // Services principaux - Endline
         "serv_endline_titre": "Évaluations Finales (Endline)",
         "serv_endline_desc": "Mesure complète de l'impact et des résultats obtenus en fin de projet avec une analyse approfondie des changements.",
@@ -902,11 +902,11 @@ const translations = {
         "serv_endline_livr2": "• Synthèse exécutive",
         "serv_endline_livr3": "• Études de cas et témoignages",
         "serv_endline_livr4": "• Visualisations de données (infographies)",
-        
+
         // Boutons
         "serv_lire_plus": "Lire plus",
         "serv_lire_moins": "Lire moins",
-        
+
         // Services complémentaires
         "serv_comp_titre": "Services complémentaires",
         "serv_comp_desc": "D'autres services pour renforcer vos capacités d'évaluation et de suivi",
@@ -922,7 +922,7 @@ const translations = {
         "serv_comp5_desc": "Mise en place de systèmes de collecte des données via smartphones et tablettes (Kobo, ODK) pour une saisie rapide, fiable et géolocalisée.",
         "serv_comp6_titre": "Évaluations participatives",
         "serv_comp6_desc": "Organisation de focus groups, entretiens approfondis et ateliers participatifs pour capturer les perceptions et expériences des bénéficiaires.",
-        
+
         // Méthodologies
         "serv_methodo_titre": "Nos méthodologies",
         "serv_methodo_desc": "Des approches scientifiques reconnues internationalement",
@@ -934,7 +934,7 @@ const translations = {
         "serv_methodo3_desc": "Combinaison stratégique de données quantitatives et qualitatives pour une compréhension holistique des phénomènes.",
         "serv_methodo4_titre": "Approches participatives",
         "serv_methodo4_desc": "Implication des parties prenantes et bénéficiaires dans toutes les étapes du processus d'évaluation.",
-        
+
         // Outils technologiques
         "serv_outils_titre": "Nos outils technologiques",
         "serv_outils_desc": "Technologies de pointe pour une évaluation moderne et efficace",
@@ -950,7 +950,7 @@ const translations = {
         "serv_outil5_desc": "Cartographie et géolocalisation",
         "serv_outil6_nom": "Cloud Storage",
         "serv_outil6_desc": "Stockage sécurisé",
-        
+
         // Processus de travail
         "serv_processus_titre": "Notre processus de travail",
         "serv_processus_desc": "Une approche structurée en 6 étapes pour garantir la qualité",
@@ -967,7 +967,7 @@ const translations = {
         "serv_processus6_titre": "Rédaction et restitution",
         "serv_processus6_desc": "Rédaction du rapport final, présentation des résultats et recommandations actionnables pour le client.",
     },
-    
+
     en: {
         // Navigation
         "nav_accueil": "Home",
@@ -983,7 +983,7 @@ const translations = {
         "nav_photos": "Photos",
         "nav_videos": "Videos",
         "nav_contact": "Contact",
-        
+
         // Footer
         "footer_navigation": "Navigation",
         "footer_services": "Services",
@@ -998,21 +998,21 @@ const translations = {
         "footer_renforcement": "Capacity Building",
         "footer_adresse": "📍 Adresse: 1, Socimat, Gombe, Kinshasa-RDC",
         "footer_copyright": "© 2025 Bunsh - Partner in Research and Evaluation",
-        
+
         // Page d'accueil
         "home_title": "Your Partner in Research and Evaluation",
         "home_subtitle": "We conduct studies and evaluations of projects and programs to enable organizations to generate lasting impact.",
         "home_btn_services": "Our Services",
         "home_btn_etudes": "Our Studies",
         "home_btn_contact": "Contact Us",
-        "home_qui_sommes": "Who are we?",
-        "home_qui_desc": "We are a design office specializing in research and evaluation of both development and humanitarian projects and programs.",
+        "home_qui_sommes": "Who Are We?",
+        "home_qui_desc": "We are a consultancy firm specializing in the research and evaluation of both development and humanitarian projects and programs. Through proven expertise and the application of rigorous methodologies consistent with international standards, we support national and international partners in measuring, understanding, and adapting their interventions.",
         "home_en_savoir_plus": "Learn More About Us",
         "home_actualites_recentes": "Recent News",
         "home_actualites_desc": "Discover our latest missions and field activities",
         "home_lire_article": "Read Article",
         "home_nouveau": "NEW",
-        
+
         // Page À propos
         "about_title": "About Us",
         "about_subtitle": "Discover our mission, values, and the team working to measure and maximize the impact of your projects",
@@ -1039,7 +1039,7 @@ const translations = {
         "about_equipe_title": "Our Team",
         "about_equipe_soustitre": "A multidisciplinary and multicultural team bringing together evaluation experts with recognized international experience.",
         "about_equipe_desc": "A multidisciplinary team of experts in evaluation, statistics, and development",
-        
+
         // Team - Roles
         "role_directeur_general": "Evaluation Expert and Researcher",
         "role_directrice_operations": "International Consultant and Researcher",
@@ -1047,41 +1047,41 @@ const translations = {
         "role_grace": "Monitoring and Evaluation Consultant",
         "role_junhee": "International Consultant and Researcher",
         "role_damaris": "Public Health Consultant",
-        
+
         // Team - Biographies
-        "about_team_kabongo_bio": "Ridi is an economist and expert in education and international development specialized in monitoring and evaluation of projects and programs in various sectors, with 7+ years of experience in conducting evaluations and studies for international organizations.",
-        
+        "about_team_Ridi_bio": "Ridi is an economist and expert in education and international development, he specializes in monitoring and evaluation of projets and programs across various sectors, with several years of experience in conducting evaluations and studies for governments and international organizations.",
+
         // Short biographies
         "bio_begench_short": "Expert in educational technologies with 7+ years of experience",
         "bio_emile_short": "Expert in mental health and psychosocial support",
         "bio_grace_short": "Specialist in M&E and project management",
         "bio_junhee_short": "Expert in sexual violence and international law",
         "bio_damaris_short": "Specialized in public health and community development",
-        
+
         // Full biographies
         "bio_begench_full": "Begench has 7+ years of experience in educational technologies, e-learning and digital skills development, collaborating with various actors from academia, government and international organizations.",
-        "bio_emile_full": "Experienced advisor, educator and mental health professional with rich and diverse experience in humanitarian and development operations. His core competencies include conducting psychological assessments, facilitating group and individual sessions, developing and delivering training programs.",
-        "bio_grace_full": "10+ years of experience in humanitarian and development sectors. Specialized in database management, statistical analysis and results-based management. Proven experience in designing and implementing M&E systems, socio-economic reintegration of ex-combatants, livelihoods, cash transfers, water, hygiene, as well as peacebuilding.",
-        "bio_junhee_full": "A specialist in issues related to sexual violence linked to conflicts in the DRC, she adopts an intersectional approach focused on gender justice and the valorization of marginalized voices. Her background combines research, legal advocacy and community action, with a strong commitment to equality and human rights.",
-        "bio_damaris_full": "Public health professional specializing in management, monitoring and evaluation of projects focused on health, nutrition and social development. Experience designing and analyzing community initiatives to strengthen equity, disease prevention, and maternal and child health.",
-        
+        "bio_emile_full": "Emile is an experienced advisor, educator and mental health professional with rich and diverse experience in humanitarian and development operations. His core competencies include conducting psychological assessments, facilitating group and individual sessions, developing and delivering training programs.",
+        "bio_grace_full": "Grace has 10+ years of experience in humanitarian and development sectors. He specializes in database management, statistical analysis and results-based management. He has a proven experience in designing and implementing M&E systems, socio-economic reintegration of ex-combatants, livelihoods, cash transfers, water, hygiene, as well as peacebuilding.",
+        "bio_junhee_full": "Junhee is a specialist in issues related to sexual violence linked to conflicts in the DRC. She adopts an intersectional approach focused on gender justice and the valorization of marginalized voices. Her background combines research, legal advocacy and community action, with a strong commitment to equality and human rights.",
+        "bio_damaris_full": "Damaris is a public health professional specializing in management, monitoring and evaluation of projects focused on health, nutrition and social development. She has experience designing and analyzing community initiatives to strengthen equity, disease prevention, and maternal and child health.",
+
         // Team buttons
         "lire_plus_equipe": "... Read more",
         "lire_moins_equipe": "... Read less",
-        
+
         // About section - Details
         "about_raison_titre": "Our Purpose",
         "about_raison_soustitre": "What guides us in our mission of excellence",
         "about_vision_titre": "Our Vision",
         "about_vision_p1": "Our vision is to be a benchmark African partner, recognized for its excellence in the monitoring and evaluation of both development and humanitarian projects and programs..",
         "about_vision_p2": "We aspire to strengthen data-driven decision-making and sustainably contribute to improving lives in Africa and across the world.",
-        "about_mission_titre": "Our Mission", 
+        "about_mission_titre": "Our Mission",
         "about_mission_p1": "To provide the highest quality evaluation services, enabling development and humanitarian organizations to concretely measure their intervention, optimize its effectiveness to ensure sustainable change within the communities they support.",
         "about_mission_p2": "We are committed to producing reliable data, rigorous analyses and strategic and operational recommendations, to inform decision-making and amplify the results of development and humanitarian actions.",
         "about_valeurs_titre": "Our Values",
         "about_rigueur": "Rigor",
         "about_rigueur_desc": "Proven scientific methodologies",
-        "about_integrite": "Integrity", 
+        "about_integrite": "Integrity",
         "about_integrite_desc": "Transparency and professional ethics",
         "about_excellence": "Excellence",
         "about_excellence_desc": "Impeccable quality in all our deliverables",
@@ -1091,7 +1091,7 @@ const translations = {
         "about_impact_desc": "Focus on concrete and measurable results",
         "about_histoire_titre": "Our Story",
         "about_histoire_p1": "Created in 2023, the Bunsh Study Bureau was born from the desire to promote a rigorous, local and innovative approach to evaluation and research applied to development and humanitarian assistance.",
-        "about_histoire_p2": "Founded by Ridi Bunshani, the Bunsh Design Office brings together African, European, Asian and American experts from various disciplinary backgrounds. The office aims to be a trusted partner for national and international organizations.",
+        "about_histoire_p2": "We bring together African, European, Asian and American experts from various disciplinary backgrounds. The office aims to be a trusted partner for national and international organizations.",
         "about_histoire_p3": "Thanks to its roots in Africa and its openness to the world, the Bunsh study bureau combines a fine understanding of local realities with international methodological standards, thus offering solid analyses, reliable data and solutions adapted to the challenges of development and humanitarian assistance.",
         "about_partenaires_soustitre": "They trusted us",
         "about_methodologies_title": "Our Methodologies and References",
@@ -1101,7 +1101,7 @@ const translations = {
         "about_rejoindre_title": "Join Our Partners",
         "about_rejoindre_desc": "Let's work together to transform your initiatives into measurable and sustainable results.",
         "about_contactez": "Contact Us",
-        
+
         // Page Services
         "services_title": "Our Services",
         "services_subtitle": "Comprehensive solutions in evaluation and monitoring of development projects",
@@ -1130,7 +1130,7 @@ const translations = {
         "services_etape6": "Restitution and Follow-up",
         "services_etape6_desc": "Presentation of results and support in implementation",
         "services_demander_devis": "Request a Quote",
-        
+
         // Page Contact
         "contact_title": "Contact Us",
         "contact_subtitle": "Let's discuss your evaluation project. Our team is at your service.",
@@ -1193,7 +1193,7 @@ const translations = {
         "contact_faq7_r": "Our permanent team includes 15 professionals (economists, statisticians, sociologists, psychologists, education specialists, health specialists, environmentalists, experts in issues related to agriculture and experts in conflict management) and we have a network of more than 100 trained and experienced investigators who we mobilize according to the needs of the projects.",
         "contact_faq8_q": "In which languages do you work?",
         "contact_faq8_r": "We have a multicultural team who speak English, French as well as African and Asian national languages.",
-        
+
         // Page Actualités
         "actualites_title": "Recent News",
         "actualites_subtitle": "Follow our missions, projects, and events",
@@ -1201,7 +1201,7 @@ const translations = {
         "actualites_email_placeholder": "Your email address",
         "actualites_abonner": "Subscribe",
         "actualites_confidentialite": "We respect your privacy. No spam, unsubscribe anytime.",
-        
+
         // Page Carrières
         "carrieres_title": "Join Our Team",
         "carrieres_subtitle": "Join a passionate team resolutely committed to the quest for excellence.",
@@ -1227,7 +1227,7 @@ const translations = {
         "carrieres_contactez": "Contact Us",
         "carrieres_aucune_offre": "No position matches your profile?",
         "carrieres_envoyez_cv": "Send us your CV and cover letter",
-        
+
         // Offres d'emploi - Commun
         "carrieres_cdi": "Permanent Contract",
         "carrieres_cdd": "Fixed-term Contract",
@@ -1251,7 +1251,7 @@ const translations = {
         "carrieres_message_complementaire": "Additional message (optional)",
         "carrieres_message_placeholder": "Tell us about your motivation and experience...",
         "carrieres_envoyer_candidature": "Submit Application",
-        
+
         // Offre 1 - M&E Officer
         "carrieres_offre1_titre": "M&E Officer",
         "carrieres_offre1_desc": "We are looking for an M&E Officer to join our team. You will be responsible for designing data collection tools, supervising field surveys, and analyzing data for our evaluation projects.",
@@ -1266,7 +1266,7 @@ const translations = {
         "carrieres_offre1_prof4": "Fluency in French (written and oral), English is an asset",
         "carrieres_offre1_prof5": "Ability to work in a team and under pressure",
         "carrieres_offre1_prof6": "Availability for field travel",
-        
+
         // Offre 2 - Enquêteur
         "carrieres_offre2_titre": "Field Enumerator",
         "carrieres_offre2_desc": "We are recruiting field enumerators for data collection in our evaluation projects. You will work in the field to administer questionnaires and conduct interviews with project beneficiaries.",
@@ -1281,7 +1281,7 @@ const translations = {
         "carrieres_offre2_prof4": "Fluency in French and at least one local language",
         "carrieres_offre2_prof5": "Ability to use digital tools (tablets, smartphones)",
         "carrieres_offre2_prof6": "Immediate availability and flexibility for field missions",
-        
+
         // Offre 3 - Analyste de données
         "carrieres_offre3_titre": "Data Analyst",
         "carrieres_offre3_desc": "We are looking for an experienced Data Analyst to process and analyze data from our evaluation studies. You will work with complex databases and produce advanced statistical analyses.",
@@ -1296,7 +1296,7 @@ const translations = {
         "carrieres_offre3_prof4": "Mastery of statistical methods (regression, hypothesis testing, etc.)",
         "carrieres_offre3_prof5": "Experience with Power BI or Tableau (a plus)",
         "carrieres_offre3_prof6": "Rigor, attention to detail, and ability to meet deadlines",
-        
+
         // Page Adhésion
         "adhesion_title": "Become a Member",
         "adhesion_subtitle": "Join our network of evaluation professionals",
@@ -1365,7 +1365,7 @@ const translations = {
         "adhesion_cta_desc": "Contact us for more information about membership",
         "adhesion_types": "Membership Types",
         "adhesion_souscrire": "Subscribe Now",
-        
+
         // Page Photos
         "photos_hero_titre": "Photo Gallery",
         "photos_hero_desc": "Discover our field missions, projects, and activities in pictures",
@@ -1410,7 +1410,7 @@ const translations = {
         "photos_date_decembre": "December",
         "photos_cta_titre": "Do you have photos to share?",
         "photos_cta_desc": "Contact us to contribute to our gallery",
-        
+
         // Page Vidéos
         "videos_hero_titre": "Video Gallery",
         "videos_hero_desc": "Relive our missions, projects, and events in video",
@@ -1438,21 +1438,21 @@ const translations = {
         "videos_video8_desc": "Discover our research firm, our team, our services, and our methodological approach in development project evaluation.",
         "videos_cta_titre": "Interested in Our Services?",
         "videos_cta_desc": "Contact us to discuss your evaluation project",
-        
+
         // Page Ressources
         "ressources_title": "Resources",
         "ressources_subtitle": "Methodological guides and publications on impact evaluation and development",
         "ressources_rapports": "Our Reports",
         "ressources_rapports_desc": "Browse our latest evaluation reports and publications",
         "ressources_telecharger": "Download",
-        
+
         // Boutons et actions communs
         "btn_lire_plus": "Read More",
         "btn_telecharger": "Download",
         "btn_postuler": "Apply",
         "btn_decouvrir": "Discover",
         "btn_retour_haut": "Back to Top",
-        
+
         // Métadonnées et balises
         "meta_baseline": "Baseline",
         "meta_midline": "Midline",
@@ -1466,20 +1466,21 @@ const translations = {
         "meta_meal": "MEAL",
         "meta_partenariat": "Partnership",
         "meta_impact": "Impact",
-        
+
         // Dates et lieux
         "date_octobre": "October",
         "date_septembre": "September",
         "date_aout": "August",
         "date_juillet": "July",
         "date_juin": "June",
-        "date_mai": "May",
+        "date_janvier": "January",
+        "date_january": "January",
         "lieu_kinshasa": "Kinshasa",
         "lieu_goma": "Goma, North Kivu",
         "lieu_bukavu": "Bukavu, South Kivu",
         "lieu_uvira": "Uvira, South Kivu",
         "lieu_kabare": "Kabare, South Kivu",
-        
+
         // Rôles d'équipe
         "role_directeur_general": "Expert in Evaluation and Researcher",
         "role_directrice_operations": "International Consultant and Researcher",
@@ -1490,11 +1491,11 @@ const translations = {
         "role_junhee": "International Consultant and Researcher",
         "role_damaris": "Public Health Consultant",
         "role_patrick": "Data & Analysis Manager",
-        
+
         // Read more for team
         "lire_plus_equipe": "... Read more",
-        "lire_moins_equipe": "... Show less",
-        
+        "lire_moins_equipe": "... Read less",
+
         // Articles/Actualités
         "article_rapport_unicef": "UNICEF Report Presentation - Improving Primary Education in Nsele",
         "article_atelier_meal": "MEAL Workshop with International Alert",
@@ -1502,7 +1503,7 @@ const translations = {
         "article_visite_bukavu": "Visit to Bukavu - FHI360 and ABFEC",
         "article_terrain_kabare": "Field Work in Kabare - USAID Project Evaluation",
         "article_mission_goma": "Mission to Goma - \"Education is the Answer\" Project",
-        
+
         // Article UNICEF (rapport-unicef-nsele.html)
         "article_unicef_titre": "UNICEF Baseline Survey Report Presentation",
         "article_unicef_date": "October 15, 2025",
@@ -1518,7 +1519,7 @@ const translations = {
         "article_goma_desc": "USAID project evaluation in Goma...",
         "article_atelier_titre": "MEAL Workshop with International Alert",
         "article_atelier_desc": "Monitoring and evaluation training...",
-        
+
         // Article MEAL (atelier-meal.html)
         "article_meal_titre": "MEAL Workshop with International Alert",
         "article_meal_date": "September 12, 2025",
@@ -1531,7 +1532,7 @@ const translations = {
         "article_meal_sim1_desc": "Presentation of baseline survey results...",
         "article_meal_sim2_titre": "Field Mission to Uvira",
         "article_meal_sim2_desc": "Evaluation of the Elimu ni Njibu project...",
-        
+
         // Article Uvira (mission-uvira.html)
         "article_uvira_titre": "Field Mission to Uvira - \"Elimu ni Njibu\" Project",
         "article_uvira_date": "August 20, 2025",
@@ -1543,7 +1544,7 @@ const translations = {
         "article_uvira_sim1_desc": "Meeting with FHI360 and ABFEC...",
         "article_uvira_sim2_titre": "Field Work in Kabare",
         "article_uvira_sim2_desc": "Data collection in South Kivu...",
-        
+
         // Index - Projets/Réalisations
         "home_projets_title": "Some of Our Projects",
         "home_projets_desc": "Discover an overview of our recent evaluations",
@@ -1558,28 +1559,28 @@ const translations = {
         "project_ministere_sante": "Ministry of Health",
         "project_bailleur_intl": "International Donor",
         "voir_realisations": "See All Our Achievements",
-        
+
         // Index - Articles
         "home_article1_badge": "NEW",
-        "home_article1_date": "October 2025",
+        "home_article1_date": "April 2025",
         "home_article1_lieu": "Kinshasa",
         "home_article1_titre": "UNICEF Report Presentation - Nsele",
         "home_article1_desc": "Presentation of the baseline survey report for the project 'Improvement of Access and Quality of Primary Education in Nsele, Kinshasa'.",
-        "home_article2_date": "September 2025",
+        "home_article2_date": "Mars 2025",
         "home_article2_titre": "MEAL Workshop with International Alert",
         "home_article2_desc": "A look back at the MEAL workshop our team had the opportunity to attend with facilitation by International Alert.",
-        "home_article3_date": "August 2025",
+        "home_article3_date": "January 2025",
         "home_article3_lieu": "Uvira, South Kivu",
         "home_article3_titre": "Field Mission to Uvira - USAID",
         "home_article3_desc": "Our team successfully reached the city of Uvira for a field mission as part of the 'Elimu ni Njibu' project.",
-        "home_article4_date": "July 2025",
+        "home_article4_date": "January 2025",
         "home_article4_lieu": "Bukavu, South Kivu",
-        "home_article5_date": "June 2025",
+        "home_article5_date": "January 2025",
         "home_article5_lieu": "Kabare, South Kivu",
-        "home_article6_date": "May 2025",
+        "home_article6_date": "January 2025",
         "home_article6_lieu": "Goma, North Kivu",
         "home_voir_articles": "See All Articles",
-        
+
         // Index - Services Preview
         "home_services_titre": "Our Main Services",
         "home_services_desc": "We support your projects at every stage of their lifecycle",
@@ -1596,12 +1597,12 @@ const translations = {
         "home_projet1_client": "Client: International NGO",
         "home_projet2_titre": "Baseline Study - Maternal and Child Health",
         "home_projet3_titre": "Midline Evaluation - Food Security",
-        
+
         // Index - CTA
         "cta_evaluation_title": "Need a Quality Evaluation?",
         "cta_evaluation_desc": "Contact us to discuss your project and get a personalized quote",
         "cta_evaluation_btn": "Contact Us Now",
-        
+
         // Communs
         "lire_plus": "Read More",
         "en_savoir_plus": "Learn More",
@@ -1610,7 +1611,7 @@ const translations = {
         "postuler": "Apply",
         "souscrire": "Subscribe",
         "retour_haut": "Back to Top",
-        
+
         // About - Page À propos - Contenu détaillé
         "about_hero_title": "About Us",
         "about_hero_subtitle": "Discover our mission, values, and the team working to measure and maximize the impact of your projects",
@@ -1634,11 +1635,11 @@ const translations = {
         "about_impact": "Impact",
         "about_impact_desc": "Focus on concrete and measurable results",
         "about_histoire_titre": "Our Story",
-        "about_histoire_p1": "Founded in 2023, Bunsh Consulting was born from the desire to promote a rigorous, local, and innovative approach to evaluation and applied research in development and humanitarian assistance.",
-        "about_histoire_p2": "Founded by Ridi Bunshani, the Bunsh Design Office brings together African, European, Asian and American experts from various disciplinary backgrounds. The office aims to be a trusted partner for national and international organizations.",
-        "about_histoire_p3": "Thanks to its African roots and global openness, Bunsh Consulting combines a deep understanding of local realities with international methodological standards, offering solid analyses, reliable data, and solutions adapted to development and humanitarian assistance challenges.",
+        "about_histoire_p1": "Founded in 2023 by Ridi Bunshani, Bunsh was born from the desire to promote a rigorous, local, and innovative approach to evaluation and applied research in development and humanitarian assistance.",
+        "about_histoire_p2": "We bring together African, European, Asian and American experts from various disciplinary backgrounds. The office aims to be a trusted partner for national and international organizations.",
+        "about_histoire_p3": "Thanks to its African roots and global openness, Bunsh combines a deep understanding of local realities with international methodological standards, offering solid analyses, reliable data, and solutions adapted to development and humanitarian assistance challenges.",
         "about_equipe_soustitre": "A multidisciplinary and multicultural team bringing together evaluation experts with recognized international experience.",
-        "about_team_kabongo_bio": "Ridi is an economist and expert in education and international development specialized in monitoring and evaluation of projects and programs across various sectors, with 7+ years of experience in conducting evaluations and studies for international organizations.",
+        "about_team_Ridi_bio": "Ridi is an economist and expert in education and international development, he specializes in monitoring and evaluation of projets and programs across various sectors, with several years of experience in conducting evaluations and studies for governments and international organizations.",
         "about_team_lumbu_bio": "Begench has 7+ years of experience in educational technologies, e-learning, and digital skills development, collaborating with various actors from academia, government, and international organizations.",
         "about_team_nkulu_bio": "Statistician specialized in complex data analysis. Proficient in SPSS, R, Python, and Power BI. Master's in Applied Statistics.",
         "about_team_monga_bio": "Sociologist specialized in qualitative methods. Expert in focus groups, in-depth interviews, and thematic analysis.",
@@ -1663,7 +1664,7 @@ const translations = {
         "about_partenaires_soustitre": "They have trusted us",
         "about_rejoindre_titre": "Join Our Partners",
         "about_rejoindre_desc": "Let's work together to measure and maximize the impact of your projects",
-        
+
         // Ressources - Page Ressources
         "ressources_hero_titre": "Our reports",
         "ressources_hero_desc": "Methodological guides and publications on impact evaluation and development",
@@ -1711,7 +1712,7 @@ const translations = {
         "ressources_theme6_desc": "Lessons learned and feedback",
         "ressources_cta_titre": "Questions About Our Methods?",
         "ressources_cta_desc": "Feel free to contact us to discuss your needs",
-        
+
         // Real Reports
         "rapport_unicef_fr_categorie": "BASELINE EVALUATION",
         "rapport_unicef_fr_titre": "Primary Education - Nsele",
@@ -1725,16 +1726,16 @@ const translations = {
         "rapport_paix_titre": "Peace Consolidation",
         "rapport_paix_meta": "Security & Stability | 2024",
         "rapport_paix_desc": "Evaluation report on peace and stability consolidation in the Democratic Republic of Congo through the reduction of explosive hazards and armed violence.",
-        
+
         // Réalisations - Page Nos réalisations
         "real_hero_titre": "Our Achievements",
-        "real_hero_desc": "More than 50 studies and evaluations carried out in various sectors of development and humanitarian assistance.",
+        "real_hero_desc": "More than 5 studies and evaluations carried out in various sectors of development and humanitarian assistance.",
         "real_stat1_nombre": "5+",
         "real_stat1_label": "Projects Evaluated",
         "real_stat2_nombre": "5",
         "real_stat2_label": "Intervention Sectors",
-        "real_stat3_nombre": "10K+",
-        "real_stat3_label": "Beneficiaries Reached",
+        "real_stat3_nombre": "10.000",
+        "real_stat3_label": "Beneficiaries Reached by Our Evaluators",
         "real_stat4_nombre": "7+",
         "real_stat4_label": "Partners",
         "real_projets_titre": "Our Activity Sectors",
@@ -1771,7 +1772,7 @@ const translations = {
         "real_cta_titre": "Ready to Evaluate Your Project?",
         "real_cta_desc": "Contact us to discuss your evaluation needs",
         "real_cta_btn": "Let's Talk About Your Project",
-        
+
         // Réalisations - Projets détaillés
         "real_projet_edu1_titre": "Primary Education Baseline in Kinshasa, N'sele",
         "real_projet_edu1_desc": "Baseline survey on improving access and quality of primary education in Kinshasa, in the N'sele commune.",
@@ -1810,16 +1811,16 @@ const translations = {
         "real_projet_env3_desc": "Final evaluation of a rural drinking water point installation project. Measurement of improved access and reduction in waterborne diseases.",
         "real_projet_env3_client": "Client: UNICEF / Ministry of Water",
         "real_projet_annee": "Year:",
-        
+
         // Page Services
         "serv_hero_titre": "Our Services",
         "serv_hero_desc": "Integrated evaluation solutions to support the design, implementation and continuous adaptation of your development or humanitarian interventions.",
-        "serv_poles_titre": "Our Three Evaluation Areas",
+        "serv_poles_titre": "Our Three Evaluation Phases",
         "serv_poles_desc": "We support you throughout the entire life cycle of your project",
-        
+
         // Services principaux - Baseline
         "serv_baseline_titre": "Baseline Studies",
-        "serv_baseline_desc": "Establishing a reference situation before your project starts to measure changes and impact later.",
+        "serv_baseline_desc": "Establishing a robust baseline to capture the initial conditions prior to project implementation, providing a solid foundation for measuring subsequent changes and assessing impact over time.",
         "serv_baseline_faisons": "What we do:",
         "serv_baseline_item1": "✓ Definition of key performance indicators",
         "serv_baseline_item2": "✓ Collection of initial quantitative and qualitative data",
@@ -1832,10 +1833,10 @@ const translations = {
         "serv_baseline_livr2": "• Raw and cleaned databases",
         "serv_baseline_livr3": "• Results measurement framework",
         "serv_baseline_livr4": "• Validated data collection tools",
-        
+
         // Services principaux - Midline
         "serv_midline_titre": "Mid-Term Evaluation",
-        "serv_midline_desc": "Monitoring and measuring progress at mid-term to adjust strategies and optimize results during the project.",
+        "serv_midline_desc": "Conducting a mid-term assessment to monitor progress, inform strategic adjustments, and enhance the effectiveness of project implementation.",
         "serv_midline_faisons": "What we do:",
         "serv_midline_item1": "✓ Measurement of intermediate indicators",
         "serv_midline_item2": "✓ Assessment of progress against targets",
@@ -1848,10 +1849,10 @@ const translations = {
         "serv_midline_livr2": "• Indicator dashboard",
         "serv_midline_livr3": "• Strategic recommendations note",
         "serv_midline_livr4": "• PowerPoint presentation of results",
-        
+
         // Services principaux - Endline
         "serv_endline_titre": "Final Evaluations (Endline)",
-        "serv_endline_desc": "Complete measurement of impact and results achieved at project end with in-depth analysis of changes.",
+        "serv_endline_desc": "Undertaking a comprehensive endline evaluation to measure achieved results, assess overall impact, and provide an in-depth analysis of the changes generated by the project.",
         "serv_endline_faisons": "What we do:",
         "serv_endline_item1": "✓ Final measurement of all indicators",
         "serv_endline_item2": "✓ Baseline-endline comparative analysis",
@@ -1864,11 +1865,11 @@ const translations = {
         "serv_endline_livr2": "• Executive summary",
         "serv_endline_livr3": "• Case studies and testimonials",
         "serv_endline_livr4": "• Data visualizations (infographics)",
-        
+
         // Boutons
         "serv_lire_plus": "Read more",
         "serv_lire_moins": "Read less",
-        
+
         // Services complémentaires
         "serv_comp_titre": "Additional Services",
         "serv_comp_desc": "Other services to strengthen your evaluation and monitoring capabilities",
@@ -1884,7 +1885,7 @@ const translations = {
         "serv_comp5_desc": "Implementation of data collection systems via smartphones and tablets (Kobo, ODK) for fast, reliable, and geolocated data entry.",
         "serv_comp6_titre": "Participatory Evaluations",
         "serv_comp6_desc": "Organization of focus groups, in-depth interviews, and participatory workshops to capture beneficiary perceptions and experiences.",
-        
+
         // Méthodologies
         "serv_methodo_titre": "Our Methodologies",
         "serv_methodo_desc": "Internationally recognized scientific approaches",
@@ -1896,7 +1897,7 @@ const translations = {
         "serv_methodo3_desc": "Strategic combination of quantitative and qualitative data for a holistic understanding of phenomena.",
         "serv_methodo4_titre": "Participatory Approaches",
         "serv_methodo4_desc": "Involvement of stakeholders and beneficiaries in all stages of the evaluation process.",
-        
+
         // Outils technologiques
         "serv_outils_titre": "Our Technological Tools",
         "serv_outils_desc": "Cutting-edge technologies for modern and efficient evaluation",
@@ -1912,7 +1913,7 @@ const translations = {
         "serv_outil5_desc": "Mapping and geolocation",
         "serv_outil6_nom": "Cloud Storage",
         "serv_outil6_desc": "Secure storage",
-        
+
         // Processus de travail
         "serv_processus_titre": "Our Work Process",
         "serv_processus_desc": "A structured 6-step approach to ensure quality",
@@ -1940,10 +1941,10 @@ let currentLanguage = localStorage.getItem('preferredLanguage') || 'fr';
 function initTranslation() {
     // Appliquer la langue sauvegardée
     applyTranslation(currentLanguage);
-    
+
     // Mettre à jour l'indicateur de langue actuelle
     updateLanguageIndicator();
-    
+
     // Mettre à jour l'attribut lang du HTML
     document.documentElement.lang = currentLanguage;
 }
@@ -1954,19 +1955,19 @@ function initTranslation() {
  */
 function changeLanguage(lang) {
     if (lang === currentLanguage) return;
-    
+
     currentLanguage = lang;
     localStorage.setItem('preferredLanguage', lang);
-    
+
     // Appliquer la traduction
     applyTranslation(lang);
-    
+
     // Mettre à jour l'indicateur
     updateLanguageIndicator();
-    
+
     // Mettre à jour l'attribut lang du HTML
     document.documentElement.lang = lang;
-    
+
     // Animation de transition
     document.body.style.opacity = '0.95';
     setTimeout(() => {
@@ -1980,11 +1981,11 @@ function changeLanguage(lang) {
  */
 function applyTranslation(lang) {
     const elements = document.querySelectorAll('[data-translate]');
-    
+
     elements.forEach(element => {
         const key = element.getAttribute('data-translate');
         const translation = translations[lang][key];
-        
+
         if (translation) {
             // Si c'est un input avec placeholder
             if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
@@ -2004,14 +2005,14 @@ function applyTranslation(lang) {
             }
         }
     });
-    
+
     // Traduire les éléments avec data-translate-attr (pour attributs spécifiques)
     const attrElements = document.querySelectorAll('[data-translate-attr]');
     attrElements.forEach(element => {
         const key = element.getAttribute('data-translate-attr');
         const attr = element.getAttribute('data-attr-name');
         const translation = translations[lang][key];
-        
+
         if (translation && attr) {
             element.setAttribute(attr, translation);
         }
@@ -2024,7 +2025,7 @@ function applyTranslation(lang) {
 function updateLanguageIndicator() {
     const frBtn = document.getElementById('langFr');
     const enBtn = document.getElementById('langEn');
-    
+
     if (currentLanguage === 'fr') {
         frBtn?.classList.add('active');
         enBtn?.classList.remove('active');

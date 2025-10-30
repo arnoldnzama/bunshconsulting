@@ -3,8 +3,8 @@
    Stylesheet Principal
    =================================== */
 
-/* Import Google Fonts - Poppins */
-/* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap'); */
+/* Import Google Fonts - Open Sans */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
 
 /* Variables CSS */
 :root {
@@ -13,7 +13,7 @@
     --color-accent-blue: #0b2294;
     --color-accent-green: #047c3a;
     --color-accent-red: #fe290b;
-    --font-main: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    --font-main: 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
     --transition: all 0.3s ease;
 }
 
@@ -24,9 +24,9 @@
     box-sizing: border-box;
 }
 
-/* Style agrandi global pour tous les textes */
+/* Style optimisé global pour tous les textes */
 p, li, span, div, td, th {
-    font-size: 1.2rem;
+    font-size: 1rem;
     line-height: 1.8;
 }
 
@@ -41,7 +41,7 @@ p, li, span, div, td, th {
 
 body {
     font-family: var(--font-main);
-    font-size: 1.2rem;
+    font-size: 1rem;
     line-height: 1.8;
     color: var(--color-secondary);
     background-color: var(--color-primary);

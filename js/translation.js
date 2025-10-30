@@ -81,6 +81,7 @@ const translations = {
         // Équipe - Rôles
         "role_directeur_general": "Expert en Evaluation et Chercheur",
         "role_directrice_operations": "Consultant International et chercheur",
+        "role_justin": "Chef de Projets et Chef d'Équipe",
         "role_emile": "Consultant International et chercheur",
         "role_grace": "Consultant en Suivi et Évaluation",
         "role_junhee": "Consultante Internationale et Chercheuse",
@@ -90,6 +91,8 @@ const translations = {
         "about_team_Ridi_bio": "Ridi est économiste et expert en éducation et développement international. Il est spécialiste en suivi et évaluation de projets et de programmes dans divers secteurs, avec plusieurs années d'expérience dans la conduite d'évaluations et d'études pour des gouvernements et des organisations internationales.",
 
         // Biographies courtes
+        "bio_ridi_short": "Économiste et expert en éducation et développement international",
+        "bio_justin_short": "Professeur associé et expert en consolidation de la paix",
         "bio_begench_short": "Expert en technologies pédagogiques avec 7+ ans d'expérience",
         "bio_emile_short": "Expert en santé mentale et psychosociale",
         "bio_grace_short": "Spécialiste en M&E et gestion de projets",
@@ -97,6 +100,7 @@ const translations = {
         "bio_damaris_short": "Spécialisée en Santé Publique et Développement Communautaire",
 
         // Biographies complètes
+        "bio_justin_full": "Justin est professeur associé à l'Université Officielle de Bukavu et à l'Université Catholique de Bukavu, en RDC. Il est affilié au Centre de recherche sur la paix et les conflits dans la région des Grands Lacs (CRECOPAX-GL) et au Centre de sociologie de l'environnement de l'Université Officielle de Bukavu. Ses recherches portent sur le rôle de l'éducation dans la consolidation de la paix dans l'est du Congo, et plus largement sur l'éducation à la paix, la démobilisation et la réintégration, l'enfance, les migrations, la gouvernance et la consolidation de la paix. Il est titulaire d'un doctorat du centre de recherche sur la paix et le développement de la KU Leuven (Belgique), d'une maîtrise en sociologie de l'Université Officielle de Bukavu et d'un master spécialisé en développement et sociétés de l'Université Catholique de Louvain. Dr. Nfundiko a fourni des services de consultance à plusieurs organisations internationales, dont le PNUD, l'ONUSI, International Alert, IDG, ISSAT, l'OAG, ZOA, Search for Common Ground, EDT et Peace Direct.",
         "bio_begench_full": "Begench possède 7+ ans d'expérience en technologies pédagogiques, e-learning et développement des compétences numériques, collaborant avec divers acteurs du monde universitaire, du gouvernement et des organisations internationales.",
         "bio_emile_full": "Émile est un conseiller, éducateur et professionnel expérimenté en santé mentale, fort d'une expérience riche et diversifiée dans les opérations humanitaires et de développement. Ses compétences clés incluent la conduite d'évaluations psychologiques, l'animation de séances collectives et individuelles, ainsi que l'élaboration et la mise en œuvre de programmes de formation.",
         "bio_grace_full": "Grace possède plus de dix ans d'expérience dans les secteurs humanitaire et du développement. Il est spécialiste en gestion de bases de données, l'analyse statistique et la gestion axée sur les résultats. Il possède une solide expérience en conception et mise en œuvre de systèmes de suivi et d'évaluation, en réinsertion socio-économique des ex-combattants, en moyens de subsistance, en transferts monétaires, en eau, en hygiène et en consolidation de la paix.",
@@ -598,7 +602,7 @@ const translations = {
 
         // Index - Articles
         "home_article1_badge": "NOUVEAU",
-        "home_article1_date": "Avril 2025",
+        "home_article1_date": "Avril 2023",
         "home_article1_lieu": "Kinshasa",
         "home_article1_titre": "Présentation du Rapport UNICEF - Nsele",
         "home_article1_desc": "Présentation du rapport de l'enquête de base du projet « Improvement of Access and Quality of Primary Education in Nsele, Kinshasa ».",
@@ -1042,6 +1046,7 @@ const translations = {
         // Team - Roles
         "role_directeur_general": "Evaluation Expert and Researcher",
         "role_directrice_operations": "International Consultant and Researcher",
+        "role_justin": "Head of Projects and Team Leader",
         "role_emile": "International Consultant and Researcher",
         "role_grace": "Monitoring and Evaluation Consultant",
         "role_junhee": "International Consultant and Researcher",
@@ -1051,6 +1056,8 @@ const translations = {
         "about_team_Ridi_bio": "Ridi is an economist and expert in education and international development. He specializes in monitoring and evaluation of projets and programs across various sectors, with several years of experience in conducting evaluations and studies for governments and international organizations.",
 
         // Short biographies
+        "bio_ridi_short": "Economist and expert in education and international development",
+        "bio_justin_short": "Associate Professor and expert in peacebuilding",
         "bio_begench_short": "Expert in educational technologies with 7+ years of experience",
         "bio_emile_short": "Expert in mental health and psychosocial support",
         "bio_grace_short": "Specialist in M&E and project management",
@@ -1058,6 +1065,7 @@ const translations = {
         "bio_damaris_short": "Specialized in public health and community development",
 
         // Full biographies
+        "bio_justin_full": "Justin is an Associate Professor at the Official University of Bukavu and the Catholic University of Bukavu in the DRC. He is affiliated with the Centre for Research on Peace and Conflicts in the Great Lakes Region (CRECOPAX-GL) and the Centre for Sociology of the Environment at the Official University of Bukavu. His research explores the role of education in peace consolidation in Eastern Congo, with broader interests in peace education, demobilisation and reintegration, childhood, migration, governance, and peacebuilding. He holds a PhD from the Centre for Research on Peace and Development at KU Leuven (Belgium), a Master's in Sociology from the Official University of Bukavu, and an Advanced Master's in Development and Societies from the Catholique University of Louvain. Dr. Nfundiko has provided consultancy services for several international organisations, including UNDP, UNOIOS, International Alert, IDG, ISSAT, OAG, ZOA, Search for Common Ground, EDT and Peace Direct.",
         "bio_begench_full": "Begench has 7+ years of experience in educational technologies, e-learning and digital skills development, collaborating with various actors from academia, government and international organizations.",
         "bio_emile_full": "Emile is an experienced advisor, educator and mental health professional with rich and diverse experience in humanitarian and development operations. His core competencies include conducting psychological assessments, facilitating group and individual sessions, developing and delivering training programs.",
         "bio_grace_full": "Grace has 10+ years of experience in humanitarian and development sectors. He specializes in database management, statistical analysis and results-based management. He has a proven experience in designing and implementing M&E systems, socio-economic reintegration of ex-combatants, livelihoods, cash transfers, water, hygiene, as well as peacebuilding.",
@@ -1561,7 +1569,7 @@ const translations = {
 
         // Index - Articles
         "home_article1_badge": "NEW",
-        "home_article1_date": "April 2025",
+        "home_article1_date": "April 2023",
         "home_article1_lieu": "Kinshasa",
         "home_article1_titre": "UNICEF Report Presentation - Nsele",
         "home_article1_desc": "Presentation of the baseline survey report for the project 'Improvement of Access and Quality of Primary Education in Nsele, Kinshasa'.",

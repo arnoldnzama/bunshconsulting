@@ -24,9 +24,25 @@
     box-sizing: border-box;
 }
 
+/* Style agrandi global pour tous les textes */
+p, li, span, div, td, th {
+    font-size: 1.2rem;
+    line-height: 1.8;
+}
+
+/* Exceptions pour les éléments qui ont besoin de tailles spécifiques */
+.nav-menu a, .btn, .form-group input, .form-group textarea, .form-group select {
+    font-size: 1rem;
+}
+
+.footer-bottom {
+    font-size: 0.9rem;
+}
+
 body {
     font-family: var(--font-main);
-    line-height: 1.6;
+    font-size: 1.2rem;
+    line-height: 1.8;
     color: var(--color-secondary);
     background-color: var(--color-primary);
 }
@@ -433,6 +449,7 @@ nav {
 
 .service-card p {
     color: #666;
+    font-size: 1.2rem;
     line-height: 1.8;
 }
 
@@ -502,7 +519,8 @@ nav {
 
 .team-bio {
     color: #666;
-    font-size: 0.9rem;
+    font-size: 1.2rem;
+    line-height: 1.8;
 }
 
 /* Projects Grid */
@@ -678,7 +696,8 @@ nav {
 
 .blog-excerpt {
     color: #666;
-    line-height: 1.6;
+    font-size: 1.2rem;
+    line-height: 1.8;
     margin-bottom: 1rem;
 }
 
@@ -726,6 +745,8 @@ nav {
 
 .contact-details p {
     color: #666;
+    font-size: 1.2rem;
+    line-height: 1.8;
 }
 
 .contact-form {
@@ -849,7 +870,7 @@ footer {
     color: rgba(11, 34, 148, 0.8);
     line-height: 1.8;
     transition: var(--transition);
-    font-size: 0.95rem;
+    font-size: 1.2rem;
 }
 
 .footer-section a:hover {
@@ -1052,6 +1073,7 @@ footer {
 
 .value-card p {
     color: #666;
+    font-size: 1.2rem;
     line-height: 1.8;
 }
 

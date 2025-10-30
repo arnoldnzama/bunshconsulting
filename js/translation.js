@@ -44,7 +44,7 @@ const translations = {
         "home_btn_etudes": "Nos études",
         "home_btn_contact": "Nous contacter",
         "home_qui_sommes": "Qui sommes-nous ?",
-        "home_qui_desc": "Nous sommes un bureau d'études spécialisé dans la recherche et l'évaluation de projets et de programmes tant de développement qu’humanitaires.\n                                Grâce à une expertise approuvée et à l'application de méthodologies rigoureuses conformes aux standards internationaux, nous accompagnons les partenaires nationaux et internationaux à mesurer, comprendre et réadapter leurs interventions.",
+        "home_qui_desc": "Nous sommes un cabinet de conseil spécialisé dans la recherche et l'évaluation de projets et programmes humanitaires et de développement. Grâce à une expertise reconnue et à l'application de méthodologies rigoureuses conformes aux normes internationales, nous aidons nos partenaires nationaux et internationaux à mesurer, comprendre et adapter leurs interventions.",
         "home_en_savoir_plus": "En savoir plus sur nous",
         "home_actualites_recentes": "Actualités récentes",
         "home_actualites_desc": "Découvrez nos dernières missions et activités terrain",
@@ -87,7 +87,7 @@ const translations = {
         "role_damaris": "Consultante en Santé Publique",
 
         // Équipe - Biographies
-        "about_team_Ridi_bio": "Ridi est un économiste et expert en éducation et développement international spécialisé dans le suivi et l'évaluation de projets et de programmes dans divers secteurs, avec 7+ ans d'expérience dans la réalisation d'évaluations et d'études pour des organisations internationales.",
+        "about_team_Ridi_bio": "Ridi est économiste et expert en éducation et développement international. Il est spécialiste en suivi et évaluation de projets et de programmes dans divers secteurs, avec plusieurs années d'expérience dans la conduite d'évaluations et d'études pour des gouvernements et des organisations internationales.",
 
         // Biographies courtes
         "bio_begench_short": "Expert en technologies pédagogiques avec 7+ ans d'expérience",
@@ -98,10 +98,10 @@ const translations = {
 
         // Biographies complètes
         "bio_begench_full": "Begench possède 7+ ans d'expérience en technologies pédagogiques, e-learning et développement des compétences numériques, collaborant avec divers acteurs du monde universitaire, du gouvernement et des organisations internationales.",
-        "bio_emile_full": "Conseiller expérimenté, éducateur et professionnel de la santé mentale possédant une expérience riche et diversifiée dans les opérations humanitaires et de développement. Ses compétences de base comprennent la réalisation d'évaluations psychologiques, l'animation de séances de groupe et individuelles, l'élaboration et la prestation de programmes de formation.",
-        "bio_grace_full": "10+ ans d'expérience dans les secteurs humanitaire et du développement. Spécialisé en gestion de bases de données, analyse statistique et gestion axée sur les résultats. Expérience avérée dans la conception et la mise en œuvre de systèmes M&E, la réinsertion socio-économique des ex-combattants, les moyens de subsistance, les transferts monétaires, l'eau, l'hygiène, ainsi que la consolidation de la paix.",
-        "bio_junhee_full": "Spécialiste des questions liées aux violences sexuelles liées aux conflits en RDC, elle adopte une approche intersectionnelle centrée sur la justice de genre et la valorisation des voix marginalisées. Son parcours allie recherche, plaidoyer juridique et action communautaire, avec un engagement fort pour l'égalité et les droits humains.",
-        "bio_damaris_full": "Professionnelle de la santé publique spécialiste en gestion, suivi et évaluation de projets axés sur la santé, la nutrition et le développement social. Expérience dans la conception et l'analyse d'initiatives communautaires visant à renforcer l'équité, la prévention des maladies et la santé maternelle et infantile.",
+        "bio_emile_full": "Émile est un conseiller, éducateur et professionnel expérimenté en santé mentale, fort d'une expérience riche et diversifiée dans les opérations humanitaires et de développement. Ses compétences clés incluent la conduite d'évaluations psychologiques, l'animation de séances collectives et individuelles, ainsi que l'élaboration et la mise en œuvre de programmes de formation.",
+        "bio_grace_full": "Grace possède plus de dix ans d'expérience dans les secteurs humanitaire et du développement. Il est spécialiste en gestion de bases de données, l'analyse statistique et la gestion axée sur les résultats. Il possède une solide expérience en conception et mise en œuvre de systèmes de suivi et d'évaluation, en réinsertion socio-économique des ex-combattants, en moyens de subsistance, en transferts monétaires, en eau, en hygiène et en consolidation de la paix.",
+        "bio_junhee_full": "Junhee est spécialiste des questions liées aux violences sexuelles liées aux conflits en RDC. Elle adopte une approche intersectionnelle axée sur la justice de genre et la valorisation des voix marginalisées. Son parcours allie recherche, plaidoyer juridique et action communautaire, avec un engagement fort en faveur de l'égalité et des droits humains.",
+        "bio_damaris_full": "Damaris est une professionnelle de la santé publique spécialisée dans la gestion, le suivi et l'évaluation de projets axés sur la santé, la nutrition et le développement social. Elle possède une expérience dans la conception et l'analyse d'initiatives communautaires visant à renforcer l'équité, la prévention des maladies et la santé maternelle et infantile.",
 
         // Boutons équipe
         "lire_plus_equipe": "... Lire plus",
@@ -128,9 +128,8 @@ const translations = {
         "about_impact": "Impact",
         "about_impact_desc": "Focus sur des résultats concrets et mesurables",
         "about_histoire_titre": "Notre Histoire",
-        "about_histoire_p1": "Créé en 2023, le Bureau d'études Bunsh est né de la volonté de promouvoir une approche rigoureuse, locale et innovante de l'évaluation et de la recherche appliquée au développement et à l'assistance humanitaire.",
-        "about_histoire_p2": "Fondé par Ridi Bunshani, le Bureau d'études Bunsh  réuni d'experts africains, européens, asiatiques et américains issus de divers horizons disciplinaires. Le bureau se veut être un partenaire de confiance pour les organisations nationales et internationales.",
-        "about_histoire_p3": "Grâce à son ancrage en Afrique et à son ouverture sur le monde, le bureau d'études Bunsh combine une compréhension fine des réalités locales avec des standards méthodologiques internationaux, offrant ainsi des analyses solides, des données fiables et des solutions adaptées aux défis du développement et de l'assistance humanitaire.",
+        "about_histoire_p1": "Fondé en 2023 par Ridi Bunshani, Bunsh est né de la volonté de promouvoir une approche rigoureuse, locale et innovante de l'évaluation et de la recherche appliquée dans le développement et l'aide humanitaire.",
+        "about_histoire_p2": "Nous réunissons des experts africains, européens, asiatiques et américains issus de disciplines variées. Le bureau se veut un partenaire de confiance pour les organisations nationales et internationales.",
         "about_partenaires_soustitre": "Ils nous ont fait confiance",
         "about_methodologies_title": "Nos méthodologies et références",
         "about_methodologies_desc": "Nous utilisons des cadres méthodologiques reconnus internationalement",
@@ -622,11 +621,11 @@ const translations = {
         "home_services_titre": "Nos services principaux",
         "home_services_desc": "Nous accompagnons vos projets à chaque étape de leur cycle de vie",
         "home_service_baseline_titre": "Études de Base (Baseline)",
-        "home_service_baseline_desc": "Collecte et analyse des données initiales pour établir une situation de référence avant le démarrage de votre projet. Identification des indicateurs clés et définition des cibles à atteindre.",
+        "home_service_baseline_desc": "Établir une base de référence solide pour saisir les conditions initiales avant la mise en œuvre du projet, fournissant une base solide pour mesurer les changements ultérieurs et évaluer l’impact au fil du temps.",
         "home_service_midline_titre": "Évaluation Mi-Parcours (Midline)",
-        "home_service_midline_desc": "Suivi et évaluation à mi-parcours pour mesurer les progrès, identifier les obstacles et ajuster les stratégies d'intervention en temps réel.",
+        "home_service_midline_desc": "Réaliser une évaluation à mi-parcours pour suivre les progrès, éclairer les ajustements stratégiques et améliorer l’efficacité de la mise en œuvre du projet.",
         "home_service_endline_titre": "Évaluations Finales (Endline)",
-        "home_service_endline_desc": "Mesure complète de l'impact et des résultats obtenus en fin de projet. Documentation des leçons apprises et recommandations pour les futures interventions.",
+        "home_service_endline_desc": "Entreprendre une évaluation finale complète pour mesurer les résultats obtenus, évaluer l’impact global et fournir une analyse approfondie des changements générés par le projet.",
         "home_decouvrir_services": "Découvrir tous nos services",
         "home_realisations_titre": "Nos réalisations",
         "home_realisations_desc": "Découvrez quelques-unes de nos études et évaluations menées à bien",
@@ -672,17 +671,17 @@ const translations = {
         "about_impact": "Impact",
         "about_impact_desc": "Focus sur des résultats concrets et mesurables",
         "about_histoire_titre": "Notre Histoire",
-        "about_histoire_p1": "Créé en 2023, le Bureau d'études Bunsh est né de la volonté de promouvoir une approche rigoureuse, locale et innovante de l'évaluation et de la recherche appliquée au développement et à l'assistance humanitaire.",
-        "about_histoire_p2": "Fondé par Ridi Bunshani, le Bureau d'études Bunsh  réuni d'experts africains, européens, asiatiques et américains issus de divers horizons disciplinaires. Le bureau se veut être un partenaire de confiance pour les organisations nationales et internationales.",
-        "about_histoire_p3": "Grâce à son ancrage en Afrique et à son ouverture sur le monde, le bureau d'études Bunsh combine une compréhension fine des réalités locales avec des standards méthodologiques internationaux, offrant ainsi des analyses solides, des données fiables et des solutions adaptées aux défis du développement et de l'assistance humanitaire.",
+        "about_histoire_p1": "Fondé en 2023 par Ridi Bunshani, Bunsh est né de la volonté de promouvoir une approche rigoureuse, locale et innovante de l'évaluation et de la recherche appliquée dans le développement et l'aide humanitaire.",
+        "about_histoire_p2": "Nous réunissons des experts africains, européens, asiatiques et américains issus de disciplines variées. Le bureau se veut un partenaire de confiance pour les organisations nationales et internationales.",
+        "about_histoire_p3": "Fort de ses racines africaines et de sa vision internationale, Bunsh allie une compréhension approfondie des réalités locales aux normes méthodologiques internationales, offrant des analyses solides, des données fiables et des solutions sur mesure aux défis du développement et de l'aide humanitaire.",
         "about_equipe_soustitre": "Une équipe pluridisciplinaire et multiculturelle réunissant des experts en évaluation, forts d'une expérience internationale reconnue.",
-        "about_team_Ridi_bio": "Ridi est un économiste et expert en éducation et développement international spécialisé dans le suivi et l'évaluation de projets et de programmes dans divers secteurs, avec 7+ ans d'expérience dans la réalisation d'évaluations et d'études pour des organisations internationales.",
+        "about_team_Ridi_bio": "Ridi est économiste et expert en éducation et développement international. Il est spécialiste en suivi et évaluation de projets et de programmes dans divers secteurs, avec plusieurs années d'expérience dans la conduite d'évaluations et d'études pour des gouvernements et des organisations internationales.",
         "about_team_lumbu_bio": "Begench possède 7+ ans d'expérience en technologies pédagogiques, e-learning et développement des compétences numériques, collaborant avec divers acteurs du monde universitaire, du gouvernement et des organisations internationales.",
         "about_team_nkulu_bio": "Statisticien spécialisé en analyse de données complexes. Maîtrise de SPSS, R, Python et Power BI. Master en Statistiques Appliquées.",
         "about_team_monga_bio": "Sociologue spécialisée en méthodes qualitatives. Experte en focus groups, entretiens approfondis et analyse thématique.",
         "about_team_emile_bio": "Conseiller expérimenté, éducateur et professionnel de la santé mentale possédant une expérience riche et diversifiée dans les opérations humanitaires et de développement. Ses compétences de base comprennent la réalisation d'évaluations psychologiques, l'animation de séances de groupe et individuelles, l'élaboration et la prestation de programmes de formation et la collaboration avec plusieurs équipes et partenaires.",
-        "about_team_grace_bio": "10+ ans d'expérience dans les secteurs humanitaire et du développement. Spécialisé en gestion de bases de données, analyse statistique et gestion axée sur les résultats. Il a en outre une expérience avérée dans la conception et la mise en œuvre de systèmes M&E, la réinsertion socio-économique des ex-combattants, les moyens de subsistance, les transferts monétaires, l'eau, l'hygiène, ainsi que la consolidation de la paix.",
-        "about_team_junhee_bio": "Spécialiste des questions liées aux violences sexuelles liées aux conflits en RDC, elle adopte une approche intersectionnelle centrée sur la justice de genre et la valorisation des voix marginalisées. Son parcours allie recherche, plaidoyer juridique et action communautaire, avec un engagement fort pour l'égalité et les droits humains.",
+        "about_team_grace_bio": "Grace possède plus de dix ans d'expérience dans les secteurs humanitaire et du développement. Il est spécialiste en gestion de bases de données, l'analyse statistique et la gestion axée sur les résultats. Il possède une solide expérience en conception et mise en œuvre de systèmes de suivi et d'évaluation, en réinsertion socio-économique des ex-combattants, en moyens de subsistance, en transferts monétaires, en eau, en hygiène et en consolidation de la paix.",
+        "about_team_junhee_bio": "Junhee est spécialiste des questions liées aux violences sexuelles liées aux conflits en RDC. Elle adopte une approche intersectionnelle axée sur la justice de genre et la valorisation des voix marginalisées. Son parcours allie recherche, plaidoyer juridique et action communautaire, avec un engagement fort en faveur de l'égalité et des droits humains.",
         "about_team_patrick_bio": "Statisticien spécialisé en analyse de données complexes. Maîtrise de SPSS, R, Python et Power BI. Master en Statistiques Appliquées.",
         "about_methodo_titre": "Nos méthodologies et références",
         "about_methodo_soustitre": "Nous utilisons des cadres méthodologiques reconnus internationalement",
@@ -772,7 +771,7 @@ const translations = {
         "real_stat2_nombre": "5",
         "real_stat2_label": "Secteurs d'intervention",
         "real_stat3_nombre": "10.000",
-        "real_stat3_label": "Bénéficiaires touchés",
+        "real_stat3_label": "Bénéficiaires touchés par nos évaluateurs",
         "real_stat4_nombre": "7+",
         "real_stat4_label": "Partenaires",
         "real_projets_titre": "Nos secteurs d'activité",
@@ -857,7 +856,7 @@ const translations = {
 
         // Services principaux - Baseline
         "serv_baseline_titre": "Études de Base (Baseline)",
-        "serv_baseline_desc": "Établissement d'une situation de référence avant le démarrage de votre projet pour mesurer ultérieurement les changements et l'impact.",
+        "serv_baseline_desc": "Établir une base de référence solide pour saisir les conditions initiales avant la mise en œuvre du projet, fournissant une base solide pour mesurer les changements ultérieurs et évaluer l’impact au fil du temps.",
         "serv_baseline_faisons": "Ce que nous faisons :",
         "serv_baseline_item1": "✓ Définition des indicateurs clés de performance",
         "serv_baseline_item2": "✓ Collecte des données initiales quantitatives et qualitatives",
@@ -873,7 +872,7 @@ const translations = {
 
         // Services principaux - Midline
         "serv_midline_titre": "Évaluation Mi-Parcours (Midline)",
-        "serv_midline_desc": "Suivi et mesure des progrès à mi-parcours pour ajuster les stratégies et optimiser les résultats en cours de projet.",
+        "serv_midline_desc": "Réaliser une évaluation à mi-parcours pour suivre les progrès, éclairer les ajustements stratégiques et améliorer l’efficacité de la mise en œuvre du projet.",
         "serv_midline_faisons": "Ce que nous faisons :",
         "serv_midline_item1": "✓ Mesure des indicateurs intermédiaires",
         "serv_midline_item2": "✓ Évaluation de l'avancement par rapport aux cibles",
@@ -889,7 +888,7 @@ const translations = {
 
         // Services principaux - Endline
         "serv_endline_titre": "Évaluations Finales (Endline)",
-        "serv_endline_desc": "Mesure complète de l'impact et des résultats obtenus en fin de projet avec une analyse approfondie des changements.",
+        "serv_endline_desc": "Entreprendre une évaluation finale complète pour mesurer les résultats obtenus, évaluer l’impact global et fournir une analyse approfondie des changements générés par le projet.",
         "serv_endline_faisons": "Ce que nous faisons :",
         "serv_endline_item1": "✓ Mesure finale de tous les indicateurs",
         "serv_endline_item2": "✓ Analyse comparative baseline-endline",
@@ -1006,7 +1005,7 @@ const translations = {
         "home_btn_etudes": "Our Studies",
         "home_btn_contact": "Contact Us",
         "home_qui_sommes": "Who Are We?",
-        "home_qui_desc": "We are a consultancy firm specializing in the research and evaluation of both development and humanitarian projects and programs. Through proven expertise and the application of rigorous methodologies consistent with international standards, we support national and international partners in measuring, understanding, and adapting their interventions.",
+        "home_qui_desc": "We are a consultancy firm specializing in research and evaluation of both development and humanitarian projects and programs. Through proven expertise and the application of rigorous methodologies consistent with international standards, we support national and international partners in measuring, understanding, and adapting their interventions.",
         "home_en_savoir_plus": "Learn More About Us",
         "home_actualites_recentes": "Recent News",
         "home_actualites_desc": "Discover our latest missions and field activities",
@@ -1049,7 +1048,7 @@ const translations = {
         "role_damaris": "Public Health Consultant",
 
         // Team - Biographies
-        "about_team_Ridi_bio": "Ridi is an economist and expert in education and international development, he specializes in monitoring and evaluation of projets and programs across various sectors, with several years of experience in conducting evaluations and studies for governments and international organizations.",
+        "about_team_Ridi_bio": "Ridi is an economist and expert in education and international development. He specializes in monitoring and evaluation of projets and programs across various sectors, with several years of experience in conducting evaluations and studies for governments and international organizations.",
 
         // Short biographies
         "bio_begench_short": "Expert in educational technologies with 7+ years of experience",
@@ -1506,7 +1505,7 @@ const translations = {
 
         // Article UNICEF (rapport-unicef-nsele.html)
         "article_unicef_titre": "UNICEF Baseline Survey Report Presentation",
-        "article_unicef_date": "October 15, 2025",
+        "article_unicef_date": "April 2025",
         "article_unicef_lieu": "Nsele, Kinshasa",
         "article_unicef_auteur": "M&E Team",
         "article_unicef_lecture": "5 min read",
@@ -1585,11 +1584,11 @@ const translations = {
         "home_services_titre": "Our Main Services",
         "home_services_desc": "We support your projects at every stage of their lifecycle",
         "home_service_baseline_titre": "Baseline Studies",
-        "home_service_baseline_desc": "Collection and analysis of initial data to establish a reference situation before your project starts. Identification of key indicators and definition of targets to be achieved.",
+        "home_service_baseline_desc": "Establishing a robust baseline to capture the initial conditions prior to project implementation, providing a solid foundation for measuring subsequent changes and assessing impact over time.",
         "home_service_midline_titre": "Mid-Term Evaluation",
-        "home_service_midline_desc": "Mid-term monitoring and evaluation to measure progress, identify obstacles, and adjust intervention strategies in real-time.",
+        "home_service_midline_desc": "Conducting a mid-term assessment to monitor progress, inform strategic adjustments, and enhance the effectiveness of project implementation.",
         "home_service_endline_titre": "Endline Evaluations",
-        "home_service_endline_desc": "Complete measurement of impact and results achieved at project end. Documentation of lessons learned and recommendations for future interventions.",
+        "home_service_endline_desc": "Undertaking a comprehensive endline evaluation to measure achieved results, assess overall impact, and provide an in-depth analysis of the changes generated by the project.",
         "home_decouvrir_services": "Discover All Our Services",
         "home_realisations_titre": "Our Achievements",
         "home_realisations_desc": "Discover some of our successfully completed studies and evaluations",
@@ -1639,12 +1638,12 @@ const translations = {
         "about_histoire_p2": "We bring together African, European, Asian and American experts from various disciplinary backgrounds. The office aims to be a trusted partner for national and international organizations.",
         "about_histoire_p3": "Thanks to its African roots and global openness, Bunsh combines a deep understanding of local realities with international methodological standards, offering solid analyses, reliable data, and solutions adapted to development and humanitarian assistance challenges.",
         "about_equipe_soustitre": "A multidisciplinary and multicultural team bringing together evaluation experts with recognized international experience.",
-        "about_team_Ridi_bio": "Ridi is an economist and expert in education and international development, he specializes in monitoring and evaluation of projets and programs across various sectors, with several years of experience in conducting evaluations and studies for governments and international organizations.",
+        "about_team_Ridi_bio": "Ridi is an economist and expert in education and international development. He specializes in monitoring and evaluation of projets and programs across various sectors, with several years of experience in conducting evaluations and studies for governments and international organizations.",
         "about_team_lumbu_bio": "Begench has 7+ years of experience in educational technologies, e-learning, and digital skills development, collaborating with various actors from academia, government, and international organizations.",
         "about_team_nkulu_bio": "Statistician specialized in complex data analysis. Proficient in SPSS, R, Python, and Power BI. Master's in Applied Statistics.",
         "about_team_monga_bio": "Sociologist specialized in qualitative methods. Expert in focus groups, in-depth interviews, and thematic analysis.",
         "about_team_emile_bio": "Experienced counselor, educator, and mental health professional with rich and diverse experience in humanitarian and development operations. Core competencies include conducting psychological assessments, facilitating group and individual sessions, developing and delivering training programs, and collaborating with multiple teams and partners.",
-        "about_team_grace_bio": "10+ years of experience in humanitarian and development sectors. Specialized in database management, statistical analysis, and results-based management. Has proven experience in designing and implementing M&E systems, socio-economic reintegration of ex-combatants, livelihoods, cash transfers, water, sanitation, as well as peace consolidation.",
+        "about_team_grace_bio": "Grace has over ten years of experience in the humanitarian and development sectors. He is a specialist in database management, statistical analysis and results-based management. He has solid experience in the design and implementation of monitoring and evaluation systems, socio-economic reintegration of ex-combatants, livelihoods, cash transfers, water, hygiene and peacebuilding.",
         "about_team_junhee_bio": "Specialized in conflict-related sexual violence in DRC, she adopts an intersectional approach focused on gender justice and amplifying marginalized voices. Her background combines research, legal advocacy, and community action, with a strong commitment to equality and human rights.",
         "about_team_patrick_bio": "Statistician specialized in complex data analysis. Proficient in SPSS, R, Python, and Power BI. Master's in Applied Statistics.",
         "about_methodo_titre": "Our Methodologies and References",

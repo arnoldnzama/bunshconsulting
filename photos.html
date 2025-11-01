@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -25,7 +26,7 @@
             border-radius: 15px;
             padding: 2rem;
             text-align: center;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
             transition: all 0.3s ease;
             cursor: pointer;
             position: relative;
@@ -73,7 +74,7 @@
             font-weight: 700;
             font-size: 1.1rem;
             z-index: 2;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
         }
 
         .album-title {
@@ -141,6 +142,7 @@
         }
     </style>
 </head>
+
 <body>
     <!-- Header & Navigation -->
     <header>
@@ -156,10 +158,14 @@
                             <span data-translate="nav_bunsh">Bunsh</span> <i class="fas fa-chevron-down"></i>
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a href="about.html"><i class="fas fa-info-circle"></i> <span data-translate="nav_apropos">À propos de nous</span></a></li>
-                            <li><a href="services.html"><i class="fas fa-cogs"></i> <span data-translate="nav_services">Nos services</span></a></li>
-                            <li><a href="realisations.html"><i class="fas fa-trophy"></i> <span data-translate="nav_realisations">Nos réalisations</span></a></li>
-                            <li><a href="ressources.html"><i class="fas fa-book"></i> <span data-translate="nav_ressources">Ressources</span></a></li>
+                            <li><a href="about.html"><i class="fas fa-info-circle"></i> <span
+                                        data-translate="nav_apropos">À propos de nous</span></a></li>
+                            <li><a href="services.html"><i class="fas fa-cogs"></i> <span
+                                        data-translate="nav_services">Nos services</span></a></li>
+                            <li><a href="realisations.html"><i class="fas fa-trophy"></i> <span
+                                        data-translate="nav_realisations">Nos réalisations</span></a></li>
+                            <li><a href="ressources.html"><i class="fas fa-book"></i> <span
+                                        data-translate="nav_ressources">Ressources</span></a></li>
                         </ul>
                     </li>
                     <li><a href="actualites.html" data-translate="nav_actualites">Actualités</a></li>
@@ -169,14 +175,17 @@
                             <span data-translate="nav_mediatheque">Média</span> <i class="fas fa-chevron-down"></i>
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a href="photos.html" class="active"><i class="fas fa-images"></i> <span data-translate="nav_photos">Photos</span></a></li>
-                            <li><a href="videos.html"><i class="fas fa-video"></i> <span data-translate="nav_videos">Vidéos</span></a></li>
+                            <li><a href="photos.html" class="active"><i class="fas fa-images"></i> <span
+                                        data-translate="nav_photos">Photos</span></a></li>
+                            <li><a href="videos.html"><i class="fas fa-video"></i> <span
+                                        data-translate="nav_videos">Vidéos</span></a></li>
                         </ul>
                     </li>
                     <li><a href="contact.html" data-translate="nav_contact">Contact</a></li>
                 </ul>
                 <div class="language-switcher">
-                    <button class="lang-btn active" id="langFr" onclick="changeLanguage('fr')" aria-label="Français">FR</button>
+                    <button class="lang-btn active" id="langFr" onclick="changeLanguage('fr')"
+                        aria-label="Français">FR</button>
                     <div class="lang-separator"></div>
                     <button class="lang-btn" id="langEn" onclick="changeLanguage('en')" aria-label="English">EN</button>
                 </div>
@@ -190,11 +199,16 @@
     </header>
 
     <!-- Hero Section -->
-    <section class="hero" style="background-image: url('img/logo/banner.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat; position: relative;">
-        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(135deg, rgba(11, 34, 148, 0.3) 0%, rgba(13, 45, 176, 0.35) 100%); z-index: 1;"></div>
+    <section class="hero"
+        style="background-image: url('img/logo/banner.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat; position: relative;">
+        <div
+            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(135deg, rgba(11, 34, 148, 0.3) 0%, rgba(13, 45, 176, 0.35) 100%); z-index: 1;">
+        </div>
         <div class="container" style="position: relative; z-index: 2;">
-            <h1 style="text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7), 0 0 20px rgba(11, 34, 148, 0.5);" data-translate="photos_hero_titre">Galerie Photos</h1>
-            <p style="text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.7), 0 0 15px rgba(11, 34, 148, 0.4);" data-translate="photos_hero_desc">Découvrez nos missions terrain, projets et activités en images</p>
+            <h1 style="text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7), 0 0 20px rgba(11, 34, 148, 0.5);"
+                data-translate="photos_hero_titre">Galerie Photos</h1>
+            <p style="text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.7), 0 0 15px rgba(11, 34, 148, 0.4);"
+                data-translate="photos_hero_desc">Découvrez nos missions terrain, projets et activités en images</p>
         </div>
     </section>
 
@@ -203,11 +217,16 @@
     <!-- Albums -->
     <section class="section" style="background-color: #f8f9fa; padding-top: 2rem;">
         <div class="container">
-            <div style="text-align: center; padding: 4rem 2rem; background: white; border-radius: 15px; box-shadow: 0 4px 20px rgba(0,0,0,0.1);">
-                <i class="fas fa-images" style="font-size: 4rem; color: #0b2294; margin-bottom: 1.5rem; opacity: 0.3;"></i>
-                <h3 style="color: #0b2294; font-size: 1.8rem; margin-bottom: 1rem;" data-translate="photos_empty_titre">Aucune photo disponible pour le moment</h3>
-                <p style="color: #666; font-size: 1.1rem; max-width: 600px; margin: 0 auto;" data-translate="photos_empty_desc">
-                    Nous travaillons actuellement sur la création de notre galerie photos. Revenez bientôt pour découvrir nos missions et activités en images.
+            <div
+                style="text-align: center; padding: 4rem 2rem; background: white; border-radius: 15px; box-shadow: 0 4px 20px rgba(0,0,0,0.1);">
+                <i class="fas fa-images"
+                    style="font-size: 4rem; color: #0b2294; margin-bottom: 1.5rem; opacity: 0.3;"></i>
+                <h3 style="color: #0b2294; font-size: 1.8rem; margin-bottom: 1rem;" data-translate="photos_empty_titre">
+                    Aucune photo disponible pour le moment</h3>
+                <p style="color: #666; font-size: 1.1rem; max-width: 600px; margin: 0 auto;"
+                    data-translate="photos_empty_desc">
+                    Nous travaillons actuellement sur la création de notre galerie photos. Revenez bientôt pour découvrir
+                    nos missions et activités en images.
                 </p>
             </div>
         </div>
@@ -217,8 +236,10 @@
     <section class="section" style="background: linear-gradient(135deg, #0b2294 0%, #0d2db0 100%); color: white;">
         <div class="container" style="text-align: center;">
             <i class="fas fa-camera" style="font-size: 3rem; margin-bottom: 1rem; opacity: 0.9;"></i>
-            <h2 style="color: white; font-size: 2rem; margin-bottom: 1rem;" data-translate="photos_cta_titre">Vous avez des photos à partager ?</h2>
-            <p style="margin-bottom: 2rem; font-size: 1.1rem;" data-translate="photos_cta_desc">Contactez-nous pour contribuer à notre galerie</p>
+            <h2 style="color: white; font-size: 2rem; margin-bottom: 1rem;" data-translate="photos_cta_titre">Vous avez
+                des photos à partager ?</h2>
+            <p style="margin-bottom: 2rem; font-size: 1.1rem;" data-translate="photos_cta_desc">Contactez-nous pour
+                contribuer à notre galerie</p>
             <a href="contact.html" class="btn btn-primary" data-translate="carrieres_contactez">Nous contacter</a>
         </div>
     </section>
@@ -247,13 +268,14 @@
                     <h3 data-translate="footer_services">Services</h3>
                     <ul class="footer-links">
                         <li><a href="services.html" data-translate="footer_baseline">Études de base (Baseline)</a></li>
-                   <li><a href="services.html" data-translate="footer_midline">Évaluation Mi-Parcours </a></li>
-                     <li><a href="services.html" data-translate="footer_endline">Évaluations Finales</a></li>
+                        <li><a href="services.html" data-translate="footer_midline">Évaluation Mi-Parcours </a></li>
+                        <li><a href="services.html" data-translate="footer_endline">Évaluations Finales</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
                     <h3 data-translate="footer_contact">Contact</h3>
-                    <p><span data-translate="footer_adresse">📍 1, Basoko, Safricas, Kinshasa, Democratic Republic of the Congo</span></p>
+                    <p><span data-translate="footer_adresse">📍 1, Basoko, Safricas, Kinshasa, Democratic Republic of
+                            the Congo</span></p>
                     <p>📧 contact@bunshinternational.com</p>
                     <p>📞 +243 0979 286 949</p>
                 </div>
@@ -265,13 +287,13 @@
                 <div class="social-links">
                     <<a href="https://www.facebook.com/share/1D2Mmd8N9H/?mibextid=wwXIfr" class="social-icon-large">
                         <i class="fab fa-facebook-f"></i>
-                    </a>
-                    <a href="#" class="social-icon-large">
-                        <i class="fab fa-twitter"></i>
-                    </a>
-                    <a href="https://www.linkedin.com/company/bunsh/" class="social-icon-large">
-                        <i class="fab fa-linkedin-in"></i>
-                    </a>
+                        </a>
+                        <a href="#" class="social-icon-large">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/company/bunsh/" class="social-icon-large">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
                 </div>
             </div>
 
@@ -292,15 +314,15 @@
     <script>
         // Filtrage des albums
         document.querySelectorAll('.filter-btn').forEach(btn => {
-            btn.addEventListener('click', function() {
+            btn.addEventListener('click', function () {
                 // Retirer la classe active de tous les boutons
                 document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
                 // Ajouter la classe active au bouton cliqué
                 this.classList.add('active');
-                
+
                 const filter = this.getAttribute('data-filter');
                 const albums = document.querySelectorAll('.album-folder');
-                
+
                 albums.forEach(album => {
                     if (filter === 'all' || album.getAttribute('data-category') === filter) {
                         album.style.display = 'block';
@@ -314,6 +336,5 @@
         });
     </script>
 </body>
+
 </html>
-
-

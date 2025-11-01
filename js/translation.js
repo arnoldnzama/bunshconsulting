@@ -451,6 +451,8 @@ const translations = {
         "photos_date_decembre": "Décembre",
         "photos_cta_titre": "Vous avez des photos à partager ?",
         "photos_cta_desc": "Contactez-nous pour contribuer à notre galerie",
+        "photos_empty_titre": "Aucune photo disponible pour le moment",
+        "photos_empty_desc": "Nous travaillons actuellement sur la création de notre galerie photos. Revenez bientôt pour découvrir nos missions et activités en images.",
 
         // Page Vidéos
         "videos_hero_titre": "Galerie Vidéos",
@@ -479,6 +481,8 @@ const translations = {
         "videos_video8_desc": "Découvrez notre bureau d'études, notre équipe, nos services et notre approche méthodologique en évaluation de projets de développement.",
         "videos_cta_titre": "Intéressé par nos services ?",
         "videos_cta_desc": "Contactez-nous pour discuter de votre projet d'évaluation",
+        "videos_empty_titre": "Aucune vidéo disponible pour le moment",
+        "videos_empty_desc": "Nous travaillons actuellement sur la création de contenu vidéo. Revenez bientôt pour découvrir nos missions et activités en vidéo.",
 
         // Page Ressources
         "ressources_title": "Ressources",
@@ -1423,6 +1427,8 @@ const translations = {
         "photos_date_decembre": "December",
         "photos_cta_titre": "Do you have photos to share?",
         "photos_cta_desc": "Contact us to contribute to our gallery",
+        "photos_empty_titre": "No photos available at the moment",
+        "photos_empty_desc": "We are currently working on creating our photo gallery. Come back soon to discover our missions and activities in pictures.",
 
         // Page Vidéos
         "videos_hero_titre": "Video Gallery",
@@ -1451,6 +1457,8 @@ const translations = {
         "videos_video8_desc": "Discover our research firm, our team, our services, and our methodological approach in development project evaluation.",
         "videos_cta_titre": "Interested in Our Services?",
         "videos_cta_desc": "Contact us to discuss your evaluation project",
+        "videos_empty_titre": "No videos available at the moment",
+        "videos_empty_desc": "We are currently working on creating video content. Come back soon to discover our missions and activities in video.",
 
         // Page Ressources
         "ressources_title": "Resources",

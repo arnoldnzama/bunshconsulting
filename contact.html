@@ -77,7 +77,7 @@
                 <div class="contact-form">
                     <h2 style="color: #0b2294; margin-bottom: 1.5rem;" data-translate="contact_message_title">Envoyez-nous un message</h2>
                     
-                    <form id="contactForm">
+                    <form id="contactForm" action="php/contact.php" method="POST">
                         <div class="form-group">
                             <label for="nom"><span data-translate="contact_nom">Nom complet</span> *</label>
                             <input type="text" id="nom" name="nom" required data-translate="contact_nom_placeholder" placeholder="Entrez votre nom complet">
@@ -448,6 +448,8 @@
                     <h3 data-translate="footer_services">Services</h3>
                     <ul class="footer-links">
                         <li><a href="services.html" data-translate="footer_baseline">Études de base (Baseline)</a></li>
+                        <li><a href="services.html" data-translate="footer_midline">Évaluation Mi-Parcours </a></li>
+                     <li><a href="services.html" data-translate="footer_endline">Évaluations Finales</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
@@ -494,57 +496,73 @@
             e.preventDefault();
             
             const currentLang = localStorage.getItem('preferredLanguage') || 'fr';
+            const formData = new FormData(this);
+            formData.append('lang', currentLang);
             
-            // Récupérer les données du formulaire
-            const nom = document.getElementById('nom').value;
-            const email = document.getElementById('email').value;
-            const telephone = document.getElementById('telephone').value;
-            const organisation = document.getElementById('organisation').value;
-            const sujet = document.getElementById('sujet').value;
-            const message = document.getElementById('message').value;
+            const submitButton = this.querySelector('button[type="submit"]');
+            const originalText = submitButton.innerHTML;
+            submitButton.disabled = true;
+            submitButton.innerHTML = currentLang === 'fr' 
+                ? '<i class="fas fa-spinner fa-spin"></i> Envoi en cours...' 
+                : '<i class="fas fa-spinner fa-spin"></i> Sending...';
             
-            // Obtenir le texte du sujet sélectionné
-            const sujetSelect = document.getElementById('sujet');
-            const sujetText = sujetSelect.options[sujetSelect.selectedIndex].text;
-            
-            // Construire le corps de l'email
-            const emailBody = `
-Nom: ${nom}
-Email: ${email}
-Téléphone: ${telephone || 'Non renseigné'}
-Organisation: ${organisation || 'Non renseignée'}
-Sujet: ${sujetText}
-
-Message:
-${message}
-
----
-Ce message a été envoyé depuis le formulaire de contact du site Bunsh International.
-            `.trim();
-            
-            // Créer le lien mailto
-            const mailtoLink = `mailto:contact@bunshinternational.com?subject=${encodeURIComponent('Contact - ' + sujetText)}&body=${encodeURIComponent(emailBody)}`;
-            
-            // Ouvrir le client email
-            window.location.href = mailtoLink;
-            
-            // Afficher un message de confirmation
-            const messageDiv = document.getElementById('formMessage');
-            messageDiv.style.display = 'block';
-            messageDiv.style.backgroundColor = '#d4edda';
-            messageDiv.style.color = '#155724';
-            messageDiv.style.border = '1px solid #c3e6cb';
-            messageDiv.innerHTML = currentLang === 'fr' 
-                ? '<i class="fas fa-check-circle"></i> <strong>Votre client email va s\'ouvrir.</strong><br>Veuillez envoyer l\'email pour finaliser votre demande. Nous vous répondrons dans les plus brefs délais.' 
-                : '<i class="fas fa-check-circle"></i> <strong>Your email client will open.</strong><br>Please send the email to finalize your request. We will respond as soon as possible.';
-            
-            // Faire défiler jusqu'au message
-            messageDiv.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-            
-            // Réinitialiser le formulaire après 2 secondes
-            setTimeout(() => {
-                document.getElementById('contactForm').reset();
-            }, 2000);
+            // Envoyer les données au serveur PHP
+            fetch('php/contact.php', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                const messageDiv = document.getElementById('formMessage');
+                messageDiv.style.display = 'block';
+                
+                if (data.success) {
+                    // Message de succès
+                    messageDiv.style.backgroundColor = '#d4edda';
+                    messageDiv.style.color = '#155724';
+                    messageDiv.style.border = '1px solid #c3e6cb';
+                    messageDiv.innerHTML = '<i class="fas fa-check-circle"></i> <strong>' + 
+                        (currentLang === 'fr' ? 'Message envoyé avec succès !' : 'Message sent successfully!') + 
+                        '</strong><br>' + data.message;
+                    
+                    // Réinitialiser le formulaire
+                    document.getElementById('contactForm').reset();
+                } else {
+                    // Message d'erreur
+                    messageDiv.style.backgroundColor = '#f8d7da';
+                    messageDiv.style.color = '#721c24';
+                    messageDiv.style.border = '1px solid #f5c6cb';
+                    messageDiv.innerHTML = '<i class="fas fa-exclamation-circle"></i> <strong>' + 
+                        (currentLang === 'fr' ? 'Erreur' : 'Error') + 
+                        '</strong><br>' + data.message;
+                }
+                
+                // Réactiver le bouton
+                submitButton.disabled = false;
+                submitButton.innerHTML = originalText;
+                
+                // Faire défiler jusqu'au message
+                messageDiv.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            })
+            .catch(error => {
+                const messageDiv = document.getElementById('formMessage');
+                messageDiv.style.display = 'block';
+                messageDiv.style.backgroundColor = '#f8d7da';
+                messageDiv.style.color = '#721c24';
+                messageDiv.style.border = '1px solid #f5c6cb';
+                messageDiv.innerHTML = '<i class="fas fa-exclamation-circle"></i> <strong>' + 
+                    (currentLang === 'fr' ? 'Erreur de connexion' : 'Connection error') + 
+                    '</strong><br>' + 
+                    (currentLang === 'fr' 
+                        ? 'Une erreur est survenue. Veuillez réessayer ou nous contacter directement à contact@bunshinternational.com' 
+                        : 'An error occurred. Please try again or contact us directly at contact@bunshinternational.com');
+                
+                // Réactiver le bouton
+                submitButton.disabled = false;
+                submitButton.innerHTML = originalText;
+                
+                console.error('Erreur:', error);
+            });
         });
     </script>
 </body>
